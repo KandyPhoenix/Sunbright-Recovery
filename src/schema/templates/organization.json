@@ -1,0 +1,93 @@
+{
+  "_comment": "Site-wide Organization + LocalBusiness + MedicalBusiness schema for Sunbright Recovery Center. Inject in <head> of every page. Update phone/address/social once finalized.",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "MedicalBusiness", "LocalBusiness"],
+      "@id": "https://sunbrightrecovery.com/#organization",
+      "name": "Sunbright Recovery Center",
+      "alternateName": "Sunbright Recovery",
+      "url": "https://sunbrightrecovery.com",
+      "logo": "https://sunbrightrecovery.com/images/logo.png",
+      "image": "https://sunbrightrecovery.com/images/og-image.jpg",
+      "description": "Faith-integrated, evidence-based addiction recovery in Northern California. Residential, outpatient (IOP/PHP), and sober living programs. Medi-Cal accepted.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Parish Health and Wellness",
+        "url": "https://www.phwcare.com"
+      },
+      "telephone": "+1-530-528-2342",
+      "email": "admissions@sunbrightrecovery.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "22425 Sunbright Ave",
+        "addressLocality": "Red Bluff",
+        "addressRegion": "CA",
+        "postalCode": "96080",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.1785,
+        "longitude": -122.2358
+      },
+      "areaServed": [
+        { "@type": "State", "name": "California" },
+        { "@type": "City", "name": "Red Bluff" },
+        { "@type": "City", "name": "Redding" },
+        { "@type": "City", "name": "Chico" },
+        { "@type": "City", "name": "Sacramento" },
+        { "@type": "AdministrativeArea", "name": "Tehama County" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "medicalSpecialty": ["Addiction Medicine", "Psychiatry"],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Residential / Inpatient Rehabilitation",
+          "url": "https://sunbrightrecovery.com/programs/residential"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Intensive Outpatient Program (IOP)",
+          "url": "https://sunbrightrecovery.com/programs/outpatient"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Partial Hospitalization Program (PHP)",
+          "url": "https://sunbrightrecovery.com/programs/outpatient"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Sober Living / Aftercare",
+          "url": "https://sunbrightrecovery.com/programs/sober-living"
+        }
+      ],
+      "acceptedPaymentMethod": ["Medi-Cal", "Medicare", "Private Insurance", "Sliding Scale", "Cash", "Credit Card"],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/sunbrightrecovery",
+        "https://www.instagram.com/sunbrightrecovery"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sunbrightrecovery.com/#website",
+      "url": "https://sunbrightrecovery.com",
+      "name": "Sunbright Recovery Center",
+      "publisher": { "@id": "https://sunbrightrecovery.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sunbrightrecovery.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
