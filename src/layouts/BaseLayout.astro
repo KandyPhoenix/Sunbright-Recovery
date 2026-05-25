@@ -1,12 +1,28 @@
 ---
 import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { organizationSchema } from '../schema/organization';
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description = 'Sunbright Recovery Center — Faith-integrated, evidence-based addiction recovery in Northern California.' } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  noindex = true, // noindex until site launches
+  ogImage,
+  ogType,
+  schema,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -14,12 +30,24 @@ const { title, description = 'Sunbright Recovery Center — Faith-integrated, ev
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <title>{title} | Sunbright Recovery Center</title>
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      noindex={noindex}
+      ogImage={ogImage}
+      ogType={ogType}
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Site-wide Organization schema on every page -->
+    <JsonLd schema={organizationSchema()} />
+
+    <!-- Page-specific schema (FAQPage, BreadcrumbList, etc.) -->
+    {schema && <JsonLd schema={schema} />}
   </head>
   <body class="font-sans text-ink-700 bg-white antialiased">
     <slot />

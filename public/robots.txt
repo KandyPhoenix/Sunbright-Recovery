@@ -1,0 +1,6 @@
+# Sunbright Recovery Center
+# Site under construction — disallow all until launch
+User-agent: *
+Disallow: /
+
+Sitemap: https://sunbrightrecovery.com/sitemap-index.xml
