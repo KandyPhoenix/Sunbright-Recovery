@@ -1,0 +1,6 @@
+name = "sunbright-recovery"
+compatibility_date = "2024-01-01"
+
+[env.production]
+# Build settings for Cloudflare Pages
+# Dashboard: Build command = "npm run build" | Output dir = "dist"
