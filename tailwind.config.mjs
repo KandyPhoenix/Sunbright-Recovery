@@ -51,6 +51,39 @@ export default {
           700: '#3a4151',
           500: '#6b7280',
         },
+        // Flyer / V2 palette — earthy, warm, rustic
+        forest: {
+          50:  '#f4f7f0',
+          100: '#e2ecda',
+          200: '#c4d9b6',
+          300: '#9dbd87',
+          400: '#729e58',
+          500: '#548239',
+          600: '#3e6628',
+          700: '#3a5220', // primary olive green (flyer headline color)
+          800: '#2c3f1a',
+          900: '#1f2d12',
+        },
+        antique: {
+          50:  '#fdf8ee',
+          100: '#f9edcc',
+          200: '#f2d997',
+          300: '#e8be58',
+          400: '#dea52c',
+          500: '#c8900a', // antique gold (flyer script/accent color)
+          600: '#a87008',
+          700: '#865408',
+          800: '#6b420a',
+          900: '#57350b',
+        },
+        burlap: {
+          50:  '#fdfaf4',
+          100: '#f8f0e0',
+          200: '#f0e6cc', // warm cream background (flyer bg)
+          300: '#e5d4ae',
+          400: '#d6be8c',
+          500: '#c4a56a',
+        },
       },
       fontFamily: {
         serif: ['Lora', 'Georgia', 'serif'],
