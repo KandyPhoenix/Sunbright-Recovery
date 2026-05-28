@@ -14,14 +14,14 @@ const currentPath = Astro.url.pathname;
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-navy-100">
   <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 lg:h-[72px]">
+    <div class="flex items-center justify-between h-20 lg:h-24">
 
       <!-- Logo -->
       <a href="/" class="flex items-center gap-3 flex-shrink-0 group">
         <img
           src="/logo.png"
           alt="Sunbright Recovery Center"
-          class="h-10 w-auto"
+          class="h-16 lg:h-20 w-auto"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
         <!-- Fallback SVG sun icon if logo not yet uploaded -->
@@ -29,10 +29,6 @@ const currentPath = Astro.url.pathname;
           <svg class="w-6 h-6 text-gold-400" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm5.66 2.34a1 1 0 010 1.42l-.71.71a1 1 0 11-1.41-1.42l.71-.71a1 1 0 011.41 0zm-11.32 0a1 1 0 011.41 0l.71.71A1 1 0 116.75 6.46l-.71-.71a1 1 0 010-1.41zM12 7a5 5 0 110 10A5 5 0 0112 7zm9 4a1 1 0 110 2h-1a1 1 0 110-2h1zM4 11a1 1 0 110 2H3a1 1 0 110-2h1zm15.66 6.66a1 1 0 01-1.42 1.41l-.7-.71a1 1 0 011.41-1.41l.71.71zm-14.32 0l.71.71a1 1 0 01-1.41 1.41l-.71-.71a1 1 0 011.41-1.41zM12 20a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"/>
           </svg>
-        </div>
-        <div class="leading-tight hidden sm:block">
-          <span class="block font-serif font-bold text-navy-700 text-base group-hover:text-navy-600 transition-colors">Sunbright Recovery</span>
-          <span class="block text-[11px] text-ink-500 tracking-wider uppercase">Recovery Center</span>
         </div>
       </a>
 
