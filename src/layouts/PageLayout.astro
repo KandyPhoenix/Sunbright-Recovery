@@ -1,0 +1,27 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import StickyPhoneButton from '../components/StickyPhoneButton.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props}>
+  <Nav />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <StickyPhoneButton />
+</BaseLayout>

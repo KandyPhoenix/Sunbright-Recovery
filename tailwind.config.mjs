@@ -4,31 +4,42 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Sunbright brand palette — warm, hopeful, calming
-        // TBD with Linda; placeholders aligned to "faith-integrated + Northern CA"
-        sage: {
-          50: '#f3f7f4',
-          100: '#e1ece4',
-          200: '#c4d8ca',
-          300: '#9bbca7',
-          400: '#6f9c80',
-          500: '#4f8163',
-          600: '#3c684e',
-          700: '#315441',
-          800: '#284336',
-          900: '#22382e',
+        // Sunbright brand palette — derived from actual logo (navy + gold)
+        navy: {
+          50: '#f0f4fb',
+          100: '#d9e4f5',
+          200: '#b3c8eb',
+          300: '#7ea3d8',
+          400: '#4a78c4',
+          500: '#2a5aad',
+          600: '#1d4490',
+          700: '#1a3270', // primary brand navy (logo text color)
+          800: '#152855',
+          900: '#101e3f',
         },
         gold: {
-          50: '#fbf8ee',
-          100: '#f4ecd0',
-          200: '#ead7a3',
-          300: '#dcbb6d',
-          400: '#cfa247',
-          500: '#bd8a35',
-          600: '#a06d2c',
-          700: '#805228',
-          800: '#6a4327',
-          900: '#5a3924',
+          50: '#fffbea',
+          100: '#fff3c0',
+          200: '#ffe680',
+          300: '#ffd740',
+          400: '#ffc81a', // sun highlight
+          500: '#f5b800', // primary brand gold (logo sun color)
+          600: '#d49b00',
+          700: '#aa7c00',
+          800: '#876200',
+          900: '#6b4e00',
+        },
+        sky: {
+          50: '#f2f6fb',
+          100: '#dce8f5',
+          200: '#b9d1eb',
+          300: '#8ab2d9',
+          400: '#5a90c4',
+          500: '#3a6fad', // water/wave blue from logo
+          600: '#2d5a90',
+          700: '#234875',
+          800: '#1c3960',
+          900: '#162d4d',
         },
         cream: {
           50: '#fdfbf7',
@@ -36,13 +47,12 @@ export default {
           200: '#f0e6d0',
         },
         ink: {
-          900: '#1f2624',
-          700: '#3a4441',
-          500: '#6b7773',
+          900: '#1a1f2e',
+          700: '#3a4151',
+          500: '#6b7280',
         },
       },
       fontFamily: {
-        // Pair: humanist serif for headings + clean sans for body
         serif: ['Lora', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },

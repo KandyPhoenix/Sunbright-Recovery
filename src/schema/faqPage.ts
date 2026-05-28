@@ -3,6 +3,8 @@ interface FAQItem {
   answer: string;
 }
 
+export const homepageFaqSchema = faqPageSchema;
+
 export function faqPageSchema(items: FAQItem[]) {
   return {
     '@context': 'https://schema.org',
