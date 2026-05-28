@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://sunbrightrecovery.com',
+  site: 'https://sunbrightrecovery.org',
   integrations: [
     tailwind({
       applyBaseStyles: false,
