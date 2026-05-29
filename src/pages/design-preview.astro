@@ -78,24 +78,25 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — sun absolutely centered so rays radiate evenly on both sides */
-    .hero-right{position:relative;min-height:480px;overflow:visible}
+    /* Right panel — sun anchored to bottom, centered horizontally, text cropped */
+    .hero-right{position:relative;min-height:480px;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
     .hero-sun-only{
-      position:absolute;
-      bottom:0;
-      left:50%;
-      transform:translateX(-50%);
+      position:relative;
       width:200%;
+      margin-left:-50%;
+      margin-right:-50%;
       height:440px;
       overflow:hidden;
       pointer-events:none;
       display:flex;
+      align-items:flex-start;
       justify-content:center;
     }
     .hero-sun-only img{
       width:100%;
       max-width:none;
       display:block;
+      margin:0 auto;
     }
     .hero-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
     .hero-logo-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.15) 0%,transparent 70%);border-radius:50%}
