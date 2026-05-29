@@ -99,23 +99,6 @@
       display: flex; align-items: center;
       overflow: hidden;
     }
-    .hero-photo {
-      position: absolute; inset: 0;
-    }
-    .hero-photo img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
-    }
-    /* Warm golden overlay — transforms any photo into golden hour feel */
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(26,46,90,.85) 0%,
-        rgba(26,46,90,.70) 35%,
-        rgba(180,120,20,.35) 65%,
-        rgba(240,180,40,.20) 100%
-      );
-    }
     /* Warm golden glow from right — simulates sun */
     .hero-glow {
       position: absolute; top: -60px; right: -40px;
@@ -453,10 +436,6 @@
 
 <!-- ══ HERO ══ -->
 <section class="hero">
-  <div class="hero-photo">
-    <img src="/images/facility-exterior.jpg" alt="Sunbright Recovery Center facility" />
-  </div>
-  <div class="hero-overlay"></div>
   <div class="hero-glow"></div>
   <div class="hero-content">
     <div class="hero-text">
