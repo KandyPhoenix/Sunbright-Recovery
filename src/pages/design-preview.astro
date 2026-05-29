@@ -59,8 +59,8 @@
     /* Sun beam rays behind logo — the big visual */
     .hero-rays{position:absolute;right:0;top:0;bottom:0;width:55%;pointer-events:none}
 
-    /* Gold glow */
-    .hero-glow{position:absolute;right:80px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(ellipse,rgba(240,192,64,.25) 0%,rgba(200,144,10,.08) 45%,transparent 70%);pointer-events:none}
+    /* Gold glow removed */
+    .hero-glow{display:none}
 
     /* Star field */
     .hero-stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.3) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1px);background-size:160px 160px,110px 110px,220px 220px;background-position:30px 25px,70px 90px,150px 50px;opacity:.35;pointer-events:none}
@@ -81,7 +81,6 @@
     /* Right panel — giant sun cropped from logo */
     .hero-right{display:flex;align-items:center;justify-content:center;position:relative;min-height:520px;overflow:visible}
     .hero-sun-only{position:relative;width:100%;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .hero-sun-only::before{content:'';position:absolute;inset:-40px;background:radial-gradient(ellipse at center,rgba(240,192,64,.25) 0%,rgba(240,192,64,.05) 50%,transparent 70%);pointer-events:none}
     /* Logo is sized huge; positioned so only the sun (top portion) shows in the visible area */
     .hero-sun-only img{
       width:1200px;
