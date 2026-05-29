@@ -52,15 +52,14 @@ const homepageFAQs = [
   ═══════════════════════════════════════════ -->
   <section class="relative overflow-hidden bg-gradient-to-b from-sand-200 via-sand-100 to-white py-20 lg:py-28">
 
-    <!-- Rock texture layers (layered ellipses suggesting boulders) -->
+    <!-- Facility exterior as background -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="/images/facility-exterior.jpg" alt="" class="w-full h-full object-cover object-center opacity-25" />
+      <div class="absolute inset-0 bg-gradient-to-r from-sand-200/95 via-sand-200/80 to-sand-100/50"></div>
+    </div>
+    <!-- Soft rock/mist overlays -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <!-- Large background rocks -->
-      <div class="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-stone-200 opacity-40 blur-2xl"></div>
-      <div class="absolute -bottom-8 right-32 w-56 h-56 rounded-full bg-sand-300 opacity-50 blur-xl"></div>
-      <div class="absolute top-8 -left-20 w-64 h-64 rounded-full bg-sand-300 opacity-30 blur-2xl"></div>
-      <!-- Waterfall mist hint -->
-      <div class="absolute top-0 right-1/4 w-48 h-full bg-gradient-to-b from-water-100 to-transparent opacity-20 blur-3xl"></div>
-      <!-- Moss texture hints -->
+      <div class="absolute -bottom-8 right-32 w-56 h-56 rounded-full bg-sand-300 opacity-30 blur-xl"></div>
       <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
     </div>
 
@@ -322,6 +321,14 @@ const homepageFAQs = [
             </ul>
           </div>
         ))}
+      </div>
+
+      <!-- Facility photos -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
+        <img src="/images/facility-exterior.jpg" alt="Sunbright Recovery Center exterior — Red Bluff, CA" class="rounded-xl object-cover w-full h-40 lg:h-48" />
+        <img src="/images/facility-common-room.jpg" alt="Common room under renovation" class="rounded-xl object-cover w-full h-40 lg:h-48" />
+        <img src="/images/facility-interior.jpg" alt="Interior space being prepared" class="rounded-xl object-cover w-full h-40 lg:h-48" />
+        <img src="/images/facility-tile.jpg" alt="New tile flooring being installed" class="rounded-xl object-cover w-full h-40 lg:h-48" />
       </div>
 
       <!-- CTA block — deep stone -->
