@@ -78,14 +78,14 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — sun only (text cropped out), anchored toward bottom */
-    .hero-right{position:relative;min-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
+    /* Right panel — sun much bigger, text cropped out, anchored to bottom */
+    .hero-right{position:relative;min-height:480px;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
     .hero-sun-only{
       position:relative;
-      width:140%;
-      margin-left:-20%;
-      margin-right:-20%;
-      height:300px;          /* short enough that SUNBRIGHT + RECOVERY CENTER text is clipped */
+      width:200%;
+      margin-left:-50%;
+      margin-right:-50%;
+      height:440px;          /* taller container shows more of the (bigger) sun */
       overflow:hidden;
       pointer-events:none;
     }
