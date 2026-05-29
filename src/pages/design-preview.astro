@@ -65,7 +65,7 @@
     /* Star field */
     .hero-stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.3) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1px);background-size:160px 160px,110px 110px,220px 220px;background-position:30px 25px,70px 90px,150px 50px;opacity:.35;pointer-events:none}
 
-    .hero-inner{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:52px 28px 60px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center}
+    .hero-inner{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:52px 28px 60px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 
     .hero-left{}
     .hero-tagline-top{font-family:'Dancing Script',cursive;font-size:30px;color:var(--gold-lt);display:block;margin-bottom:6px}
@@ -78,18 +78,15 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — giant sun cropped from logo */
-    .hero-right{display:flex;align-items:center;justify-content:center;position:relative;min-height:520px;overflow:visible}
-    .hero-sun-only{position:relative;width:100%;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    /* Logo is sized huge; positioned so only the sun (top portion) shows in the visible area */
+    /* Right panel — sun fills the column entirely */
+    .hero-right{display:flex;align-items:center;justify-content:center;position:relative;overflow:visible}
+    .hero-sun-only{position:relative;width:100%;display:flex;align-items:center;justify-content:center}
     .hero-sun-only img{
-      width:1200px;
+      width:100%;
       max-width:none;
       filter:brightness(0) invert(1);
       opacity:.96;
-      position:relative;
-      z-index:1;
-      transform:translateY(20%);
+      display:block;
     }
     .hero-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
     .hero-logo-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.15) 0%,transparent 70%);border-radius:50%}
