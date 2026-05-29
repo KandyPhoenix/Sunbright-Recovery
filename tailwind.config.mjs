@@ -51,6 +51,67 @@ export default {
           700: '#3a4151',
           500: '#6b7280',
         },
+        // Landscape palette — rock, waterfall, moss, sandstone, terracotta
+        stone: {
+          50:  '#f5f3f1',
+          100: '#e8e3de',
+          200: '#d4cbc3',
+          300: '#b8aca0',
+          400: '#9a8c80',
+          500: '#7d6e63',
+          600: '#655750',
+          700: '#504540', // medium dark stone
+          800: '#3d3530', // deep charcoal rock
+          900: '#2a2420', // near-black warm stone
+        },
+        terra: {
+          50:  '#fdf4ee',
+          100: '#fae4d0',
+          200: '#f5c9a0',
+          300: '#eda66a',
+          400: '#e3853c',
+          500: '#c8683a', // primary terracotta
+          600: '#a85230', // deep terra
+          700: '#874026',
+          800: '#6d321f',
+          900: '#59281a',
+        },
+        moss: {
+          50:  '#f3f5ef',
+          100: '#e2e8d8',
+          200: '#c5d1b2',
+          300: '#a0b485',
+          400: '#7a9458',
+          500: '#5e7a3e',
+          600: '#4a6230',
+          700: '#3c5028', // deep moss green
+          800: '#2f3f1f',
+          900: '#243018',
+        },
+        sand: {
+          50:  '#faf7f2',
+          100: '#f5ede0',
+          200: '#ecdcc4', // warm sandy bg
+          300: '#dfc9a5',
+          400: '#cfb280',
+          500: '#bb9560',
+          600: '#a07a45',
+          700: '#826038',
+          800: '#694d2e',
+          900: '#553d25',
+        },
+        water: {
+          50:  '#f0f6f8',
+          100: '#d8eaef',
+          200: '#b0d4de',
+          300: '#80b8c8',
+          400: '#5099ae',
+          500: '#3a7d94', // waterfall blue-grey
+          600: '#2e6378',
+          700: '#264f60',
+          800: '#1f3f4e',
+          900: '#183240',
+        },
         // Flyer / V2 palette — earthy, warm, rustic
         forest: {
           50:  '#f4f7f0',
