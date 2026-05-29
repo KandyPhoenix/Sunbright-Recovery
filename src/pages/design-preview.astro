@@ -78,15 +78,23 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — sun fills the column entirely */
-    .hero-right{display:flex;align-items:center;justify-content:center;position:relative;overflow:visible}
-    .hero-sun-only{position:relative;width:100%;display:flex;align-items:center;justify-content:center}
+    /* Right panel — giant golden sun with rays extending out */
+    .hero-right{display:flex;align-items:center;justify-content:center;position:relative;overflow:visible;min-height:480px}
+    .hero-sun-only{
+      position:absolute;
+      top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      width:140%;
+      height:480px;
+      overflow:hidden;
+      display:flex;align-items:flex-start;justify-content:center;
+      pointer-events:none;
+    }
     .hero-sun-only img{
-      width:100%;
+      width:140%;
       max-width:none;
-      filter:brightness(0) invert(1);
-      opacity:.96;
       display:block;
+      transform:translateY(-2%);
     }
     .hero-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
     .hero-logo-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.15) 0%,transparent 70%);border-radius:50%}
