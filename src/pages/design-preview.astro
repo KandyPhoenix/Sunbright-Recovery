@@ -1,430 +1,265 @@
 ---
-// Design Preview V4 — Flyer aesthetic: warm golden photography, navy + gold, script accents
+// Design Preview V5 — Matches flyer: warm navy, gold, script font, rich and full
 ---
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunbright Recovery Center — Design Preview</title>
-  <meta name="robots" content="noindex" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sunbright Recovery — Design Preview</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --navy:#1a2e5a; --navy-dk:#101d3a; --navy-mid:#254080; --navy-lt:#edf1fa;
+      --gold:#c8900a; --gold-lt:#f0c040; --gold-pale:#fdf5e0; --gold-bg:#fef9ee;
+      --cream:#f8f3ea; --cream-dk:#efe8d8; --white:#fff;
+      --text:#1a2438; --mid:#3d4a5c; --soft:#6b7a8d; --border:#e2d9c8;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.6}
+    h1,h2,h3,h4{font-family:'Lora',Georgia,serif;line-height:1.2}
+    .script{font-family:'Dancing Script',cursive}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
 
-    :root {
-      --navy:      #1a2e5a;
-      --navy-dk:   #111e3e;
-      --navy-mid:  #254080;
-      --navy-pale: #edf1fa;
-      --gold:      #c8900a;
-      --gold-lt:   #f0c040;
-      --gold-pale: #fdf5e0;
-      --gold-bg:   #fef9ee;
-      --cream:     #f8f3ea;
-      --cream-dk:  #efe8d8;
-      --white:     #ffffff;
-      --text:      #1a2438;
-      --text-mid:  #3d4a5c;
-      --text-soft: #6b7a8d;
-      --border:    #e2d9c8;
-    }
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:8px;font-size:14.5px;font-weight:700;font-family:'Inter',sans-serif;transition:all .2s;cursor:pointer;border:none;text-decoration:none}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 16px rgba(200,144,10,.4)}
+    .btn-gold:hover{background:#a87008}
+    .btn-navy{background:var(--navy);color:#fff;box-shadow:0 4px 14px rgba(26,46,90,.35)}
+    .btn-navy:hover{background:var(--navy-dk)}
+    .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.45)}
+    .btn-ghost:hover{background:rgba(255,255,255,.25)}
+    .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+    .btn-outline:hover{background:var(--navy-lt)}
 
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      color: var(--text); background: var(--white);
-      -webkit-font-smoothing: antialiased; line-height: 1.6;
-    }
-    h1,h2,h3,h4 { font-family: 'Lora', Georgia, serif; line-height: 1.2; }
-    .script { font-family: 'Dancing Script', cursive; }
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(26,46,90,.08)}
+    .nav-in{max-width:1160px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:82px}
+    .nav-in img{height:66px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:2px}
+    .nav-links a{padding:8px 12px;border-radius:6px;font-size:13.5px;font-weight:500;color:var(--mid);transition:all .15s}
+    .nav-links a:hover{color:var(--navy);background:var(--navy-lt)}
+    .nav-cta{display:flex;align-items:center;gap:7px;background:var(--navy);color:#fff;padding:11px 20px;border-radius:8px;font-size:14px;font-weight:700;box-shadow:0 2px 12px rgba(26,46,90,.3);transition:all .2s}
+    .nav-cta:hover{background:var(--navy-dk);transform:translateY(-1px)}
 
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 30px; border-radius: 8px;
-      font-size: 15px; font-weight: 700; font-family: 'Inter', sans-serif;
-      transition: all .2s; cursor: pointer; border: none; text-decoration: none;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-gold  { background: var(--gold); color: #fff; box-shadow: 0 4px 16px rgba(200,144,10,.35); }
-    .btn-gold:hover { background: #a87008; box-shadow: 0 6px 22px rgba(200,144,10,.45); }
-    .btn-navy  { background: var(--navy); color: #fff; box-shadow: 0 4px 14px rgba(26,46,90,.3); }
-    .btn-navy:hover { background: var(--navy-dk); }
-    .btn-ghost { background: rgba(255,255,255,.15); color: #fff; border: 2px solid rgba(255,255,255,.5); }
-    .btn-ghost:hover { background: rgba(255,255,255,.25); }
-    .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
-    .btn-outline:hover { background: var(--navy-pale); }
+    /* ══════════════════════════
+       HERO — rich, full, navy sky
+    ══════════════════════════ */
+    .hero{position:relative;overflow:hidden;background:var(--navy-dk)}
 
+    /* Deep sky gradient */
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 110% 140% at 75% 50%,#243a7a 0%,#1a2e5a 35%,#0d1e3a 100%)}
 
-    /* ─── NAV ─── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,.97); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 20px rgba(26,46,90,.07);
-    }
-    .nav-inner {
-      max-width: 1160px; margin: 0 auto; padding: 0 28px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 84px;
-    }
-    .nav-logo img { height: 68px; width: auto; }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-links a {
-      padding: 8px 13px; border-radius: 6px;
-      font-size: 13.5px; font-weight: 500; color: var(--text-mid); transition: all .15s;
-    }
-    .nav-links a:hover { color: var(--navy); background: var(--navy-pale); }
-    .nav-cta {
-      display: flex; align-items: center; gap: 7px;
-      background: var(--navy); color: #fff;
-      padding: 11px 20px; border-radius: 8px;
-      font-size: 14px; font-weight: 700;
-      box-shadow: 0 2px 10px rgba(26,46,90,.25); transition: all .2s;
-    }
-    .nav-cta:hover { background: var(--navy-dk); transform: translateY(-1px); }
-    .nav-cta svg { width: 15px; height: 15px; }
+    /* Sun beam rays behind logo — the big visual */
+    .hero-rays{position:absolute;right:0;top:0;bottom:0;width:55%;pointer-events:none}
 
+    /* Gold glow */
+    .hero-glow{position:absolute;right:80px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(ellipse,rgba(240,192,64,.25) 0%,rgba(200,144,10,.08) 45%,transparent 70%);pointer-events:none}
 
-    /* ─── HERO ─── */
-    .hero {
-      position: relative; min-height: 580px;
-      display: flex; align-items: center;
-      overflow: hidden;
-    }
-    /* Warm golden glow from right — simulates sun */
-    .hero-glow {
-      position: absolute; top: -60px; right: -40px;
-      width: 500px; height: 500px;
-      background: radial-gradient(ellipse, rgba(240,192,64,.35) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .hero-content {
-      position: relative; z-index: 2;
-      max-width: 1160px; margin: 0 auto; padding: 80px 28px;
-      display: grid; grid-template-columns: 1fr 320px;
-      gap: 48px; align-items: center; width: 100%;
-    }
-    .hero-text {}
-    .hero-tagline-small {
-      font-family: 'Dancing Script', cursive;
-      font-size: 26px; color: var(--gold-lt);
-      margin-bottom: 6px; display: block;
-    }
-    .hero h1 {
-      font-size: clamp(38px, 5.5vw, 62px);
-      font-weight: 700; color: #fff;
-      letter-spacing: -.02em; margin-bottom: 14px;
-      line-height: 1.08;
-      text-shadow: 0 2px 16px rgba(0,0,0,.3);
-    }
-    .hero-descriptor {
-      font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-      color: var(--gold-lt); margin-bottom: 8px;
-    }
-    .hero-sub {
-      font-size: 17px; color: rgba(255,255,255,.72);
-      line-height: 1.7; margin-bottom: 28px; max-width: 480px;
-    }
-    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-    .hero-privacy {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 13px; color: rgba(255,255,255,.45);
-    }
-    .hero-privacy svg { width: 13px; height: 13px; color: var(--gold-lt); flex-shrink: 0; }
+    /* Star field */
+    .hero-stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.3) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1px);background-size:160px 160px,110px 110px,220px 220px;background-position:30px 25px,70px 90px,150px 50px;opacity:.35;pointer-events:none}
 
-    /* Hero right: sun + key stats */
-    .hero-right {
-      display: flex; flex-direction: column; align-items: center; gap: 20px;
-    }
-    .hero-sun-crop {
-      width: 200px; overflow: hidden;
-    }
-    .hero-sun-crop img {
-      width: 200px;
-      filter: brightness(0) invert(1);
-      opacity: .9;
-    }
-    .hero-stat-pills {
-      display: flex; flex-direction: column; gap: 10px; width: 100%;
-    }
-    .hero-pill {
-      background: rgba(255,255,255,.12); backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 10px; padding: 10px 16px;
-      display: flex; align-items: center; gap: 10px;
-      color: #fff; font-size: 13.5px; font-weight: 600;
-    }
-    .hero-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-lt); flex-shrink: 0; }
+    .hero-inner{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:52px 28px 60px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center}
 
+    .hero-left{}
+    .hero-tagline-top{font-family:'Dancing Script',cursive;font-size:30px;color:var(--gold-lt);display:block;margin-bottom:6px}
+    .hero h1{font-size:clamp(38px,5.5vw,64px);font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:10px;line-height:1.06;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+    .hero h1 em{font-style:italic;color:var(--gold-lt)}
+    .hero-type{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .hero-type::before{content:'';width:24px;height:2px;background:var(--gold-lt);border-radius:2px;display:block}
+    .hero-sub{font-size:16.5px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:28px;max-width:460px}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
+    .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* ─── 30-60-90 BAND ─── */
-    .program-band {
-      background: var(--navy);
-      padding: 48px 28px;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .program-band::before {
-      content: '';
-      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-      width: 600px; height: 300px;
-      background: radial-gradient(ellipse, rgba(200,144,10,.15), transparent 70%);
-    }
-    .program-band-inner { position: relative; }
-    .program-band .days {
-      font-family: 'Lora', serif;
-      font-size: clamp(40px, 7vw, 72px);
-      font-weight: 700; color: #fff;
-      letter-spacing: .02em; line-height: 1;
-      margin-bottom: 8px;
-    }
-    .program-band .days span { color: var(--gold-lt); }
-    .program-band .prog-label {
-      font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--gold-lt); margin-bottom: 8px;
-    }
-    .program-band .prog-sub {
-      font-size: 16px; color: rgba(255,255,255,.6); margin-bottom: 28px;
-    }
-    .program-band-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    /* Right panel — logo + info */
+    .hero-right{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .hero-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
+    .hero-logo-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.15) 0%,transparent 70%);border-radius:50%}
+    .hero-logo-wrap img{width:300px;filter:brightness(0) invert(1);opacity:.93;position:relative;z-index:1}
+    .hero-badge-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+    .hero-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 12px;text-align:center}
+    .hero-badge strong{display:block;font-size:13px;font-weight:800;color:#fff;margin-bottom:2px}
+    .hero-badge span{font-size:11px;color:rgba(255,255,255,.5)}
+    .hero-tagline-pill{background:rgba(200,144,10,.2);border:1px solid rgba(240,192,64,.35);border-radius:100px;padding:9px 20px;font-family:'Dancing Script',cursive;font-size:19px;color:var(--gold-lt);text-align:center;width:100%}
 
+    /* ══ GOLD STRIP ══ */
+    .gold-strip{background:var(--gold);padding:14px 28px}
+    .gold-strip-in{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
+    .gs-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--navy-dk);padding:4px 20px;border-right:1.5px solid rgba(26,46,90,.2)}
+    .gs-item:last-child{border-right:none}
+    .gs-item svg{width:14px;height:14px;flex-shrink:0}
 
-    /* ─── FEATURES GRID ─── */
-    .features { padding: 72px 0; background: var(--cream); }
-    .features-grid {
-      display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;
-    }
-    .feat-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 16px; padding: 24px 16px;
-      text-align: center; transition: all .2s;
-    }
-    .feat-card:hover { box-shadow: 0 8px 24px rgba(26,46,90,.1); transform: translateY(-3px); border-color: var(--gold); }
-    .feat-icon {
-      width: 52px; height: 52px; border-radius: 50%;
-      background: var(--navy); margin: 0 auto 14px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .feat-icon svg { width: 24px; height: 24px; }
-    .feat-card h4 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
-    .feat-card p { font-size: 12px; color: var(--text-soft); line-height: 1.55; }
+    /* ══ 30/60/90 BAND ══ */
+    .band{background:var(--navy);padding:56px 28px;text-align:center;position:relative;overflow:hidden}
+    .band::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(200,144,10,.15),transparent 65%)}
+    .band-inner{position:relative;max-width:900px;margin:0 auto}
+    .band-days{font-family:'Lora',serif;font-size:clamp(44px,8vw,80px);font-weight:700;color:#fff;letter-spacing:.04em;line-height:1;margin-bottom:6px}
+    .band-days em{color:var(--gold-lt);font-style:normal}
+    .band-label{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:8px}
+    .band-sub{font-size:18px;color:rgba(255,255,255,.55);margin-bottom:30px;font-family:'Dancing Script',cursive}
+    .band-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    /* Badge circle — from flyer */
+    .band-badge{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.07);border:2px solid rgba(240,192,64,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px}
+    .band-badge span{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-lt);line-height:1.5}
 
+    /* ══ FEATURES ══ */
+    .features{padding:64px 0;background:var(--cream)}
+    .feat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .feat-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px 14px;text-align:center;transition:all .2s}
+    .feat-card:hover{box-shadow:0 8px 24px rgba(26,46,90,.1);transform:translateY(-3px);border-color:var(--gold)}
+    .feat-icon{width:50px;height:50px;border-radius:50%;background:var(--navy);margin:0 auto 12px;display:flex;align-items:center;justify-content:center}
+    .feat-card h4{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--navy);margin-bottom:7px}
+    .feat-card p{font-size:12px;color:var(--soft);line-height:1.5}
 
-    /* ─── PROGRAMS ─── */
-    .programs { padding: 80px 0; background: var(--white); }
-    .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .prog-card {
-      border: 1.5px solid var(--border); border-radius: 16px; padding: 28px;
-      background: var(--white); transition: all .25s; cursor: pointer;
-      display: flex; flex-direction: column; position: relative; overflow: hidden;
-    }
-    .prog-card:hover { border-color: var(--gold); box-shadow: 0 12px 32px rgba(200,144,10,.12); transform: translateY(-3px); }
-    .prog-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); opacity: 0; transition: opacity .25s; }
-    .prog-card:hover .prog-accent { opacity: 1; }
-    .prog-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: var(--gold-pale); border: 1.5px solid var(--cream-dk);
-      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
-    }
-    .prog-tag {
-      position: absolute; top: 20px; right: 20px;
-      font-size: 10px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
-      color: var(--navy); background: var(--navy-pale);
-      padding: 4px 10px; border-radius: 100px;
-    }
-    .prog-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
-    .prog-card p { font-size: 14px; color: var(--text-soft); line-height: 1.7; flex: 1; margin-bottom: 18px; }
-    .prog-link { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: var(--gold); transition: gap .2s; }
-    .prog-card:hover .prog-link { gap: 10px; }
+    /* ══ PROGRAMS ══ */
+    .programs{padding:72px 0;background:var(--white)}
+    .sec-head{text-align:center;margin-bottom:44px}
+    .sec-script{font-family:'Dancing Script',cursive;font-size:28px;color:var(--gold);display:block;margin-bottom:2px}
+    .sec-h2{font-size:clamp(26px,3.5vw,40px);color:var(--navy);margin-bottom:8px}
+    .sec-sub{font-size:16px;color:var(--soft);max-width:480px;margin:0 auto}
+    .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .prog-card{border:1.5px solid var(--border);border-radius:16px;padding:28px;background:var(--white);transition:all .25s;cursor:pointer;display:flex;flex-direction:column;position:relative;overflow:hidden}
+    .prog-top-bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .25s}
+    .prog-card:hover{border-color:var(--gold);box-shadow:0 12px 32px rgba(200,144,10,.12);transform:translateY(-3px)}
+    .prog-card:hover .prog-top-bar{opacity:1}
+    .prog-ico{width:46px;height:46px;border-radius:12px;background:var(--gold-pale);border:1.5px solid var(--cream-dk);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .prog-tag{position:absolute;top:18px;right:18px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--navy);background:var(--navy-lt);padding:4px 10px;border-radius:100px}
+    .prog-card h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+    .prog-card p{font-size:14px;color:var(--soft);line-height:1.7;flex:1;margin-bottom:16px}
+    .prog-link{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--gold);transition:gap .2s}
+    .prog-card:hover .prog-link{gap:9px}
 
+    /* ══ WHAT WE TREAT ══ */
+    .treat{padding:72px 0;background:var(--gold-bg)}
+    .treat-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+    .treat-script{font-family:'Dancing Script',cursive;font-size:26px;color:var(--gold);display:block;margin-bottom:6px}
+    .treat h2{font-size:clamp(26px,3.3vw,38px);color:var(--navy);margin-bottom:18px}
+    .treat-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .treat-list li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--mid)}
+    .treat-check{width:22px;height:22px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .treat-vis{border-radius:18px;overflow:hidden;box-shadow:0 20px 48px rgba(26,46,90,.18);position:relative}
+    .treat-vis img{width:100%;height:320px;object-fit:cover}
+    .treat-vis-foot{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(26,46,90,.85) 0%,transparent 100%);padding:20px 20px 22px}
+    .treat-motto{font-family:'Dancing Script',cursive;font-size:20px;color:var(--gold-lt)}
 
-    /* ─── WHAT WE TREAT ─── */
-    .treat { padding: 72px 0; background: var(--gold-bg); }
-    .treat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .treat-text h2 { font-size: clamp(28px, 3.5vw, 40px); color: var(--navy); margin-bottom: 12px; }
-    .treat-text .script-sub { font-family: 'Dancing Script', cursive; font-size: 22px; color: var(--gold); margin-bottom: 20px; display: block; }
-    .treat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .treat-list li {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 15px; font-weight: 500; color: var(--text-mid);
-    }
-    .treat-list li::before {
-      content: '';
-      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
-      background: var(--navy); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='linejoin'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
-      background-size: 12px; background-repeat: no-repeat; background-position: center;
-    }
-    .treat-visual {
-      position: relative; border-radius: 20px; overflow: hidden;
-      box-shadow: 0 20px 48px rgba(26,46,90,.2);
-    }
-    .treat-visual img { width: 100%; height: 340px; object-fit: cover; }
-    .treat-visual-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(26,46,90,.6) 0%, transparent 50%);
-    }
-    .treat-badge {
-      position: absolute; bottom: 20px; left: 20px; right: 20px;
-      background: rgba(255,255,255,.95); border-radius: 12px; padding: 14px 18px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .treat-badge .icon { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .treat-badge p { font-size: 12px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    /* ══ YOUR JOURNEY ══ */
+    .journey{padding:72px 0;background:var(--navy);position:relative;overflow:hidden}
+    .journey::before{content:'';position:absolute;top:-100px;right:-100px;width:450px;height:450px;background:radial-gradient(ellipse,rgba(200,144,10,.1),transparent 65%)}
+    .journey-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+    .journey-script{font-family:'Dancing Script',cursive;font-size:56px;color:var(--gold-lt);line-height:1;display:block;margin-bottom:2px}
+    .journey h2{font-size:clamp(28px,3.5vw,40px);color:#fff;margin-bottom:14px}
+    .journey p{font-size:16px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:28px}
+    .journey-steps{display:flex;flex-direction:column;gap:12px}
+    .j-step{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px}
+    .j-num{width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--navy-dk);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .j-step h4{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
+    .j-step p{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.5}
 
+    /* ══ DONATIONS ══ */
+    .donations{padding:72px 0;background:var(--cream)}
+    .don-intro{text-align:center;max-width:600px;margin:0 auto 36px}
+    .don-intro .script-lg{font-family:'Dancing Script',cursive;font-size:32px;color:var(--gold);display:block;margin-bottom:4px}
+    .don-intro h2{font-size:clamp(26px,3.5vw,38px);color:var(--navy);margin-bottom:10px}
+    .don-intro p{font-size:15px;color:var(--soft);line-height:1.7}
+    .fac-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:36px}
+    .fac-strip img{border-radius:12px;width:100%;height:170px;object-fit:cover;box-shadow:0 4px 16px rgba(0,0,0,.1);transition:transform .2s}
+    .fac-strip img:hover{transform:scale(1.025)}
+    .don-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+    .don-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px;transition:box-shadow .2s}
+    .don-card:hover{box-shadow:0 6px 20px rgba(26,46,90,.08)}
+    .don-card.feat{border:2px solid var(--gold)}
+    .don-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:11px}
+    .don-icon{font-size:26px}
+    .don-badge{font-size:9.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--navy);background:var(--gold-pale);padding:3px 9px;border-radius:100px;border:1px solid var(--cream-dk)}
+    .don-card h3{font-size:16px;color:var(--navy);margin-bottom:9px}
+    .don-card ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .don-card ul li{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--mid)}
+    .don-card ul li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+    .don-cta{background:var(--navy);border-radius:16px;padding:40px 32px;text-align:center;position:relative;overflow:hidden}
+    .don-cta::before{content:'';position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:400px;height:200px;background:radial-gradient(ellipse,rgba(200,144,10,.12),transparent 65%)}
+    .don-cta h3{font-size:26px;color:#fff;margin-bottom:8px;position:relative}
+    .don-cta p{font-size:15px;color:rgba(255,255,255,.5);margin-bottom:22px;position:relative;max-width:440px;margin-left:auto;margin-right:auto}
+    .don-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
 
-    /* ─── YOUR JOURNEY ─── */
-    .journey { padding: 80px 0; background: var(--navy); position: relative; overflow: hidden; }
-    .journey::before {
-      content: '';
-      position: absolute; top: -80px; right: -80px;
-      width: 400px; height: 400px;
-      background: radial-gradient(ellipse, rgba(200,144,10,.12), transparent 70%);
-    }
-    .journey-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .journey-text .script-heading { font-family: 'Dancing Script', cursive; font-size: 52px; color: var(--gold-lt); line-height: 1.1; margin-bottom: 4px; display: block; }
-    .journey-text h2 { font-size: clamp(28px, 3.5vw, 38px); color: #fff; margin-bottom: 16px; }
-    .journey-text p { font-size: 16px; color: rgba(255,255,255,.6); line-height: 1.8; margin-bottom: 28px; }
-    .journey-steps { display: flex; flex-direction: column; gap: 16px; }
-    .journey-step {
-      display: flex; align-items: flex-start; gap: 14px;
-      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
-      border-radius: 12px; padding: 16px 18px;
-    }
-    .journey-step-num {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--gold); color: var(--navy-dk);
-      font-size: 14px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .journey-step h4 { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 3px; }
-    .journey-step p { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.5; }
+    /* ══ QUOTE ══ */
+    .quote-sec{padding:72px 0;background:var(--white)}
+    .q-inner{text-align:center;max-width:680px;margin:0 auto}
+    .q-mark{font-family:'Dancing Script',cursive;font-size:72px;color:var(--gold);line-height:.8;display:block;margin-bottom:8px}
+    .q-inner blockquote{font-family:'Lora',serif;font-size:clamp(18px,2.5vw,24px);font-style:italic;color:var(--navy);line-height:1.7;margin-bottom:18px}
+    .q-inner cite{font-style:normal;font-size:12px;font-weight:700;color:var(--soft);letter-spacing:.06em;text-transform:uppercase}
+    .q-heal{margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
+    .q-heal p{font-family:'Dancing Script',cursive;font-size:26px;color:var(--gold)}
 
+    /* ══ FAQ ══ */
+    .faq-sec{padding:72px 0;background:var(--cream)}
+    .faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:9px}
+    .faq-item{background:var(--white);border:1.5px solid var(--border);border-radius:12px;overflow:hidden}
+    .faq-item.open{border-color:var(--navy)}
+    .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;color:var(--navy);text-align:left;transition:background .15s}
+    .faq-q:hover{background:var(--navy-lt)}
+    .faq-q svg{width:17px;height:17px;color:var(--gold);flex-shrink:0;transition:transform .25s}
+    .faq-item.open .faq-q svg{transform:rotate(180deg)}
+    .faq-a{padding:0 20px 15px;font-size:14px;color:var(--mid);line-height:1.75;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-more{text-align:center;margin-top:22px}
+    .faq-more a{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:2px;transition:gap .2s}
+    .faq-more a:hover{gap:9px}
 
-    /* ─── DONATIONS ─── */
-    .donations { padding: 80px 0; background: var(--cream); }
-    .donations-intro { text-align: center; max-width: 620px; margin: 0 auto 40px; }
-    .donations-intro .script-label { font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--gold); display: block; margin-bottom: 6px; }
-    .donations-intro h2 { font-size: clamp(26px, 3.5vw, 38px); color: var(--navy); margin-bottom: 12px; }
-    .donations-intro p { font-size: 16px; color: var(--text-soft); line-height: 1.7; }
-    .facility-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 40px; }
-    .facility-strip img { border-radius: 12px; width: 100%; height: 176px; object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,.1); transition: transform .2s; }
-    .facility-strip img:hover { transform: scale(1.02); }
-    .don-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
-    .don-card {
-      background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 22px;
-      transition: box-shadow .2s;
-    }
-    .don-card:hover { box-shadow: 0 6px 20px rgba(26,46,90,.08); }
-    .don-card.featured { border: 2px solid var(--gold); }
-    .don-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
-    .don-card .icon { font-size: 26px; }
-    .don-badge { font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--navy); background: var(--gold-pale); padding: 4px 10px; border-radius: 100px; border: 1px solid var(--cream-dk); }
-    .don-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 10px; }
-    .don-card ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-    .don-card ul li { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-mid); }
-    .don-card ul li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-    .don-cta { background: var(--navy); border-radius: 16px; padding: 44px 36px; text-align: center; position: relative; overflow: hidden; }
-    .don-cta::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 400px; height: 200px; background: radial-gradient(ellipse, rgba(200,144,10,.15), transparent 70%); }
-    .don-cta h3 { font-size: 26px; color: #fff; margin-bottom: 8px; position: relative; }
-    .don-cta p { font-size: 15px; color: rgba(255,255,255,.5); margin-bottom: 24px; position: relative; max-width: 460px; margin-left: auto; margin-right: auto; }
-    .don-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+    /* ══ FINAL CTA ══ */
+    .final{padding:72px 0;background:var(--gold-bg)}
+    .final-inner{text-align:center}
+    .final-script{font-family:'Dancing Script',cursive;font-size:54px;color:var(--gold);display:block;margin-bottom:2px}
+    .final h2{font-size:clamp(28px,3.8vw,44px);color:var(--navy);margin-bottom:12px}
+    .final p{font-size:17px;color:var(--soft);margin-bottom:30px;max-width:440px;margin-left:auto;margin-right:auto}
+    .final-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+    .final-priv{display:flex;align-items:center;justify-content:center;gap:7px;font-size:12.5px;color:var(--soft)}
+    .final-priv svg{width:12px;height:12px;color:var(--gold)}
 
+    /* ══ FOOTER ══ */
+    footer{background:var(--navy-dk)}
+    .f-crisis{background:var(--navy);padding:11px 28px;text-align:center;font-size:13px;color:rgba(255,255,255,.5)}
+    .f-crisis a{color:var(--gold-lt);font-weight:700}
+    .f-main{padding:50px 28px 36px;max-width:1160px;margin:0 auto}
+    .f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+    .f-brand img{height:48px;width:auto;margin-bottom:10px;filter:brightness(0) invert(1);opacity:.85}
+    .f-tagline{font-family:'Dancing Script',cursive;font-size:19px;color:rgba(255,255,255,.35);margin-bottom:14px}
+    .f-brand p{font-size:13px;color:rgba(255,255,255,.32);line-height:1.7;margin-bottom:16px}
+    .f-contact{display:flex;flex-direction:column;gap:8px}
+    .f-contact a{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.38);transition:color .15s}
+    .f-contact a:hover{color:rgba(255,255,255,.85)}
+    .f-contact .phone{color:var(--gold-lt) !important;font-weight:700;font-size:15px}
+    .f-col h4{font-family:'Inter',sans-serif;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:12px}
+    .f-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .f-col ul a{font-size:13px;color:rgba(255,255,255,.38);transition:color .15s}
+    .f-col ul a:hover{color:rgba(255,255,255,.85)}
+    .f-col .mt{margin-top:22px}
+    .f-bot{max-width:1160px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding:15px 28px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.2)}
+    .f-bot a{color:rgba(255,255,255,.28)}
+    .f-heal{font-family:'Dancing Script',cursive;font-size:15px;color:rgba(255,255,255,.25)}
 
-    /* ─── QUOTE ─── */
-    .quote-section { padding: 80px 0; background: var(--white); }
-    .quote-inner { text-align: center; max-width: 700px; margin: 0 auto; }
-    .quote-script { font-family: 'Dancing Script', cursive; font-size: 64px; color: var(--gold); line-height: .8; margin-bottom: 12px; display: block; }
-    .quote-inner blockquote { font-family: 'Lora', serif; font-size: clamp(18px, 2.5vw, 24px); font-style: italic; color: var(--navy); line-height: 1.7; margin-bottom: 20px; }
-    .quote-inner cite { font-style: normal; font-size: 13px; font-weight: 700; color: var(--text-soft); letter-spacing: .05em; text-transform: uppercase; }
-    .quote-tagline { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--border); }
-    .quote-tagline p { font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--gold); }
-
-
-    /* ─── FAQ ─── */
-    .faq-section { padding: 80px 0; background: var(--cream); }
-    .faq-list { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
-    .faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; }
-    .faq-item.open { border-color: var(--navy); }
-    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 20px; background: none; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 14.5px; font-weight: 600; color: var(--navy); text-align: left; transition: background .15s; }
-    .faq-q:hover { background: var(--navy-pale); }
-    .faq-q svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; transition: transform .25s; }
-    .faq-item.open .faq-q svg { transform: rotate(180deg); }
-    .faq-a { padding: 0 20px 16px; font-size: 14px; color: var(--text-mid); line-height: 1.75; display: none; }
-    .faq-item.open .faq-a { display: block; }
-    .faq-more { text-align: center; margin-top: 24px; }
-    .faq-more a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 2px; transition: gap .2s; }
-    .faq-more a:hover { gap: 10px; }
-
-
-    /* ─── FINAL CTA ─── */
-    .final-cta { padding: 80px 0; background: var(--gold-pale); }
-    .final-cta-inner { text-align: center; }
-    .final-cta .script-heading { font-family: 'Dancing Script', cursive; font-size: 52px; color: var(--gold); display: block; margin-bottom: 4px; }
-    .final-cta h2 { font-size: clamp(28px, 3.8vw, 44px); color: var(--navy); margin-bottom: 12px; }
-    .final-cta p { font-size: 17px; color: var(--text-soft); margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto; }
-    .final-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-    .final-privacy { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 13px; color: var(--text-soft); }
-    .final-privacy svg { width: 13px; height: 13px; color: var(--gold); }
-
-
-    /* ─── FOOTER ─── */
-    footer { background: var(--navy-dk); }
-    .footer-crisis { background: var(--navy); padding: 12px 28px; text-align: center; font-size: 13px; color: rgba(255,255,255,.5); }
-    .footer-crisis a { color: var(--gold-lt); font-weight: 700; }
-    .footer-main { padding: 52px 28px 36px; max-width: 1160px; margin: 0 auto; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
-    .footer-brand img { height: 50px; width: auto; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: .85; }
-    .footer-tagline { font-family: 'Dancing Script', cursive; font-size: 20px; color: rgba(255,255,255,.4); margin-bottom: 16px; }
-    .footer-brand p { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.7; margin-bottom: 18px; }
-    .footer-contact { display: flex; flex-direction: column; gap: 8px; }
-    .footer-contact a { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.4); transition: color .15s; }
-    .footer-contact a:hover { color: rgba(255,255,255,.85); }
-    .footer-contact .phone { color: var(--gold-lt) !important; font-weight: 700; font-size: 15px; }
-    .footer-col h4 { font-family: 'Inter', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.25); margin-bottom: 12px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,.4); transition: color .15s; }
-    .footer-col ul a:hover { color: rgba(255,255,255,.85); }
-    .footer-col .mt { margin-top: 22px; }
-    .footer-bottom { max-width: 1160px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,.06); padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,.22); }
-    .footer-bottom a { color: rgba(255,255,255,.3); }
-    .footer-healing { font-family: 'Dancing Script', cursive; font-size: 16px; color: rgba(255,255,255,.3); }
-
-    /* Sticky CTA */
-    .sticky-call { position: fixed; bottom: 20px; right: 20px; z-index: 200; }
-    .sticky-call a { display: flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; padding: 13px 20px; border-radius: 100px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 24px rgba(26,46,90,.45); transition: all .2s; }
-    .sticky-call a:hover { background: var(--navy-dk); transform: translateY(-2px); }
-
-    svg.ph { width: 16px; height: 16px; flex-shrink: 0; }
-
-    /* Section header helper */
-    .sec-head { text-align: center; margin-bottom: 48px; }
-    .sec-script { font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--gold); display: block; margin-bottom: 4px; }
-    .sec-h2 { font-size: clamp(26px, 3.5vw, 40px); color: var(--navy); margin-bottom: 10px; }
-    .sec-sub { font-size: 16px; color: var(--text-soft); max-width: 500px; margin: 0 auto; }
+    .sticky{position:fixed;bottom:20px;right:20px;z-index:200}
+    .sticky a{display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:12px 20px;border-radius:100px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(26,46,90,.5);transition:all .2s}
+    .sticky a:hover{background:var(--navy-dk);transform:translateY(-2px)}
+    svg.ph{width:15px;height:15px;flex-shrink:0}
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
+<!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/logo.png" alt="Sunbright Recovery Center" /></a>
+  <div class="nav-in">
+    <a href="/"><img src="/logo.png" alt="Sunbright Recovery Center"/></a>
     <div class="nav-links">
-      <a href="/programs">Programs</a>
-      <a href="/what-we-treat">What We Treat</a>
-      <a href="/our-approach">Our Approach</a>
-      <a href="/admissions">Admissions</a>
-      <a href="/insurance">Insurance</a>
-      <a href="/team">Team</a>
-      <a href="/contact">Contact</a>
+      <a href="/programs">Programs</a><a href="/what-we-treat">What We Treat</a>
+      <a href="/our-approach">Our Approach</a><a href="/admissions">Admissions</a>
+      <a href="/insurance">Insurance</a><a href="/team">Team</a><a href="/contact">Contact</a>
     </div>
     <a href="tel:+15305282342" class="nav-cta">
       <svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -433,16 +268,47 @@
   </div>
 </nav>
 
-
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-stars"></div>
   <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <span class="hero-tagline-small">A Brighter Tomorrow. A Stronger You.</span>
-      <h1>Recovery<br/>Starts Here.</h1>
-      <p class="hero-descriptor">16-Bed Co-Ed Substance Use Treatment Center</p>
-      <p class="hero-sub">Compassionate care. Real results. Lasting change. Serving Northern California with faith-integrated, evidence-based addiction recovery.</p>
+
+  <!-- Sun beam SVG behind logo -->
+  <div class="hero-rays">
+    <svg width="100%" height="100%" viewBox="0 0 560 480" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="rg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#f0c040" stop-opacity=".18"/>
+          <stop offset="100%" stop-color="#f0c040" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="280" cy="240" rx="260" ry="240" fill="url(#rg)"/>
+      <g stroke="#f0c040" stroke-linecap="round" opacity=".12">
+        <line x1="280" y1="240" x2="280" y2="0" stroke-width="2.5"/>
+        <line x1="280" y1="240" x2="180" y2="8" stroke-width="2"/>
+        <line x1="280" y1="240" x2="90" y2="44" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="20" y2="110" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="0" y2="195" stroke-width="1"/>
+        <line x1="280" y1="240" x2="380" y2="8" stroke-width="2"/>
+        <line x1="280" y1="240" x2="470" y2="44" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="540" y2="110" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="560" y2="195" stroke-width="1"/>
+        <line x1="280" y1="240" x2="228" y2="4" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="332" y2="4" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="136" y2="22" stroke-width="1.5"/>
+        <line x1="280" y1="240" x2="424" y2="22" stroke-width="1.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <!-- Left: headline + CTA -->
+    <div class="hero-left">
+      <span class="hero-tagline-top">A Brighter Tomorrow. A Stronger You.</span>
+      <h1>Recovery<br/><em>Starts Here.</em></h1>
+      <p class="hero-type">16-Bed Co-Ed Substance Use Treatment Center</p>
+      <p class="hero-sub">Compassionate care. Real results. Lasting change.<br/>Faith-integrated, evidence-based addiction recovery serving Northern California.</p>
       <div class="hero-ctas">
         <a href="tel:+15305282342" class="btn btn-gold">
           <svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -452,222 +318,177 @@
       </div>
       <div class="hero-privacy">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        Completely private · HIPAA confidential · Medi-Cal accepted
+        Completely private · HIPAA confidential · Medi-Cal accepted · Nonprofit organization
       </div>
     </div>
+
+    <!-- Right: full logo + info badges -->
     <div class="hero-right">
-      <div class="hero-sun-crop" aria-hidden="true">
-        <img src="/logo.png" alt="" />
+      <div class="hero-logo-wrap">
+        <img src="/logo.png" alt="Sunbright Recovery Center" class="hero-logo-wrap" style="width:300px;filter:brightness(0) invert(1);opacity:.93;position:relative;z-index:1;"/>
       </div>
-      <div class="hero-stat-pills">
-        <div class="hero-pill"><span class="dot"></span>Nonprofit Organization</div>
-        <div class="hero-pill"><span class="dot"></span>Medi-Cal &amp; Medicare Accepted</div>
-        <div class="hero-pill"><span class="dot"></span>Faith-Integrated · Evidence-Based</div>
-        <div class="hero-pill"><span class="dot"></span>Red Bluff, Northern California</div>
+      <div class="hero-tagline-pill">Healing Today. Hope for Tomorrow.</div>
+      <div class="hero-badge-row">
+        <div class="hero-badge"><strong>Medi-Cal</strong><span>Accepted</span></div>
+        <div class="hero-badge"><strong>16 Beds</strong><span>Co-Ed Facility</span></div>
+        <div class="hero-badge"><strong>30/60/90</strong><span>Day Programs</span></div>
+        <div class="hero-badge"><strong>Nonprofit</strong><span>Organization</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- GOLD STRIP -->
+<div class="gold-strip">
+  <div class="gold-strip-in">
+    <div class="gs-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Medi-Cal &amp; Medicare Accepted</div>
+    <div class="gs-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Faith-Integrated · Never Required</div>
+    <div class="gs-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Evidence-Based Therapies</div>
+    <div class="gs-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>16-Bed Co-Ed Facility</div>
+    <div class="gs-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Red Bluff, Northern California</div>
+  </div>
+</div>
 
-<!-- ══ 30·60·90 BAND ══ -->
-<div class="program-band">
-  <div class="program-band-inner">
-    <p class="days">30 <span>•</span> 60 <span>•</span> 90 <span style="font-size:.6em;color:rgba(255,255,255,.5)">DAY</span></p>
-    <p class="prog-label">Treatment Programs</p>
-    <p class="prog-sub">Personalized care. Proven results. Lasting recovery.</p>
-    <div class="program-band-ctas">
+<!-- 30/60/90 BAND -->
+<div class="band">
+  <div class="band-inner">
+    <p class="band-label">Treatment Programs</p>
+    <p class="band-days">30 <em>•</em> 60 <em>•</em> 90 <span style="font-size:.55em;color:rgba(255,255,255,.4);font-style:normal"> DAY</span></p>
+    <p class="band-sub">Personalized care. Proven results. Lasting recovery.</p>
+    <div class="band-ctas">
       <a href="/programs" class="btn btn-gold">View All Programs</a>
       <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
     </div>
   </div>
+  <div class="band-badge">
+    <span>Recovery</span>
+    <span>Hope</span>
+    <span>Healing</span>
+    <span>New Beginnings</span>
+  </div>
 </div>
 
-
-<!-- ══ FEATURES ══ -->
+<!-- FEATURES -->
 <section class="features">
-  <div class="container">
+  <div class="wrap">
     <div class="sec-head">
       <span class="sec-script">What we offer</span>
       <h2 class="sec-h2">Comprehensive recovery support</h2>
     </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
-        </div>
-        <h4>Co-Ed Program</h4>
-        <p>A supportive environment for men and women.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-        </div>
-        <h4>16-Bed Facility</h4>
-        <p>Comfortable, private, and conducive to healing.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h4>Evidence-Based Therapies</h4>
-        <p>Individual therapy, group therapy, CBT, DBT, trauma-informed care &amp; more.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <h4>Holistic Approach</h4>
-        <p>Mind, body &amp; spirit healing for lasting recovery.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        </div>
-        <h4>Compassionate Care</h4>
-        <p>We meet you where you are and walk with you every step.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-        </div>
-        <h4>Lifelong Support</h4>
-        <p>Aftercare planning and alumni resources for continued success.</p>
-      </div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div><h4>Co-Ed Program</h4><p>A supportive environment for men and women.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div><h4>16-Bed Facility</h4><p>Comfortable, private, and conducive to healing.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h4>Evidence-Based</h4><p>CBT, DBT, trauma-informed care &amp; more.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><h4>Holistic Approach</h4><p>Mind, body &amp; spirit healing for lasting recovery.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div><h4>Compassionate Care</h4><p>We meet you where you are, every step.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div><h4>Lifelong Support</h4><p>Aftercare planning and alumni resources.</p></div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ PROGRAMS ══ -->
+<!-- PROGRAMS -->
 <section class="programs">
-  <div class="container">
+  <div class="wrap">
     <div class="sec-head">
       <span class="sec-script">Our programs</span>
       <h2 class="sec-h2">Built for real recovery</h2>
-      <p class="sec-sub">From 30-day residential to step-down sober living — personalized care every step of the way.</p>
+      <p class="sec-sub">Personalized care from 30-day residential to step-down sober living.</p>
     </div>
     <div class="prog-grid">
       <a href="/programs/residential" class="prog-card">
-        <div class="prog-accent"></div>
-        <span class="prog-tag">Primary</span>
-        <div class="prog-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
-        <h3>Residential Rehab</h3>
-        <p>30, 60, or 90-day inpatient programs. Full-time support as you build the foundation for lasting recovery.</p>
-        <span class="prog-link">Learn more <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+        <div class="prog-top-bar"></div><span class="prog-tag">Primary</span>
+        <div class="prog-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+        <h3>Residential Rehab</h3><p>30, 60, or 90-day inpatient programs. Full-time support as you build the foundation for lasting recovery.</p>
+        <span class="prog-link">Learn more <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
       <a href="/programs/outpatient" class="prog-card">
-        <div class="prog-accent"></div>
-        <div class="prog-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-        <h3>Outpatient (IOP / PHP)</h3>
-        <p>Intensive outpatient and partial hospitalization programs — structured treatment that fits around your life.</p>
-        <span class="prog-link">Learn more <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+        <div class="prog-top-bar"></div>
+        <div class="prog-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <h3>Outpatient (IOP / PHP)</h3><p>Intensive outpatient and partial hospitalization — structured treatment that fits around your life.</p>
+        <span class="prog-link">Learn more <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
       <a href="/programs/sober-living" class="prog-card">
-        <div class="prog-accent"></div>
-        <div class="prog-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
-        <h3>Sober Living & Aftercare</h3>
-        <p>Transitional housing and step-down support. Community, accountability, and a clear path forward.</p>
-        <span class="prog-link">Learn more <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+        <div class="prog-top-bar"></div>
+        <div class="prog-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c8900a" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+        <h3>Sober Living &amp; Aftercare</h3><p>Transitional housing and step-down support. Community, accountability, and a clear path forward.</p>
+        <span class="prog-link">Learn more <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-
-<!-- ══ WHAT WE TREAT ══ -->
+<!-- WHAT WE TREAT -->
 <section class="treat">
-  <div class="container">
+  <div class="wrap">
     <div class="treat-grid">
-      <div class="treat-text">
-        <span class="script-sub">We treat</span>
-        <h2>Addiction doesn't stand alone. Neither do you.</h2>
-        <ul class="treat-list">
-          <li>Alcohol Use Disorder</li>
-          <li>Opioid Addiction</li>
-          <li>Stimulant Use Disorder</li>
-          <li>Co-Occurring Disorders</li>
-          <li>Relapse Prevention</li>
-          <li>Mental Health Support</li>
+      <div>
+        <span class="treat-script">We treat</span>
+        <h2>Addiction doesn't stand alone.<br/>Neither do you.</h2>
+        <ul class="treat-list" style="margin-top:20px;">
+          {['Alcohol Use Disorder','Opioid Addiction','Stimulant Use Disorder','Co-Occurring Disorders','Relapse Prevention','Mental Health Support'].map(t => (
+            <li><div class="treat-check"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>{t}</li>
+          ))}
         </ul>
       </div>
-      <div class="treat-visual">
-        <img src="/images/facility-common-room.jpg" alt="Sunbright Recovery Center interior" />
-        <div class="treat-visual-overlay"></div>
-        <div class="treat-badge">
-          <div class="icon">
-            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-          </div>
-          <p>Recovery · Hope · Healing · New Beginnings</p>
+      <div class="treat-vis">
+        <img src="/images/facility-common-room.jpg" alt="Sunbright Recovery Center interior"/>
+        <div class="treat-vis-foot">
+          <p class="treat-motto">Recovery · Hope · Healing · New Beginnings</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ YOUR JOURNEY ══ -->
+<!-- YOUR JOURNEY -->
 <section class="journey">
-  <div class="container">
-    <div class="journey-inner">
-      <div class="journey-text">
-        <span class="script-heading">Your Journey</span>
-        <h2>Starts Here.</h2>
-        <p>You don't have to do it alone. Let Sunbright guide you toward a brighter tomorrow. One call is all it takes to begin.</p>
-        <a href="tel:+15305282342" class="btn btn-gold" style="margin-top:8px;">
+  <div class="wrap">
+    <div class="journey-grid">
+      <div>
+        <span class="journey-script">Your Journey</span>
+        <h2 style="color:#fff;margin-bottom:14px;">Starts Here.</h2>
+        <p>You don't have to do it alone. Let Sunbright guide you toward a brighter tomorrow. One call begins everything.</p>
+        <a href="tel:+15305282342" class="btn btn-gold">
           <svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           530-528-2342
         </a>
       </div>
       <div class="journey-steps">
-        <div class="journey-step">
-          <div class="journey-step-num">01</div>
-          <div><h4>Call Us</h4><p>One private conversation. No commitment. We listen first.</p></div>
-        </div>
-        <div class="journey-step">
-          <div class="journey-step-num">02</div>
-          <div><h4>Assessment</h4><p>A brief clinical assessment to find the right level of care.</p></div>
-        </div>
-        <div class="journey-step">
-          <div class="journey-step-num">03</div>
-          <div><h4>Verify Insurance</h4><p>We verify your Medi-Cal or insurance coverage — fast and free.</p></div>
-        </div>
-        <div class="journey-step">
-          <div class="journey-step-num">04</div>
-          <div><h4>Begin Recovery</h4><p>Most clients admitted within 3–5 days of their first call.</p></div>
-        </div>
+        <div class="j-step"><div class="j-num">01</div><div><h4>Call Us</h4><p>One private conversation. No commitment. We listen first.</p></div></div>
+        <div class="j-step"><div class="j-num">02</div><div><h4>Assessment</h4><p>A brief clinical assessment to find your right level of care.</p></div></div>
+        <div class="j-step"><div class="j-num">03</div><div><h4>Verify Insurance</h4><p>We verify Medi-Cal or insurance coverage — fast and free.</p></div></div>
+        <div class="j-step"><div class="j-num">04</div><div><h4>Begin Recovery</h4><p>Most clients admitted within 3–5 days of their first call.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ DONATIONS ══ -->
+<!-- DONATIONS -->
 <section class="donations">
-  <div class="container">
-    <div class="donations-intro">
-      <span class="script-label">Help us open</span>
+  <div class="wrap">
+    <div class="don-intro">
+      <span class="script-lg">Help us open</span>
       <h2>Build something beautiful with us</h2>
       <p>Sunbright is a nonprofit preparing to open its doors. We're equipping this facility room by room — and we need this community's help to make it feel like home.</p>
     </div>
-    <div class="facility-strip">
-      <img src="/images/facility-exterior.jpg" alt="Sunbright Recovery Center — Red Bluff, CA" />
-      <img src="/images/facility-common-room.jpg" alt="Common room under renovation" />
-      <img src="/images/facility-interior.jpg" alt="Interior being prepared" />
-      <img src="/images/facility-tile.jpg" alt="New flooring installed" />
+    <div class="fac-strip">
+      <img src="/images/facility-exterior.jpg" alt="Sunbright Recovery Center"/>
+      <img src="/images/facility-common-room.jpg" alt="Common room under renovation"/>
+      <img src="/images/facility-interior.jpg" alt="Interior being prepared"/>
+      <img src="/images/facility-tile.jpg" alt="New flooring installed"/>
     </div>
     <div class="don-grid">
-      <div class="don-card"><div class="don-top"><span class="icon">🛏️</span></div><h3>Furnish a Room</h3><ul><li>Mattresses & bed frames</li><li>Bedding & pillows</li><li>Washable fabric chairs</li><li>Dressers & storage</li><li>Lamps & curtains</li></ul></div>
-      <div class="don-card"><div class="don-top"><span class="icon">🍳</span></div><h3>Kitchen & Appliances</h3><ul><li>Kitchen equipment & cookware</li><li>Refrigerator & microwave</li><li>Dishes, cups & utensils</li><li>Pantry staples</li><li>Appliances of any kind</li></ul></div>
-      <div class="don-card"><div class="don-top"><span class="icon">🙌</span></div><h3>Volunteer Your Skills</h3><ul><li>Teach cooking or nutrition</li><li>Lead knitting or crafts</li><li>Garden & grow food together</li><li>Financial literacy coaching</li><li>Job readiness help</li></ul></div>
-      <div class="don-card"><div class="don-top"><span class="icon">🐓</span></div><h3>Farm & Garden</h3><ul><li>Chickens & chicken coops</li><li>Coop building supplies</li><li>Help training with animals</li><li>Seeds, soil & garden tools</li><li>Raised garden beds</li></ul></div>
-      <div class="don-card featured"><div class="don-top"><span class="icon">⛪</span><span class="don-badge">Featured</span></div><h3>Churches: Adopt a Room</h3><ul><li>Sponsor a complete bedroom</li><li>Furnish a shared living space</li><li>Ongoing prayer partnership</li><li>Volunteer as a congregation</li><li>Monthly supply donations</li></ul></div>
-      <div class="don-card"><div class="don-top"><span class="icon">💛</span></div><h3>Cash & Gift Cards</h3><ul><li>Cash donations (any amount)</li><li>Walmart gift cards</li><li>Amazon wish list items</li><li>Restaurant gift cards</li><li>Gas cards for family visits</li></ul></div>
+      <div class="don-card"><div class="don-top"><span class="don-icon">🛏️</span></div><h3>Furnish a Room</h3><ul><li>Mattresses &amp; bed frames</li><li>Bedding &amp; pillows</li><li>Washable fabric chairs</li><li>Dressers &amp; storage</li><li>Lamps &amp; curtains</li></ul></div>
+      <div class="don-card"><div class="don-top"><span class="don-icon">🍳</span></div><h3>Kitchen &amp; Appliances</h3><ul><li>Kitchen equipment &amp; cookware</li><li>Refrigerator &amp; microwave</li><li>Dishes, cups &amp; utensils</li><li>Pantry staples</li><li>Appliances of any kind</li></ul></div>
+      <div class="don-card"><div class="don-top"><span class="don-icon">🙌</span></div><h3>Volunteer Your Skills</h3><ul><li>Teach cooking or nutrition</li><li>Lead knitting or crafts</li><li>Garden &amp; grow food together</li><li>Financial literacy coaching</li><li>Job readiness help</li></ul></div>
+      <div class="don-card"><div class="don-top"><span class="don-icon">🐓</span></div><h3>Farm &amp; Garden</h3><ul><li>Chickens &amp; chicken coops</li><li>Coop building supplies</li><li>Help training with animals</li><li>Seeds, soil &amp; garden tools</li><li>Raised garden beds</li></ul></div>
+      <div class="don-card feat"><div class="don-top"><span class="don-icon">⛪</span><span class="don-badge">Featured</span></div><h3>Churches: Adopt a Room</h3><ul><li>Sponsor a complete bedroom</li><li>Furnish a shared living space</li><li>Ongoing prayer partnership</li><li>Volunteer as a congregation</li><li>Monthly supply donations</li></ul></div>
+      <div class="don-card"><div class="don-top"><span class="don-icon">💛</span></div><h3>Cash &amp; Gift Cards</h3><ul><li>Cash donations (any amount)</li><li>Walmart gift cards</li><li>Amazon wish list items</li><li>Restaurant gift cards</li><li>Gas cards for family visits</li></ul></div>
     </div>
     <div class="don-cta">
       <h3>Any way you can help matters.</h3>
       <p>Whether it's a mattress, a morning teaching cooking, or a $20 donation — every contribution brings someone closer to recovery.</p>
-      <div class="don-cta-btns">
+      <div class="don-btns">
         <a href="/donate" class="btn btn-gold">♡ Donate or Get Involved</a>
         <a href="/contact" class="btn btn-ghost">Contact Us to Volunteer</a>
       </div>
@@ -675,121 +496,87 @@
   </div>
 </section>
 
-
-<!-- ══ QUOTE ══ -->
-<section class="quote-section">
-  <div class="container">
-    <div class="quote-inner">
-      <span class="quote-script">"</span>
+<!-- QUOTE -->
+<section class="quote-sec">
+  <div class="wrap">
+    <div class="q-inner">
+      <span class="q-mark">"</span>
       <blockquote>People recover every day. Sunbright exists because healing needs a safe place to start — and Northern California deserves one.</blockquote>
       <cite>— The Founding Team · Sunbright Recovery Center</cite>
-      <div class="quote-tagline">
-        <p>Healing Today. Hope for Tomorrow. Freedom for Life.</p>
-      </div>
+      <div class="q-heal"><p>Healing Today. Hope for Tomorrow. Freedom for Life.</p></div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ FAQ ══ -->
-<section class="faq-section">
-  <div class="container">
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="wrap">
     <div class="sec-head">
       <span class="sec-script">Questions?</span>
       <h2 class="sec-h2">We have answers</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item open">
-        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Does Sunbright accept Medi-Cal?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-a">Yes. Medi-Cal is accepted and is a priority for us. Many people don't realize Medi-Cal covers substance use disorder treatment — including residential rehab. We'll verify your coverage at no cost to you.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">How quickly can I get admitted?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-a">Most clients are admitted within 3–5 days of their first call. We'll work with your insurance, complete the assessment, and get you into treatment as quickly as possible.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Is Sunbright a Christian rehab?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-a">Sunbright is faith-integrated, not faith-required. Spiritual support is available for those who want it — but recovery here does not require any particular religious belief. Everyone is welcome.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Where is Sunbright located?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-        <div class="faq-a">22425 Sunbright Ave, Red Bluff, CA 96080 — serving all of Northern California including Redding, Chico, and the Sacramento corridor.</div>
-      </div>
+      <div class="faq-item open"><button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Does Sunbright accept Medi-Cal?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Yes. Medi-Cal is accepted and is a priority for us. Many people don't realize Medi-Cal covers substance use disorder treatment — including residential rehab. We'll verify your coverage at no cost to you.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">How quickly can I get admitted?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Most clients are admitted within 3–5 days of their first call. We'll work with your insurance, complete the assessment, and get you into treatment as fast as possible.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Is Sunbright a Christian rehab?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Sunbright is faith-integrated, not faith-required. Spiritual support is available for those who want it — but recovery here does not require any particular religious belief. Everyone is welcome.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">Where is Sunbright located?<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">22425 Sunbright Ave, Red Bluff, CA 96080 — serving all of Northern California including Redding, Chico, and the Sacramento corridor.</div></div>
     </div>
     <div class="faq-more"><a href="/faqs">See all FAQs <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
   </div>
 </section>
 
-
-<!-- ══ FINAL CTA ══ -->
-<section class="final-cta">
-  <div class="container">
-    <div class="final-cta-inner">
-      <span class="script-heading final-cta">Your Journey</span>
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-inner">
+      <span class="final-script">Your Journey</span>
       <h2>Starts Here.</h2>
       <p>You don't have to do it alone. Let Sunbright guide you toward a brighter tomorrow.</p>
-      <div class="final-cta-btns">
-        <a href="tel:+15305282342" class="btn btn-navy">
-          <svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Call (530) 528-2342
-        </a>
+      <div class="final-btns">
+        <a href="tel:+15305282342" class="btn btn-navy"><svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call (530) 528-2342</a>
         <a href="/tour" class="btn btn-outline">Schedule a Tour</a>
       </div>
-      <div class="final-privacy">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        HIPAA confidential · No commitment required
-      </div>
+      <div class="final-priv"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>HIPAA confidential · No commitment required</div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-crisis">Medical emergency? Call 911. &nbsp;·&nbsp; SAMHSA: <a href="tel:+18006624357">1-800-662-4357</a></div>
-  <div class="footer-main">
-    <div class="footer-grid">
+  <div class="f-crisis">Medical emergency? Call 911. &nbsp;·&nbsp; SAMHSA: <a href="tel:+18006624357">1-800-662-4357</a></div>
+  <div class="f-main">
+    <div class="f-grid">
       <div>
-        <img src="/logo.png" alt="Sunbright Recovery Center" style="height:50px;width:auto;margin-bottom:12px;filter:brightness(0) invert(1);opacity:.85;" />
-        <p class="footer-tagline">A Brighter Tomorrow. A Stronger You.</p>
-        <p class="footer-brand">A nonprofit providing faith-integrated, evidence-based addiction recovery in Northern California.</p>
-        <div class="footer-contact">
+        <div class="f-brand"><img src="/logo.png" alt="Sunbright Recovery Center"/></div>
+        <p class="f-tagline">A Brighter Tomorrow. A Stronger You.</p>
+        <p class="f-brand">A nonprofit providing faith-integrated, evidence-based addiction recovery in Northern California.</p>
+        <div class="f-contact">
           <a href="tel:+15305282342" class="phone"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(530) 528-2342</a>
           <a href="mailto:info@sunbrightrecovery.com">info@sunbrightrecovery.com</a>
           <a href="#">22425 Sunbright Ave, Red Bluff, CA 96080</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul><li><a href="/programs/residential">Residential Rehab</a></li><li><a href="/programs/outpatient">Outpatient (IOP/PHP)</a></li><li><a href="/programs/sober-living">Sober Living</a></li></ul>
-        <h4 class="mt">What We Treat</h4>
-        <ul><li><a href="/what-we-treat/alcohol">Alcohol Use Disorder</a></li><li><a href="/what-we-treat/opioids">Opioid Addiction</a></li><li><a href="/what-we-treat/dual-diagnosis">Dual Diagnosis</a></li><li><a href="/what-we-treat/trauma-addiction">Trauma & Addiction</a></li></ul>
+      <div class="f-col">
+        <h4>Programs</h4><ul><li><a href="/programs/residential">Residential Rehab</a></li><li><a href="/programs/outpatient">Outpatient (IOP/PHP)</a></li><li><a href="/programs/sober-living">Sober Living</a></li></ul>
+        <h4 class="mt">What We Treat</h4><ul><li><a href="/what-we-treat/alcohol">Alcohol Use Disorder</a></li><li><a href="/what-we-treat/opioids">Opioid Addiction</a></li><li><a href="/what-we-treat/dual-diagnosis">Dual Diagnosis</a></li><li><a href="/what-we-treat/trauma-addiction">Trauma &amp; Addiction</a></li></ul>
       </div>
-      <div class="footer-col">
-        <h4>About</h4>
-        <ul><li><a href="/about">About Sunbright</a></li><li><a href="/our-approach">Our Approach</a></li><li><a href="/team">Our Team</a></li><li><a href="/family-resources">Family Resources</a></li><li><a href="/admissions">Admissions</a></li><li><a href="/insurance">Insurance</a></li><li><a href="/faqs">FAQs</a></li><li><a href="/contact">Contact</a></li></ul>
+      <div class="f-col">
+        <h4>About</h4><ul><li><a href="/about">About Sunbright</a></li><li><a href="/our-approach">Our Approach</a></li><li><a href="/team">Our Team</a></li><li><a href="/family-resources">Family Resources</a></li><li><a href="/admissions">Admissions</a></li><li><a href="/insurance">Insurance</a></li><li><a href="/faqs">FAQs</a></li><li><a href="/contact">Contact</a></li></ul>
       </div>
-      <div class="footer-col">
-        <h4>Insurance</h4>
-        <ul><li><a href="/insurance">Medi-Cal</a></li><li><a href="/insurance">Medicare</a></li><li><a href="/insurance">Private Insurance</a></li><li><a href="/insurance">Sliding Scale</a></li></ul>
-        <h4 class="mt">Contact</h4>
-        <ul><li><a href="tel:+15305282342">530-528-2342</a></li><li><a href="mailto:info@sunbrightrecovery.com">info@sunbrightrecovery.com</a></li></ul>
-        <p style="font-size:12px;color:rgba(255,255,255,.2);margin-top:20px;">An affiliate of <a href="https://phwcare.com" style="color:rgba(255,255,255,.3)">Parish Health & Wellness</a></p>
+      <div class="f-col">
+        <h4>Insurance</h4><ul><li><a href="/insurance">Medi-Cal</a></li><li><a href="/insurance">Medicare</a></li><li><a href="/insurance">Private Insurance</a></li><li><a href="/insurance">Sliding Scale</a></li></ul>
+        <h4 class="mt">Contact</h4><ul><li><a href="tel:+15305282342">530-528-2342</a></li><li><a href="mailto:info@sunbrightrecovery.com">info@sunbrightrecovery.com</a></li></ul>
+        <p style="font-size:12px;color:rgba(255,255,255,.18);margin-top:18px;">An affiliate of <a href="https://phwcare.com" style="color:rgba(255,255,255,.28)">Parish Health &amp; Wellness</a></p>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="f-bot">
     <span>&copy; 2026 Sunbright Recovery Center. All rights reserved.</span>
-    <span class="footer-healing">Healing Today. Hope for Tomorrow. Freedom for Life.</span>
+    <span class="f-heal">Healing Today. Hope for Tomorrow. Freedom for Life.</span>
   </div>
 </footer>
 
-<div class="sticky-call">
-  <a href="tel:+15305282342">
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-    Call Now
-  </a>
-</div>
+<div class="sticky"><a href="tel:+15305282342"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call Now</a></div>
 
 </body>
 </html>
