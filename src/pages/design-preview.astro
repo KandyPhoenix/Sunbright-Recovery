@@ -78,16 +78,19 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — sun much bigger, text cropped out, anchored to bottom */
-    .hero-right{position:relative;min-height:480px;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
+    /* Right panel — sun absolutely centered so rays radiate evenly on both sides */
+    .hero-right{position:relative;min-height:480px;overflow:visible}
     .hero-sun-only{
-      position:relative;
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
       width:200%;
-      margin-left:-50%;
-      margin-right:-50%;
-      height:440px;          /* taller container shows more of the (bigger) sun */
+      height:440px;
       overflow:hidden;
       pointer-events:none;
+      display:flex;
+      justify-content:center;
     }
     .hero-sun-only img{
       width:100%;
