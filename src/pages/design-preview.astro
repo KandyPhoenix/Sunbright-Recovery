@@ -78,11 +78,20 @@
     .hero-privacy{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.38)}
     .hero-privacy svg{width:12px;height:12px;color:var(--gold-lt);flex-shrink:0}
 
-    /* Right panel — large logo */
-    .hero-right{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
-    .hero-logo-big{position:relative;display:flex;align-items:center;justify-content:center;padding:30px;width:100%}
-    .hero-logo-big::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.18) 0%,transparent 70%);border-radius:50%}
-    .hero-logo-big img{width:100%;max-width:380px;filter:brightness(0) invert(1);opacity:.95;position:relative;z-index:1}
+    /* Right panel — giant sun cropped from logo */
+    .hero-right{display:flex;align-items:center;justify-content:center;position:relative;min-height:520px;overflow:visible}
+    .hero-sun-only{position:relative;width:100%;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero-sun-only::before{content:'';position:absolute;inset:-40px;background:radial-gradient(ellipse at center,rgba(240,192,64,.25) 0%,rgba(240,192,64,.05) 50%,transparent 70%);pointer-events:none}
+    /* Logo is sized huge; positioned so only the sun (top portion) shows in the visible area */
+    .hero-sun-only img{
+      width:1200px;
+      max-width:none;
+      filter:brightness(0) invert(1);
+      opacity:.96;
+      position:relative;
+      z-index:1;
+      transform:translateY(20%);
+    }
     .hero-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:20px}
     .hero-logo-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse,rgba(240,192,64,.15) 0%,transparent 70%);border-radius:50%}
     .hero-logo-wrap img{width:300px;filter:brightness(0) invert(1);opacity:.93;position:relative;z-index:1}
@@ -329,10 +338,10 @@
       </div>
     </div>
 
-    <!-- Right: large logo only -->
+    <!-- Right: giant sun (cropped from logo) -->
     <div class="hero-right">
-      <div class="hero-logo-big">
-        <img src="/logo.png" alt="Sunbright Recovery Center"/>
+      <div class="hero-sun-only" aria-hidden="true">
+        <img src="/logo.png" alt=""/>
       </div>
     </div>
   </div>
