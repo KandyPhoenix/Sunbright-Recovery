@@ -148,6 +148,16 @@
     .about-visual-cap span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:4px;display:block}
     .about-visual-cap p{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.4}
 
+    /* ══ NONPROFIT BAND — quick benefit callout ══ */
+    .nonprofit-band{padding:48px 0;background:var(--navy);position:relative;overflow:hidden}
+    .nonprofit-band::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(ellipse,rgba(200,144,10,.08),transparent 65%)}
+    .nonprofit-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+    .np-card{display:flex;align-items:flex-start;gap:14px}
+    .np-icon{width:42px;height:42px;border-radius:10px;background:rgba(240,192,64,.12);border:1px solid rgba(240,192,64,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .np-icon svg{width:22px;height:22px;color:var(--gold-lt)}
+    .np-card h3{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:.01em}
+    .np-card p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6}
+
     /* ══ WHY SUNBRIGHT — Option B styling ══ */
     .why{padding:80px 0;background:var(--cream)}
     .why-head{text-align:center;margin-bottom:56px}
@@ -214,6 +224,8 @@
     .don-intro .eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;display:block}
     .don-intro h2{font-family:'Lora',serif;font-size:clamp(34px,4.5vw,52px);color:#2a2a18;margin-bottom:18px;line-height:1.1;letter-spacing:-.01em}
     .don-intro p{font-size:16px;color:#3a3a28;line-height:1.7;max-width:560px}
+    .don-intro p.tax-deduct{font-size:13px;color:#5a5a45;display:flex;align-items:center;gap:7px;margin-top:12px;font-style:italic}
+    .don-intro p.tax-deduct svg{color:var(--gold);flex-shrink:0}
     .don-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
     .don-card{background:var(--white);border:1px solid #e8e0cf;border-radius:14px;padding:24px;transition:all .2s;position:relative}
     .don-card:hover{box-shadow:0 6px 20px rgba(26,46,90,.06);transform:translateY(-2px)}
@@ -419,9 +431,9 @@
   <div class="wrap">
     <div class="about-grid">
       <div class="about-text">
-        <span class="eyebrow">About Sunbright</span>
-        <h2>A nonprofit recovery center built by and for our community.</h2>
-        <p>Sunbright Recovery Center exists because Northern California needs more compassionate, accessible addiction treatment. We're a nonprofit organization built to serve real people facing real challenges — not a corporate facility designed for profit.</p>
+        <span class="eyebrow">About Sunbright · 501(c)(3) Nonprofit</span>
+        <h2>We're not a corporate rehab. We're a nonprofit built to serve our community.</h2>
+        <p>Most rehabs in California are owned by national chains charging $30,000+ a month to maximize shareholder returns. Sunbright is different. As a 501(c)(3) nonprofit, every dollar — from program fees, donations, and grants — goes back into care. Not profits. Not investors. Care.</p>
         <p>Our 16-bed co-ed residential facility in Red Bluff combines faith-integrated support, evidence-based therapies, and the warmth of a community that believes everyone deserves a chance to heal.</p>
         <div class="about-stats">
           <div class="about-stat">
@@ -433,8 +445,8 @@
             <span>Levels of Care</span>
           </div>
           <div class="about-stat">
-            <strong>100%</strong>
-            <span>Nonprofit Mission</span>
+            <strong>501(c)(3)</strong>
+            <span>Nonprofit</span>
           </div>
         </div>
       </div>
@@ -444,6 +456,35 @@
           <span>Red Bluff, California</span>
           <p>Where healing finds a home.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT NONPROFIT MEANS — quick benefit callout -->
+<section class="nonprofit-band">
+  <div class="wrap">
+    <div class="nonprofit-grid">
+      <div class="np-card">
+        <div class="np-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>Real care, not revenue targets</h3>
+        <p>No upselling, no surprise charges, no quarterly earnings calls. Our only goal is your recovery.</p>
+      </div>
+      <div class="np-card">
+        <div class="np-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Donations are tax-deductible</h3>
+        <p>Every contribution helps someone heal — and qualifies as a tax-deductible gift to a registered 501(c)(3).</p>
+      </div>
+      <div class="np-card">
+        <div class="np-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3>Community-accountable</h3>
+        <p>Governed by a board, answerable to the people we serve — not Wall Street, not private equity.</p>
       </div>
     </div>
   </div>
@@ -586,6 +627,7 @@
       <span class="eyebrow">Get Involved</span>
       <h2>We're building this home together.</h2>
       <p>Sunbright is real, and it's still being equipped. The walls are up and the tile is going down — now we're filling it with the things that make a house a home. Here's how you can be part of someone's recovery.</p>
+      <p class="tax-deduct"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Sunbright Recovery Center is a 501(c)(3) nonprofit organization. All contributions are tax-deductible to the extent allowed by law.</p>
     </div>
 
     <div class="don-grid">
