@@ -331,29 +331,6 @@
     .f-bot a:hover{color:var(--gold-lt)}
     .f-heal{font-family:'Dancing Script',cursive;font-size:15px;color:rgba(255,255,255,.25)}
 
-    /* ══ GREENERY BAND — photographic foliage strip above footer ══ */
-    /* TO REMOVE: delete the <div class="greenery-band"> in the HTML or set display:none here */
-    .greenery-band{
-      width:100%;
-      height:140px;
-      background-image:url('/images/plants/greenery-1.jpg');
-      background-size:cover;
-      background-position:center bottom;
-      background-repeat:no-repeat;
-      position:relative;
-      margin-bottom:-1px;
-    }
-    /* Soft fade at top of band into the section above */
-    .greenery-band::before{
-      content:'';position:absolute;inset:0 0 auto 0;height:50px;
-      background:linear-gradient(to bottom,var(--cream),transparent);
-    }
-    /* Soft fade at bottom into the footer */
-    .greenery-band::after{
-      content:'';position:absolute;inset:auto 0 0 0;height:40px;
-      background:linear-gradient(to top,var(--navy-dk),transparent);
-    }
-
     .sticky{position:fixed;bottom:20px;right:20px;z-index:200}
     .sticky a{display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:12px 20px;border-radius:100px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(26,46,90,.5);transition:all .2s}
     .sticky a:hover{background:var(--navy-dk);transform:translateY(-2px)}
@@ -898,9 +875,6 @@
 </section>
 
 <!-- FOOTER -->
-<!-- Greenery band — photographic foliage strip transitioning into the footer -->
-<div class="greenery-band" aria-hidden="true"></div>
-
 <footer>
   <div class="f-crisis">Medical emergency? Call 911. &nbsp;·&nbsp; SAMHSA: <a href="tel:+18006624357">1-800-662-4357</a></div>
   <div class="f-main">
