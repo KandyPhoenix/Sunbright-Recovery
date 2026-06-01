@@ -149,14 +149,15 @@
     .about-visual-cap p{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.4}
 
     /* ══ NONPROFIT BAND — quick benefit callout ══ */
-    .nonprofit-band{padding:48px 0;background:var(--navy);position:relative;overflow:hidden}
-    .nonprofit-band::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(ellipse,rgba(200,144,10,.08),transparent 65%)}
-    .nonprofit-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-    .np-card{display:flex;align-items:flex-start;gap:14px}
-    .np-icon{width:42px;height:42px;border-radius:10px;background:rgba(240,192,64,.12);border:1px solid rgba(240,192,64,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .np-icon svg{width:22px;height:22px;color:var(--gold-lt)}
-    .np-card h3{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:.01em}
-    .np-card p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6}
+    .nonprofit-band{padding:72px 0;background:var(--navy);position:relative;overflow:hidden}
+    .nonprofit-band::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:radial-gradient(ellipse,rgba(200,144,10,.08),transparent 65%)}
+    .nonprofit-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+    .np-card{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+    .np-icon{width:52px;height:52px;border-radius:12px;background:rgba(240,192,64,.12);border:1px solid rgba(240,192,64,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .np-icon svg{width:26px;height:26px;color:var(--gold-lt)}
+    .np-card-body{display:flex;flex-direction:column}
+    .np-card h3{font-family:'Lora',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-.005em;line-height:1.3}
+    .np-card p{font-size:14px;color:rgba(255,255,255,.62);line-height:1.75}
 
     /* ══ WHY SUNBRIGHT — Option B styling ══ */
     .why{padding:80px 0;background:var(--cream)}
@@ -468,22 +469,28 @@
         <div class="np-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
         </div>
-        <h3>Real care, not revenue targets</h3>
-        <p>No upselling, no surprise charges, no quarterly earnings calls. Our only goal is your recovery.</p>
+        <div class="np-card-body">
+          <h3>Real care, not revenue targets</h3>
+          <p>No upselling, no surprise charges, no quarterly earnings calls. Our only goal is your recovery.</p>
+        </div>
       </div>
       <div class="np-card">
         <div class="np-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <h3>Donations are tax-deductible</h3>
-        <p>Every contribution helps someone heal — and qualifies as a tax-deductible gift to a registered 501(c)(3).</p>
+        <div class="np-card-body">
+          <h3>Donations are tax-deductible</h3>
+          <p>Every contribution helps someone heal — and qualifies as a tax-deductible gift to a registered 501(c)(3).</p>
+        </div>
       </div>
       <div class="np-card">
         <div class="np-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
         </div>
-        <h3>Community-accountable</h3>
-        <p>Governed by a board, answerable to the people we serve — not Wall Street, not private equity.</p>
+        <div class="np-card-body">
+          <h3>Community-accountable</h3>
+          <p>Governed by a board, answerable to the people we serve — not Wall Street, not private equity.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -587,7 +594,7 @@
         </ul>
       </div>
       <div class="treat-vis">
-        <img src="/images/hug-for-hope.png" alt="Two people embracing — connection and support in recovery"/>
+        <img src="/images/facility-common-room.jpg" alt="The Sunbright Recovery Center common room — where group therapy and community happen"/>
         <div class="treat-vis-foot">
           <p class="treat-motto">Recovery · Hope · Healing · New Beginnings</p>
         </div>
