@@ -43,7 +43,7 @@
     nav.nav-scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(26,46,90,.08)}
     .nav-in{max-width:1160px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:110px;overflow:hidden}
     /* Logo: white over hero, restored color when scrolled */
-    .nav-in img{height:128px;width:auto;flex-shrink:0;filter:brightness(0) invert(1);opacity:.95;transition:filter .3s,opacity .3s}
+    .nav-in img{height:108px;width:auto;flex-shrink:0;filter:brightness(0) invert(1);opacity:.95;transition:filter .3s,opacity .3s}
     nav.nav-scrolled .nav-in img{filter:none;opacity:1}
     .nav-links{display:flex;align-items:center;gap:2px}
     /* Nav links: white over hero, navy when scrolled */
@@ -980,8 +980,8 @@
     const heroEl = document.querySelector('.hero');
     if (!navEl || !heroEl) return;
     const onScroll = () => {
-      const threshold = heroEl.offsetHeight - 80;
-      navEl.classList.toggle('nav-scrolled', window.scrollY > threshold);
+      // Switch to solid nav as soon as the user starts scrolling
+      navEl.classList.toggle('nav-scrolled', window.scrollY > 20);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
