@@ -139,14 +139,14 @@
     .band-badge span{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-lt);line-height:1.5}
 
     /* ══ ABOUT US — full-bleed image right, text fades from left ══ */
-    .about{padding:84px 0;background:var(--white);position:relative;overflow:hidden;min-height:540px}
-    /* Full-bleed building image filling the right side */
-    .about-bg-image{position:absolute;top:0;bottom:0;right:0;width:58%;z-index:0}
-    .about-bg-image img{width:100%;height:100%;object-fit:cover;object-position:center 60%;transform:scale(1.45);transform-origin:center 60%;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
-    /* Soft cream fade-out from right edge of text into the image */
+    .about{padding:72px 0;background:var(--white);position:relative;overflow:hidden}
+    /* Full-bleed building image filling the right portion */
+    .about-bg-image{position:absolute;top:0;bottom:0;right:0;width:55%;z-index:0}
+    .about-bg-image img{width:100%;height:100%;object-fit:cover;object-position:30% 60%;transform:scale(1.45);transform-origin:30% 60%;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
+    /* Hard fade — fully cream behind the text, only fades to image past 50% of the container */
     .about-bg-image::after{
       content:'';position:absolute;inset:0;
-      background:linear-gradient(to right, var(--white) 0%, rgba(255,255,255,.96) 18%, rgba(255,255,255,.7) 32%, rgba(255,255,255,.15) 55%, transparent 75%);
+      background:linear-gradient(to right, var(--white) 0%, var(--white) 38%, rgba(255,255,255,.7) 55%, rgba(255,255,255,.15) 80%, transparent 95%);
       pointer-events:none;
     }
     /* Subtle warm sky overlay */
