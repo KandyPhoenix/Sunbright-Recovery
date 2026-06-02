@@ -143,9 +143,9 @@
     .about-stat strong{display:block;font-family:'Lora',serif;font-size:32px;color:var(--gold);font-weight:700;line-height:1;margin-bottom:4px}
     .about-stat span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
     .about-visual{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(26,46,90,.18);aspect-ratio:5/4}
-    .about-visual img{width:100%;height:100%;object-fit:cover;object-position:center 65%;transform:scale(1.85);transform-origin:center 65%;filter:brightness(1.18) contrast(1.12) saturate(1.18)}
-    /* Sky-brightening gradient overlay — softens the gray sky */
-    .about-visual-sky-brighten{position:absolute;top:0;left:0;right:0;height:60%;background:linear-gradient(to bottom,rgba(255,235,195,.5) 0%,rgba(255,235,195,.25) 50%,transparent 100%);pointer-events:none;z-index:1}
+    .about-visual img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
+    /* Subtle sky warming overlay */
+    .about-visual-sky-brighten{position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(to bottom,rgba(255,240,210,.18) 0%,transparent 100%);pointer-events:none;z-index:1}
     .about-visual-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(26,46,90,.85),transparent);padding:24px 22px;color:#fff}
     .about-visual-cap span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:4px;display:block}
     .about-visual-cap p{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.4}
@@ -476,7 +476,7 @@
         </div>
       </div>
       <div class="about-visual">
-        <img src="/images/facility-front.jpg" alt="The front of Sunbright Recovery Center in Red Bluff, California"/>
+        <img src="/images/phw-about-hero.jpg" alt="The front entrance of Sunbright Recovery Center in Red Bluff, California"/>
         <div class="about-visual-sky-brighten" aria-hidden="true"></div>
         <div class="about-visual-cap">
           <span>Red Bluff, California</span>
