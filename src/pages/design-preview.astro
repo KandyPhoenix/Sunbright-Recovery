@@ -41,7 +41,7 @@
     /* NAV */
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(26,46,90,.08)}
     .nav-in{max-width:1160px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:110px;overflow:hidden}
-    .nav-in img{height:140px;width:auto;flex-shrink:0}
+    .nav-in img{height:128px;width:auto;flex-shrink:0}
     .nav-links{display:flex;align-items:center;gap:2px}
     .nav-links a{padding:8px 12px;border-radius:6px;font-size:14.5px;font-weight:600;color:var(--navy);transition:all .15s;letter-spacing:-.005em}
     .nav-links a:hover{color:var(--gold-dk);background:var(--navy-lt)}
@@ -329,8 +329,12 @@
 
     /* ══ FOOTER ══ */
     footer{background:var(--navy-dk)}
-    .f-crisis{background:var(--navy);padding:11px 28px;text-align:center;font-size:13px;color:rgba(255,255,255,.5)}
-    .f-crisis a{color:var(--gold-lt);font-weight:700}
+    .f-crisis{background:var(--navy);padding:11px 28px;text-align:center;font-size:13px;color:rgba(255,255,255,.6)}
+    .f-crisis a{color:var(--gold-lt);font-weight:700;transition:color .2s}
+    .f-crisis a:hover{color:#fff}
+    .f-samhsa{padding:10px 28px;text-align:center;font-size:11.5px;color:rgba(255,255,255,.32);border-top:1px solid rgba(255,255,255,.04)}
+    .f-samhsa a{color:rgba(255,255,255,.55);text-decoration:underline;text-decoration-color:rgba(240,192,64,.4);text-underline-offset:2px;transition:color .15s}
+    .f-samhsa a:hover{color:var(--gold-lt)}
     .f-main{padding:28px 28px 20px;max-width:1160px;margin:0 auto}
     .f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;align-items:start}
     .f-brand img{width:100%;max-width:280px;height:auto;margin-bottom:6px;margin-top:-8px;filter:brightness(0) invert(1);opacity:.92;display:block}
@@ -922,7 +926,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="f-crisis">Medical emergency? Call 911. &nbsp;·&nbsp; SAMHSA: <a href="tel:+18006624357">1-800-662-4357</a></div>
+  <div class="f-crisis">Call us: <a href="tel:+15305282342">(530) 528-2342</a> &nbsp;·&nbsp; Medical emergency: 911</div>
   <div class="f-main">
     <div class="f-grid">
       <div>
@@ -948,6 +952,9 @@
         <ul><li><a href="/admissions">Private Pay Accepted</a></li><li><a href="/admissions">Insurance Coming Soon</a></li></ul>
       </div>
     </div>
+  </div>
+  <div class="f-samhsa">
+    Need help finding treatment elsewhere? The free, confidential <a href="tel:+18006624357">SAMHSA National Helpline</a> is available at 1-800-662-4357.
   </div>
   <div class="f-bot">
     <span>&copy; 2026 <a href="/">Sunbright Recovery Center</a> · Site by <a href="https://phoenixmethodseo.com">Phoenix Method SEO</a></span>
