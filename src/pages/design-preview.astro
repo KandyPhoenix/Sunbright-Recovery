@@ -151,7 +151,7 @@
     .about-stat span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
     /* Card matches the full height of the text column on the left */
     .about-visual{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(26,46,90,.22);height:100%;min-height:480px}
-    .about-visual img{width:100%;height:100%;object-fit:cover;object-position:center 55%;transform:scale(1.8);transform-origin:center 55%;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
+    .about-visual img{width:100%;height:100%;object-fit:cover;object-position:center 55%;transform:scale(1.6);transform-origin:center 55%;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
     .about-visual-sky-brighten{position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(to bottom,rgba(255,240,210,.18) 0%,transparent 100%);pointer-events:none;z-index:1}
     .about-visual-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(26,46,90,.85),transparent);padding:24px 22px;color:#fff;z-index:2}
     .about-visual-cap span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:4px;display:block}
@@ -177,12 +177,21 @@
     .why-eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
     .why-head h2{font-family:'Lora',serif;font-size:clamp(32px,4.5vw,52px);color:var(--navy);margin-bottom:10px;font-weight:700;letter-spacing:-.01em}
     .why-head .sub{font-size:16px;color:var(--soft)}
-    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1000px;margin:0 auto}
-    .why-card{text-align:center}
-    .why-icon{width:72px;height:72px;border-radius:50%;background:var(--navy);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(26,46,90,.2)}
-    .why-icon svg{width:30px;height:30px;color:var(--gold-lt)}
-    .why-card h3{font-family:'Lora',serif;font-size:21px;font-weight:700;color:var(--navy);margin-bottom:12px}
-    .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75;max-width:280px;margin:0 auto}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1080px;margin:0 auto}
+    .why-card{position:relative;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px 28px 32px;text-align:center;transition:all .3s;box-shadow:0 4px 16px rgba(26,46,90,.05);overflow:hidden}
+    .why-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent);transition:width .35s ease;opacity:0}
+    .why-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(26,46,90,.15);border-color:var(--gold-lt)}
+    .why-card:hover::before{width:80%;opacity:1}
+    /* Icon stack — navy circle with gold ring around it */
+    .why-icon-wrap{position:relative;width:88px;height:88px;margin:0 auto 24px}
+    .why-icon-wrap::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1.5px solid var(--gold-lt);opacity:.45;transition:transform .3s,opacity .3s}
+    .why-icon-wrap::after{content:'';position:absolute;inset:-16px;border-radius:50%;border:1px dashed rgba(240,192,64,.25);transition:transform .35s ease,opacity .3s}
+    .why-card:hover .why-icon-wrap::before{transform:scale(1.06);opacity:.8}
+    .why-card:hover .why-icon-wrap::after{transform:scale(1.08) rotate(8deg);opacity:.55}
+    .why-icon{width:100%;height:100%;border-radius:50%;background:linear-gradient(140deg,var(--navy-mid) 0%,var(--navy) 60%,var(--navy-dk) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(26,46,90,.3),inset 0 1px 0 rgba(255,255,255,.1)}
+    .why-icon svg{width:32px;height:32px;color:var(--gold-lt)}
+    .why-card h3{font-family:'Lora',serif;font-size:21px;font-weight:700;color:var(--navy);margin-bottom:12px;letter-spacing:-.005em}
+    .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75;margin:0 auto}
 
     /* ══ PROGRAMS ══ */
     .programs{padding:72px 0;background:var(--white)}
@@ -595,32 +604,38 @@
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728l.707.707M1 12h2m18 0h2M4.22 19.78l.707-.707M18.364 5.636l.707-.707"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor"/>
-          </svg>
+        <div class="why-icon-wrap">
+          <div class="why-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728l.707.707M1 12h2m18 0h2M4.22 19.78l.707-.707M18.364 5.636l.707-.707"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor"/>
+            </svg>
+          </div>
         </div>
         <h3>Faith-integrated, never required</h3>
         <p>Recovery rooted in hope and meaning. Spiritual support is available for those who want it — never pushed on those who don't.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-          </svg>
+        <div class="why-icon-wrap">
+          <div class="why-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
         </div>
         <h3>Evidence-based therapies</h3>
         <p>CBT, motivational interviewing, trauma-informed care, and family systems work — proven approaches that actually heal.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-          </svg>
+        <div class="why-icon-wrap">
+          <div class="why-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+          </div>
         </div>
-        <h3>Most insurances coming soon</h3>
-        <p>Currently accepting private pay. We're actively credentialing with major commercial and government insurances. Call us about payment options — we'll find a path that works.</p>
+        <h3>Flexible payment options</h3>
+        <p>We accept private pay today, with insurance partnerships expanding throughout the year. Call us and we'll walk through what works for you.</p>
       </div>
     </div>
   </div>
