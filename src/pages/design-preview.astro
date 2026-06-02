@@ -138,14 +138,16 @@
     .band-badge{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.07);border:2px solid rgba(240,192,64,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px}
     .band-badge span{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-lt);line-height:1.5}
 
-    /* ══ ABOUT US — card returns, bigger ══ */
+    /* ══ ABOUT US — card aligns with headline+paragraphs, stats sit below ══ */
     .about{padding:72px 0;background:var(--white)}
-    .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:stretch}
-    .about-text{}
-    .about-text .eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
-    .about-text h2{font-family:'Lora',serif;font-size:clamp(28px,3.6vw,42px);color:var(--navy);margin-bottom:18px;line-height:1.15;letter-spacing:-.01em}
-    .about-text p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:14px}
-    .about-text p:last-of-type{margin-bottom:24px}
+    .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;column-gap:56px;row-gap:0;align-items:stretch}
+    .about-text-main{grid-column:1;grid-row:1;align-self:start}
+    .about-visual{grid-column:2;grid-row:1;align-self:stretch}
+    .about-stats-row{grid-column:1;grid-row:2;align-self:start}
+    .about-text-main .eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+    .about-text-main h2{font-family:'Lora',serif;font-size:clamp(28px,3.6vw,42px);color:var(--navy);margin-bottom:18px;line-height:1.15;letter-spacing:-.01em}
+    .about-text-main p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:14px}
+    .about-text-main p:last-of-type{margin-bottom:0}
     .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
     .about-stat strong{display:block;font-family:'Lora',serif;font-size:30px;color:var(--gold);font-weight:700;line-height:1;margin-bottom:4px}
     .about-stat span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
@@ -483,12 +485,22 @@
 <section class="about">
   <div class="wrap">
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text-main">
         <span class="eyebrow">About Sunbright</span>
         <h2>A place built for healing.</h2>
         <p>Sunbright Recovery Center was built around one belief: every person who walks through our doors deserves to be treated with dignity, met with compassion, and given real tools for lasting recovery.</p>
         <p>Our 16-bed residential program in Red Bluff combines evidence-based therapy, faith-integrated support, and the warmth of a small community that learns your name and walks with you — through treatment, and long after.</p>
         <p style="font-size:14px;color:var(--soft);font-style:italic;">As a 501(c)(3) nonprofit, our focus stays where it belongs — on the people we serve.</p>
+      </div>
+      <div class="about-visual">
+        <img src="/images/phw-about-hero.jpg" alt="The front entrance of Sunbright Recovery Center in Red Bluff, California"/>
+        <div class="about-visual-sky-brighten" aria-hidden="true"></div>
+        <div class="about-visual-cap">
+          <span>Red Bluff, California</span>
+          <p>Where healing finds a center.</p>
+        </div>
+      </div>
+      <div class="about-stats-row">
         <div class="about-stats">
           <div class="about-stat">
             <strong>16</strong>
@@ -502,14 +514,6 @@
             <strong>30/60/90</strong>
             <span>Day Programs</span>
           </div>
-        </div>
-      </div>
-      <div class="about-visual">
-        <img src="/images/phw-about-hero.jpg" alt="The front entrance of Sunbright Recovery Center in Red Bluff, California"/>
-        <div class="about-visual-sky-brighten" aria-hidden="true"></div>
-        <div class="about-visual-cap">
-          <span>Red Bluff, California</span>
-          <p>Where healing finds a center.</p>
         </div>
       </div>
     </div>
