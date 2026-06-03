@@ -207,7 +207,8 @@
     .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75}
 
     /* ══ PROGRAMS ══ */
-    .programs{padding:72px 0;background:var(--white)}
+    .programs{padding:72px 0;background:var(--gold-bg);position:relative}
+    .programs::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:3px;background:var(--gold-lt);border-radius:2px}
     .sec-head{text-align:center;margin-bottom:44px}
     .sec-script{font-family:'Dancing Script',cursive;font-size:28px;color:var(--gold);display:block;margin-bottom:2px}
     .sec-h2{font-size:clamp(26px,3.5vw,40px);color:var(--navy);margin-bottom:8px}
