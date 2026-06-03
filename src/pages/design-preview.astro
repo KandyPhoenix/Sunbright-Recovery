@@ -161,12 +161,14 @@
     .about-stat strong{display:block;font-family:'Lora',serif;font-size:30px;color:var(--gold);font-weight:700;line-height:1;margin-bottom:4px}
     .about-stat span{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
     /* Card matches the natural height of the text-main column on the left — no minimum height, so it ends exactly where text ends */
-    .about-visual{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(26,46,90,.22);height:100%}
-    .about-visual img{width:100%;height:100%;object-fit:cover;object-position:42% 55%;transform:scale(1.85);transform-origin:42% 55%;filter:brightness(1.05) contrast(1.04) saturate(1.05)}
-    .about-visual-sky-brighten{position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(to bottom,rgba(255,240,210,.18) 0%,transparent 100%);pointer-events:none;z-index:1}
-    .about-visual-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(26,46,90,.85),transparent);padding:24px 22px;color:#fff;z-index:2}
-    .about-visual-cap span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:4px;display:block}
-    .about-visual-cap p{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.4}
+    /* Quote card replaces the building image — sits in the right column of About */
+    .about-visual{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(26,46,90,.22);height:100%;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dk) 100%);padding:44px 38px;display:flex;flex-direction:column;justify-content:center}
+    .about-visual::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(ellipse,rgba(200,144,10,.12),transparent 65%);pointer-events:none}
+    .aq-mark{font-family:'Dancing Script',cursive;font-size:84px;color:var(--gold-lt);line-height:.5;display:block;margin-bottom:8px;position:relative}
+    .about-visual blockquote{font-family:'Lora',serif;font-size:clamp(18px,1.8vw,21px);font-style:italic;color:#fff;line-height:1.65;margin-bottom:18px;position:relative;z-index:1}
+    .about-visual cite{font-style:normal;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;position:relative;z-index:1}
+    .aq-heal{margin-top:24px;padding-top:20px;border-top:1px solid rgba(240,192,64,.22);text-align:center;position:relative;z-index:1}
+    .aq-heal p{font-family:'Dancing Script',cursive;font-size:22px;color:var(--gold-lt);line-height:1.3}
 
     /* ══ NONPROFIT BAND — quick benefit callout ══ */
     .nonprofit-band{padding:72px 0;background:var(--navy);position:relative;overflow:hidden}
@@ -507,11 +509,11 @@
         <p style="font-size:14px;color:var(--soft);font-style:italic;">As a 501(c)(3) nonprofit, our focus stays where it belongs — on the people we serve.</p>
       </div>
       <div class="about-visual">
-        <img src="/images/phw-about-hero.jpg" alt="The front entrance of Sunbright Recovery Center in Red Bluff, California"/>
-        <div class="about-visual-sky-brighten" aria-hidden="true"></div>
-        <div class="about-visual-cap">
-          <span>Red Bluff, California</span>
-          <p>Where healing finds a center.</p>
+        <span class="aq-mark">"</span>
+        <blockquote>I've watched recovery happen for more than twenty years. It's real, it's possible, and it happens in safe places. So we built one — and the door is open.</blockquote>
+        <cite>— Linda Spyres, LCSW, LAADC-CA · Founder</cite>
+        <div class="aq-heal">
+          <p>Healing Today. Hope for Tomorrow. Freedom for Life.</p>
         </div>
       </div>
       <div class="about-stats-row">
@@ -528,41 +530,6 @@
             <strong>30/60/90</strong>
             <span>Day Programs</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUR PROMISE TO YOU — client-facing reassurance -->
-<section class="nonprofit-band">
-  <div class="wrap">
-    <div class="nonprofit-grid">
-      <div class="np-card">
-        <div class="np-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <div class="np-card-body">
-          <h3>Welcomed as you are.</h3>
-          <p>From the very first call, you'll be met with warmth, dignity, and the kind of compassion that says: you belong here, exactly as you are.</p>
-        </div>
-      </div>
-      <div class="np-card">
-        <div class="np-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <div class="np-card-body">
-          <h3>Recovery that lasts.</h3>
-          <p>Evidence-based therapies, holistic care, and a team that knows what works. We help heal the whole person — mind, body, and spirit.</p>
-        </div>
-      </div>
-      <div class="np-card">
-        <div class="np-icon">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-        </div>
-        <div class="np-card-body">
-          <h3>You won't walk alone.</h3>
-          <p>Family involvement, community connection, and lifelong aftercare. Recovery doesn't end when you leave — and neither do we.</p>
         </div>
       </div>
     </div>
@@ -626,12 +593,11 @@
         <div class="why-card-content">
           <div class="why-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728l.707.707M1 12h2m18 0h2M4.22 19.78l.707-.707M18.364 5.636l.707-.707"/>
-              <circle cx="12" cy="12" r="4" stroke="currentColor"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
             </svg>
           </div>
-          <h3>Faith-integrated, never required</h3>
-          <p>Recovery rooted in hope and meaning. Spiritual support is available for those who want it — never pushed on those who don't.</p>
+          <h3>Welcomed as you are</h3>
+          <p>From your very first call, you'll be met with warmth and dignity. Faith-integrated support is available for those who want it — never required, never pushed. You belong here, exactly as you are.</p>
         </div>
       </div>
       <div class="why-card">
@@ -642,8 +608,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
           </div>
-          <h3>Evidence-based therapies</h3>
-          <p>CBT, motivational interviewing, trauma-informed care, and family systems work — proven approaches that actually heal.</p>
+          <h3>Evidence-based and holistic</h3>
+          <p>CBT, motivational interviewing, trauma-informed care, and family systems work — proven therapies combined with whole-person care for mind, body, and spirit.</p>
         </div>
       </div>
       <div class="why-card">
@@ -651,11 +617,11 @@
         <div class="why-card-content">
           <div class="why-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </div>
-          <h3>Flexible payment options</h3>
-          <p>We accept private pay today, with insurance partnerships expanding throughout the year. Call us and we'll walk through what works for you.</p>
+          <h3>You won't walk alone</h3>
+          <p>Family involvement, community connection, and lifelong aftercare. Recovery doesn't end when you leave — and neither do we.</p>
         </div>
       </div>
     </div>
@@ -847,18 +813,6 @@
         </a>
         <a href="/get-involved" class="btn-call">Explore Ways to Help</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section class="quote-sec">
-  <div class="wrap">
-    <div class="q-inner">
-      <span class="q-mark">"</span>
-      <blockquote>I've watched recovery happen for more than twenty years. It's real, it's possible, and it happens in safe places. So we built one — and the door is open.</blockquote>
-      <cite>— Linda Spyres, LCSW, LAADC-CA · Founder</cite>
-      <div class="q-heal"><p>Healing Today. Hope for Tomorrow. Freedom for Life.</p></div>
     </div>
   </div>
 </section>
