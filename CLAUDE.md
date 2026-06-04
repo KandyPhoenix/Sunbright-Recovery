@@ -1,6 +1,10 @@
 # Sunbright Recovery Center — Repo Configuration
 
 > Drop this file at the root of `KandyPhoenix/Sunbright-Recovery`. It tells any future Claude Code session the context, stack, and workflow rules for this repo.
+>
+> **⚠️ START HERE — READ `STATUS.md` FIRST.** That file documents exactly what's been done, what's pending, where each thing lives, key user preferences, and approved messaging. This CLAUDE.md is foundational context; STATUS.md is the live progress log.
+>
+> Active design lives in `src/pages/design-preview.astro` (NOT index.astro). Preview URL: https://sunbright-recovery.pages.dev/design-preview
 
 ## Project
 
