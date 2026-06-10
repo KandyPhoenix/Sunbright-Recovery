@@ -1,12 +1,5 @@
 ---
 // Contact Page — Donations, Sponsorships, Church Partnerships, Volunteering
-// FORM SETUP: Uses Formspree (free). To activate:
-//   1. Go to https://formspree.io and create a free account
-//   2. Create a new form — enter info@sunbrightrecovery.org as the email
-//   3. Copy your form ID (looks like "xabcd123")
-//   4. Replace YOUR_FORMSPREE_ID below with that ID
-//   5. Done — submissions go straight to your inbox
-const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 ---
 <!doctype html>
 <html lang="en">
@@ -237,11 +230,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
           <h2>Send us a message</h2>
           <p class="sub">Tell us a little about yourself and how you'd like to get involved. Every inquiry is welcome.</p>
 
-          <form
-            id="contact-form"
-            action={`https://formspree.io/f/${FORMSPREE_ID}`}
-            method="POST"
-          >
+          <form id="contact-form" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="form-group">
                 <label>Your Name <span>*</span></label>
@@ -285,9 +274,6 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
               <textarea name="message" placeholder="Tell us a bit about yourself and what you have in mind. No message is too small." required></textarea>
             </div>
 
-            <!-- Hidden fields for Formspree -->
-            <input type="hidden" name="_subject" value="New Contact — Sunbright Recovery"/>
-            <input type="hidden" name="_next" value="/contact?sent=true"/>
 
             <div class="form-submit">
               <button type="submit" class="btn-submit">
@@ -357,14 +343,40 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 </footer>
 
 <script>
-  // Show success message if redirected back with ?sent=true
-  if (window.location.search.includes('sent=true')) {
-    const form = document.getElementById('contact-form');
-    const success = document.getElementById('form-success');
-    if (form && success) {
-      form.style.display = 'none';
-      success.style.display = 'block';
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value;
+    const org  = f.organization.value;
+    const email = f.email.value;
+    const phone = f.phone.value;
+    const type  = f.inquiry_type.value;
+    const msg   = f.message.value;
+
+    const body = [
+      `Name: ${name}`,
+      org   ? `Organization: ${org}` : null,
+      `Email: ${email}`,
+      phone ? `Phone: ${phone}` : null,
+      `Inquiry: ${type}`,
+      ``,
+      msg
+    ].filter(Boolean).join('\n');
+
+    const subject = encodeURIComponent(`Sunbright Inquiry — ${type}`);
+    const bodyEnc = encodeURIComponent(body);
+
+    window.location.href = `mailto:info@sunbrightrecovery.org?subject=${subject}&body=${bodyEnc}`;
+
+    // Show success message after a short delay
+    setTimeout(() => {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      if (form && success) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    }, 800);
   }
 </script>
 
