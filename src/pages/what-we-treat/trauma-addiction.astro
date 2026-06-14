@@ -1,0 +1,253 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalConditionSchema } from '../../schema/medicalCondition';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Trauma-Informed Addiction Treatment California | Sunbright',
+  description:
+    'Recover from addiction rooted in trauma or PTSD. Trauma-informed care and a safe healing environment in Northern California. Nonprofit, faith-integrated.',
+  primaryKeyword: 'trauma-informed addiction treatment',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'What We Treat', url: '/what-we-treat' },
+  { name: 'Trauma &amp; Addiction', url: '/what-we-treat/trauma-addiction' },
+];
+
+const faqs = [
+  {
+    question: 'What does "trauma-informed care" actually mean in practice?',
+    answer:
+      'Trauma-informed care is a clinical framework that recognizes the widespread impact of trauma and integrates that knowledge into every aspect of treatment. In practice at Sunbright, it means our staff understand how trauma affects behavior and brain function, our environment is structured to maximize physical and emotional safety, and our therapeutic approaches are designed not to re-traumatize. It means we ask "what happened to you?" not "what is wrong with you?"',
+  },
+  {
+    question: 'Do I have to talk about my trauma in treatment?',
+    answer:
+      'Not before you are ready. Trauma-informed care begins with building safety and stabilization — the foundation you need before trauma processing work becomes possible or appropriate. Our clinical team will work at your pace, with your consent, always. No one is pushed into disclosures they are not ready to make.',
+  },
+  {
+    question: 'What types of trauma does Sunbright treat alongside addiction?',
+    answer:
+      'We work with people who have experienced childhood abuse or neglect, intimate partner violence, sexual trauma, grief and loss, adverse childhood experiences (ACEs), combat or first-responder trauma, and the chronic stress of poverty, displacement, or systemic harm. Trauma takes many forms — all are valid here.',
+  },
+  {
+    question: 'Is trauma-informed care the same as EMDR or trauma therapy?',
+    answer:
+      'Trauma-informed care is a framework that shapes the entire clinical environment, while trauma-specific therapies (like EMDR, CPT, or trauma-focused CBT) are specific interventions. Our clinical program is built on trauma-informed principles throughout. Ask our admissions team about specific trauma therapy modalities available during your intake.',
+  },
+  {
+    question: 'Is PTSD the same as trauma-rooted addiction?',
+    answer:
+      'PTSD is a specific clinical diagnosis that can co-occur with addiction. Trauma-rooted addiction is a broader description — it includes people who use substances to manage the effects of unprocessed trauma whether or not they carry a formal PTSD diagnosis. Many people have significant trauma histories without meeting full PTSD criteria. All of it matters in treatment.',
+  },
+  {
+    question: 'Is faith part of trauma recovery at Sunbright?',
+    answer:
+      'For many people, faith and spiritual practice are powerful resources in trauma recovery — providing meaning, community, and a sense of transcendence. At Sunbright, faith-integrated programming is available for those who want it, and never required of anyone who does not. Our clinical model works for people across the full spectrum of belief.',
+  },
+];
+
+const schema = [
+  medicalConditionSchema({
+    name: 'Trauma-Related Substance Use Disorder',
+    alternateName: ['Trauma-Rooted Addiction', 'PTSD and Addiction', 'Trauma and Substance Abuse'],
+    description:
+      'Trauma-related substance use disorder describes addiction that is rooted in, or significantly driven by, unresolved trauma, adverse life experiences, or post-traumatic stress. Many people who develop substance use disorders began using substances to manage the psychological and physical effects of trauma — including anxiety, hypervigilance, emotional numbing, or intrusive memories.',
+    path: '/what-we-treat/trauma-addiction',
+    signs: [
+      'Using substances to manage anxiety, nightmares, or intrusive trauma memories',
+      'Feeling emotionally numb or disconnected and using substances to feel present',
+      'Avoiding people, places, or situations that trigger trauma memories',
+      'History of adverse childhood experiences (ACEs), abuse, or neglect',
+      'Difficulty trusting others or feeling safe in relationships',
+      'Using alcohol or drugs to sleep or to shut down trauma-related hyperarousal',
+      'Significant mood instability, emotional dysregulation, or chronic shame',
+    ],
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="treat" schema={schema}>
+
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">What We Treat</span>
+      <h1>Healing addiction rooted <em>in trauma.</em></h1>
+      <p class="lead">Many people who use substances are not choosing escape — they are managing pain they do not yet have another way to bear. At Sunbright, we understand the connection between trauma and addiction, and we treat both with the care each deserves.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>The relationship between trauma and addiction is one of the most consistent findings in addiction research. People who experienced adverse childhood experiences — abuse, neglect, household instability, violence — are significantly more likely to develop substance use disorders as adults. Not because trauma causes weakness, but because the nervous system does exactly what it is designed to do: seek relief from pain.</p>
+
+        <p>Substances often work — at first. They quiet hypervigilance. They dull intrusive memories. They make the body feel calm or numb when calm is otherwise impossible. The problem is that they stop working, and then they create new pain on top of the old pain. At Sunbright, we help people find a way through that does not require substances to feel safe.</p>
+
+        <h2>Signs that trauma may be driving your substance use</h2>
+        <p>If any of these resonate, it may be worth exploring with a trauma-informed clinician:</p>
+
+        <ul class="checks">
+          <li><strong>Using substances to sleep</strong> — alcohol or drugs are the only way you can get rest</li>
+          <li><strong>Using to manage anxiety, hypervigilance, or intrusive memories</strong> — substances quiet the alarm system</li>
+          <li><strong>Emotional numbing</strong> — feeling disconnected from yourself or others, using substances to feel present or to feel nothing</li>
+          <li><strong>History of childhood adverse experiences</strong> — abuse, neglect, household dysfunction, loss</li>
+          <li><strong>Intense shame</strong> — a deep sense of being fundamentally broken or wrong, which substances temporarily relieve</li>
+          <li><strong>Avoidance</strong> — staying away from situations, people, or places that trigger trauma responses</li>
+          <li><strong>Difficulty feeling safe</strong> in relationships or environments, even supportive ones</li>
+        </ul>
+
+        <h2>What trauma-informed care looks like at Sunbright</h2>
+        <p>Trauma-informed care is not a single therapy — it is a framework that shapes the entire clinical environment. At Sunbright, it means:</p>
+        <ul>
+          <li><strong>Safety first.</strong> Before any meaningful trauma work is possible, you need to feel safe. Our residential environment, staff culture, and daily structure are all designed to create that safety from day one.</li>
+          <li><strong>Consent and transparency.</strong> You are never pushed into disclosures you are not ready to make, or into therapeutic processes without your understanding and agreement.</li>
+          <li><strong>Recognizing trauma's reach.</strong> Our clinical team understands how trauma affects the brain and body — why people respond the way they do, why certain triggers feel overwhelming, why trust takes time. We do not pathologize what are, in fact, survival adaptations.</li>
+          <li><strong>Treating the whole person.</strong> Trauma is not separate from the addiction — it is often the root of it. Our program addresses both simultaneously through <a href="/programs/residential">residential care</a>, individual therapy, group programming, and step-down through <a href="/programs/outpatient">IOP</a> and <a href="/programs/sober-living">sober living</a>.</li>
+          <li><strong>Empowerment and agency.</strong> Recovery from trauma-rooted addiction requires rebuilding a sense of choice and control. Every aspect of our clinical approach is designed to restore that — not take it away.</li>
+        </ul>
+
+        <h2>The connection to dual diagnosis</h2>
+        <p>Trauma, mental health conditions, and substance use frequently occur together — this is called <a href="/what-we-treat/dual-diagnosis">dual diagnosis</a>. Many people with trauma histories also carry diagnoses of PTSD, depression, anxiety, or bipolar disorder. Our integrated approach, backed by the behavioral health expertise of Parish Health &amp; Wellness (PHW Care), treats all of these conditions as the interconnected picture they are.</p>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <p><strong>You are not your trauma, and you are not your addiction.</strong> Both are things that happened to you — or developed in response to what happened to you. Both are treatable. At Sunbright, we have walked alongside people through exactly this kind of recovery. Call us at <a href="tel:+15305282342">(530) 528-2342</a> — we will listen, and we will not judge.</p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Trauma care at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Trauma-informed clinical model throughout
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Safety &amp; stabilization first
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Integrated dual diagnosis care
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          PHW Care behavioral health expertise
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          30, 60 &amp; 90-day residential programs
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Faith-integrated, never required
+        </div>
+        <a href="/admissions" class="btn btn-navy">Check Availability</a>
+        <a href="tel:+15305282342" class="btn btn-outline" style="margin-top:10px;">Call (530) 528-2342</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">A Different Kind of Recovery</span>
+        <h2>Why Sunbright for <em>trauma-informed care.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div>
+            <h3>Safety is not an afterthought</h3>
+            <p>For people whose nervous systems have been shaped by chronic threat, feeling safe is a prerequisite for healing — not an outcome of it. Our 16-bed center in Red Bluff is purpose-built to be calm, predictable, and genuinely safe.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h3>Clinical depth from 20+ years of experience</h3>
+            <p>Sunbright was founded by Linda Spyres, LCSW, LAADC-CA, whose 20+ years in addiction treatment includes deep experience with trauma-informed approaches. That expertise is embedded in how we train staff and run clinical programming.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <h3>Compassion without judgment, always</h3>
+            <p>People with trauma histories have often been blamed, dismissed, or shamed by the systems that were supposed to help them. That will not happen here. Every interaction at Sunbright is grounded in dignity, empathy, and respect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Trauma &amp; addiction treatment <em>FAQs.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Related Conditions</span>
+        <h2>Trauma connects to many <em>other conditions.</em></h2>
+        <p class="lead">Trauma rarely exists in isolation. It often co-occurs with depression, anxiety, PTSD, alcohol or opioid use disorder, and other conditions we treat at Sunbright.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="/what-we-treat/dual-diagnosis" class="card is-link">
+          <span class="card-tag">Co-Occurring Disorders</span>
+          <h3>Dual Diagnosis</h3>
+          <p>PTSD, depression, and anxiety frequently accompany trauma-rooted addiction. Our integrated dual diagnosis track treats all of it at once.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/what-we-treat/alcohol" class="card is-link">
+          <span class="card-tag">Alcohol Use Disorder</span>
+          <h3>Alcohol Addiction</h3>
+          <p>Alcohol is among the most commonly used substances to manage trauma symptoms. We treat the alcohol use and the underlying trauma together.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/what-we-treat/opioids" class="card is-link">
+          <span class="card-tag">Opioid Use Disorder</span>
+          <h3>Opioid Addiction</h3>
+          <p>Many opioid use disorders are rooted in self-medication of physical pain, emotional pain, or both. Trauma-informed opioid care addresses the full picture.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Trauma-Informed Addiction Treatment — Northern California</span>
+    <h2>The pain brought you here. <em>Healing is possible.</em></h2>
+    <p>What you have been through matters, and it deserves to be part of your treatment. Call Sunbright Recovery Center in Red Bluff for a private, compassionate conversation about trauma-informed addiction care.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+
+</SiteLayout>

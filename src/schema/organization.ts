@@ -1,28 +1,34 @@
+const SITE = 'https://sunbrightrecovery.org';
+
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'MedicalBusiness', 'LocalBusiness'],
-        '@id': 'https://sunbrightrecovery.com/#organization',
+        '@type': ['Organization', 'NGO', 'MedicalBusiness', 'LocalBusiness'],
+        '@id': `${SITE}/#organization`,
         name: 'Sunbright Recovery Center',
         alternateName: 'Sunbright Recovery',
-        url: 'https://sunbrightrecovery.com',
-        logo: 'https://sunbrightrecovery.com/images/logo.png',
-        image: 'https://sunbrightrecovery.com/images/og-default.jpg',
+        url: SITE,
+        logo: `${SITE}/logo.png`,
+        image: `${SITE}/images/og-default.jpg`,
         description:
-          'Faith-integrated, evidence-based addiction recovery in Northern California. Residential, outpatient (IOP/PHP), and sober living programs. Medi-Cal accepted.',
+          'Faith-integrated, evidence-based addiction recovery in Northern California. A 16-bed nonprofit residential center in Red Bluff, CA offering residential, outpatient, and sober living programs.',
+        nonprofitStatus: 'Nonprofit501c3',
         parentOrganization: {
           '@type': 'Organization',
           name: 'Parish Health and Wellness',
           url: 'https://www.phwcare.com',
         },
+        founder: {
+          '@type': 'Person',
+          name: 'Linda Spyres',
+          jobTitle: 'Founder & Clinical Director, LCSW, LAADC-CA',
+        },
         telephone: '+1-530-528-2342',
-        // TODO: confirm separate Sunbright email or share PHW's
-        email: 'admissions@sunbrightrecovery.com',
+        email: 'info@sunbrightrecovery.org',
         address: {
           '@type': 'PostalAddress',
-          // TODO: confirm exact street address with Linda
           streetAddress: '22425 Sunbright Ave',
           addressLocality: 'Red Bluff',
           addressRegion: 'CA',
@@ -52,28 +58,13 @@ export function organizationSchema() {
         ],
         medicalSpecialty: ['Addiction Medicine', 'Psychiatry'],
         availableService: [
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Residential / Inpatient Rehabilitation',
-            url: 'https://sunbrightrecovery.com/programs/residential',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Intensive Outpatient Program (IOP)',
-            url: 'https://sunbrightrecovery.com/programs/outpatient',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Partial Hospitalization Program (PHP)',
-            url: 'https://sunbrightrecovery.com/programs/outpatient',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Sober Living / Aftercare',
-            url: 'https://sunbrightrecovery.com/programs/sober-living',
-          },
+          { '@type': 'MedicalTherapy', name: 'Residential / Inpatient Rehabilitation', url: `${SITE}/programs/residential` },
+          { '@type': 'MedicalTherapy', name: 'Intensive Outpatient Program (IOP)', url: `${SITE}/programs/outpatient` },
+          { '@type': 'MedicalTherapy', name: 'Partial Hospitalization Program (PHP)', url: `${SITE}/programs/outpatient` },
+          { '@type': 'MedicalTherapy', name: 'Sober Living / Aftercare', url: `${SITE}/programs/sober-living` },
         ],
-        acceptedPaymentMethod: ['Medi-Cal', 'Medicare', 'Private Insurance', 'Sliding Scale', 'Cash', 'Credit Card'],
+        // Insurance network is still expanding — do NOT claim specific payers as accepted.
+        acceptedPaymentMethod: ['Cash', 'Credit Card', 'Private Pay'],
         priceRange: '$$',
         sameAs: [
           'https://www.facebook.com/sunbrightrecovery',
@@ -82,10 +73,10 @@ export function organizationSchema() {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://sunbrightrecovery.com/#website',
-        url: 'https://sunbrightrecovery.com',
+        '@id': `${SITE}/#website`,
+        url: SITE,
         name: 'Sunbright Recovery Center',
-        publisher: { '@id': 'https://sunbrightrecovery.com/#organization' },
+        publisher: { '@id': `${SITE}/#organization` },
       },
     ],
   };

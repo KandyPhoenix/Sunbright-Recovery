@@ -1,0 +1,244 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalTherapySchema } from '../../schema/medicalTherapy';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Inpatient Residential Rehab California | Sunbright Recovery',
+  description:
+    '30, 60, and 90-day residential rehab in Northern California. Faith-integrated, evidence-based, nonprofit. 24/7 support in a 16-bed center in Red Bluff, CA.',
+  primaryKeyword: 'inpatient rehab california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Programs', url: '/programs' },
+  { name: 'Residential', url: '/programs/residential' },
+];
+
+const faqs = [
+  {
+    question: 'How long is residential rehab at Sunbright Recovery?',
+    answer:
+      'We offer 30-day, 60-day, and 90-day residential programs. The right length depends on the severity of the addiction, any co-occurring mental health conditions, and your personal history with treatment. Our clinical team will recommend the track best suited to you during the admissions assessment. Research consistently shows that longer engagement produces stronger long-term outcomes.',
+  },
+  {
+    question: 'Does Sunbright offer medical detox on-site?',
+    answer:
+      'Sunbright does not provide on-site medical detox. If you need medically supervised withdrawal management before entering residential care — which some substances require for safety — we will connect you with a trusted partner detox facility. Once you complete medical stabilization, you transition into our residential program. We coordinate this handoff closely so nothing falls through the cracks.',
+  },
+  {
+    question: 'What does a typical day in residential rehab look like?',
+    answer:
+      'Days follow a structured schedule that includes individual therapy, group therapy sessions, psychoeducation groups, meals together, physical wellness time, and optional faith-based programming. Structure is therapeutic — it replaces the chaos of active addiction with intentional routine. Evenings often include 12-step or alternative recovery support meetings and reflective time.',
+  },
+  {
+    question: 'Is the program co-ed or gender-specific?',
+    answer:
+      'Sunbright is a co-ed center with 16 beds. Men and women participate in most programming together. If gender-specific programming is a clinical priority for your situation, let our admissions team know — we can discuss the options and refer you to a gender-specific center if that is the best fit.',
+  },
+  {
+    question: 'Is faith participation required in the residential program?',
+    answer:
+      'No. Faith is woven into the life of the center for those who want it, and it is never required of anyone who does not. You can fully engage in evidence-based clinical treatment at Sunbright without any religious component. That said, many people find that the spiritual dimension adds a layer of meaning and community to their recovery.',
+  },
+  {
+    question: 'How do I pay for residential rehab at Sunbright?',
+    answer:
+      'Private pay is accepted today. Call us to discuss private-pay options. Treatment is not free, but as a nonprofit we work hard to make it as accessible as possible. Our admissions team will walk you through payment options honestly, without pressure.',
+  },
+];
+
+const schema = [
+  medicalTherapySchema({
+    name: 'Residential Addiction Rehab',
+    alternateName: 'Inpatient Rehab',
+    description:
+      '30, 60, and 90-day residential treatment programs at a 16-bed nonprofit recovery center in Red Bluff, Northern California. Evidence-based, faith-integrated, 24/7 clinical support.',
+    path: '/programs/residential',
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="programs" schema={schema}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Residential Programs</span>
+      <h1>Inpatient rehab in California — personal, connected, <em>effective.</em></h1>
+      <p class="lead">Our 30, 60, and 90-day residential programs give people in Northern California the time and space to do the deep work of recovery — with 24/7 clinical support, evidence-based therapy, and a personal and connected 16-bed center in Red Bluff.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>When addiction has taken over — when the daily attempts to moderate, quit, or cut back have stopped working — residential treatment creates the conditions that outpatient care can't. You step away from the environments and triggers that feed the cycle. You enter a structured, supportive space where recovery becomes the focus, not the afterthought.</p>
+
+        <h2>Who residential rehab is for</h2>
+        <p>Residential treatment is typically the right level of care when:</p>
+        <ul>
+          <li>Outpatient treatment has not worked, or the addiction is too severe to begin there</li>
+          <li>The home environment is unstable or actively triggering</li>
+          <li>There is a co-occurring mental health condition that needs structured clinical attention</li>
+          <li>Daily life has become unmanageable — employment, relationships, or physical health are at serious risk</li>
+          <li>The person needs a clean break and a safe place to start over</li>
+        </ul>
+        <p>We serve people from Red Bluff, Redding, Chico, Sacramento, and across Tehama County and Northern California. Many people travel a short distance from home specifically to create that necessary distance from familiar triggers.</p>
+
+        <h2>Program lengths: 30, 60, and 90 days</h2>
+        <p>Recovery doesn't follow a single timeline. We offer three tracks because different people — and different addictions — require different amounts of time:</p>
+        <ul>
+          <li><strong>30-day:</strong> An intensive introduction to recovery for those with less severe dependence or strong external support waiting for them. A solid foundation for stepping down to outpatient.</li>
+          <li><strong>60-day:</strong> The most common recommendation for moderate-to-severe addiction. Enough time to stabilize physically, begin deep therapeutic work, and build early recovery skills.</li>
+          <li><strong>90-day:</strong> Research consistently shows 90-day programs produce the strongest long-term outcomes, particularly for severe or long-standing addiction, opioid use disorder, or co-occurring trauma.</li>
+        </ul>
+        <p>Our clinical team recommends the track that fits your situation after a thorough intake assessment — not the one that fits a slot.</p>
+
+        <h2>A note on medical detox</h2>
+        <p>Some substances — alcohol, benzodiazepines, opioids — can require medically supervised withdrawal management before residential treatment begins. Sunbright does not provide on-site medical detox, and we want to be upfront about that. If you need it, we will connect you with a trusted partner facility for a safe, supervised detox, and then coordinate your transition directly into our residential program. You will never be left to navigate that handoff alone.</p>
+
+        <h2>What residential treatment at Sunbright includes</h2>
+        <p>Each person in our residential program receives a personalized treatment plan built by our clinical team. That plan draws from a range of proven therapies and support structures:</p>
+        <ul>
+          <li><strong>Individual therapy</strong> — weekly one-on-one sessions with your primary therapist using evidence-based approaches</li>
+          <li><strong>Group therapy</strong> — daily structured group sessions covering relapse prevention, coping skills, communication, and more</li>
+          <li><strong>Cognitive Behavioral Therapy (CBT)</strong> — to identify and rewrite the thought patterns that drive addictive behavior</li>
+          <li><strong>Trauma-informed care and EMDR</strong> — for those with underlying trauma (which is most people; see <a href="/what-we-treat/trauma-addiction">trauma &amp; addiction</a>)</li>
+          <li><strong>Dual diagnosis treatment</strong> — if depression, anxiety, PTSD, or other conditions are present alongside addiction (see <a href="/what-we-treat/dual-diagnosis">dual diagnosis</a>)</li>
+          <li><strong>Family therapy and education</strong> — because recovery heals relationships, and families need support too (see <a href="/family-resources">family resources</a>)</li>
+          <li><strong>Faith-integrated programming</strong> — optional, never required; available for those who want it</li>
+          <li><strong>12-step and alternative peer support</strong> — evening meetings and connection with a recovery community</li>
+          <li><strong>Discharge and step-down planning</strong> — transition planning begins early, so you leave with a real plan, not a handshake</li>
+        </ul>
+      </div>
+
+      <aside class="aside">
+        <h3>Residential at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          16-bed co-ed nonprofit center
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          30, 60, and 90-day tracks
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          24/7 clinical support
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Red Bluff, CA — 22425 Sunbright Ave
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Detox referral to partner facility if needed
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Faith-integrated, never required
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Private pay accepted today
+        </div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="stats" style="justify-content:center">
+        <div class="stat" style="text-align:center"><div class="num">16</div><div class="lbl">Residential Beds</div></div>
+        <div class="stat" style="text-align:center"><div class="num">30/60/90</div><div class="lbl">Day Programs</div></div>
+        <div class="stat" style="text-align:center"><div class="num">24/7</div><div class="lbl">Clinical Support</div></div>
+        <div class="stat" style="text-align:center"><div class="num">100%</div><div class="lbl">Nonprofit</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">A Day in Residential</span>
+        <h2>Structure that heals.</h2>
+        <p class="lead">One of the most powerful aspects of residential treatment is the daily structure — a rhythm that replaces the chaos of active addiction with intention, connection, and skill-building.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/></svg>
+          </div>
+          <h3>Morning</h3>
+          <p>Mindful start, breakfast together, morning group session. The day begins with community and intention — not isolation.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3>Afternoon</h3>
+          <p>Individual therapy, psychoeducation groups, skill-building workshops, and physical wellness. The clinical core of each day.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          </div>
+          <h3>Evening</h3>
+          <p>Peer support meetings, optional faith programming, reflection time, and community. Connection and accountability after hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gold">
+    <div class="wrap">
+      <div class="sec-head left">
+        <span class="eyebrow">The Continuum of Care</span>
+        <h2>Residential is the beginning, <em>not the end.</em></h2>
+      </div>
+      <div class="prose">
+        <p>Residential treatment is the most intensive level of care — and for most people, it is the beginning of a longer recovery journey, not the final destination. What comes after residential matters enormously. We plan for that from day one.</p>
+        <p>As your residential program approaches its final weeks, your care team will work with you on a step-down plan tailored to your situation. Common next steps include:</p>
+        <ul>
+          <li><a href="/programs/outpatient">Intensive outpatient (IOP) or PHP</a> — structured group therapy several days a week while returning to daily life</li>
+          <li><a href="/programs/sober-living">Sober living</a> — transitional housing with peer community, accountability, and ongoing support</li>
+          <li>Community outpatient therapy and peer support groups</li>
+        </ul>
+        <p>We also work closely with your family throughout your stay. Visit our <a href="/family-resources">family resources page</a> to learn how we involve loved ones in the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Frequently asked questions about <em>residential rehab.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Ready to take the first step?</span>
+    <h2>Recovery starts with <em>one honest conversation.</em></h2>
+    <p>Call us for a private, no-pressure conversation. We'll listen, answer your questions, and help you understand what residential treatment looks like for your specific situation.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

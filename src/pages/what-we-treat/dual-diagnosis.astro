@@ -1,0 +1,260 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalConditionSchema } from '../../schema/medicalCondition';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Dual Diagnosis Treatment California | Co-Occurring Disorders',
+  description:
+    'Treatment for addiction with co-occurring mental health conditions, backed by Parish Health and Wellness expertise. Northern California nonprofit rehab.',
+  primaryKeyword: 'dual diagnosis treatment california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'What We Treat', url: '/what-we-treat' },
+  { name: 'Dual Diagnosis', url: '/what-we-treat/dual-diagnosis' },
+];
+
+const faqs = [
+  {
+    question: 'What is dual diagnosis?',
+    answer:
+      'Dual diagnosis — also called co-occurring disorders — means a person has both a substance use disorder and at least one mental health condition at the same time. Common combinations include alcohol use disorder with depression, opioid addiction with PTSD, or stimulant use with anxiety. Both conditions need to be treated together for recovery to hold.',
+  },
+  {
+    question: 'Can Sunbright treat my mental health condition and my addiction at the same time?',
+    answer:
+      'Yes. Treating only the addiction while leaving the mental health condition unaddressed is a common reason people relapse. Our integrated dual diagnosis track addresses both simultaneously, drawing on the behavioral health expertise of our parent organization, Parish Health and Wellness (PHW Care).',
+  },
+  {
+    question: 'Which mental health conditions does Sunbright treat alongside addiction?',
+    answer:
+      'We commonly treat co-occurring depression, anxiety disorders, PTSD, bipolar disorder, and trauma-related conditions alongside substance use disorder. Our clinical team will conduct a thorough assessment during admissions to understand your full clinical picture.',
+  },
+  {
+    question: 'How is dual diagnosis treatment different from standard addiction treatment?',
+    answer:
+      'Integrated dual diagnosis treatment addresses both conditions at once — in the same program, with the same clinical team — rather than treating one and referring you elsewhere for the other. The interplay between mental health symptoms and substance use is complex, and understanding that interplay is what makes treatment effective.',
+  },
+  {
+    question: 'What if I am currently on psychiatric medication?',
+    answer:
+      'If you are currently prescribed psychiatric medication, our clinical team will work with your prescribing provider to ensure continuity of care. Please let our admissions team know during your intake conversation so we can plan accordingly.',
+  },
+  {
+    question: 'Does faith play a role in dual diagnosis treatment?',
+    answer:
+      'Faith-integrated programming is available at Sunbright for those who find it supportive, and is never required. Our clinical model is evidence-based and works for people of all backgrounds and beliefs.',
+  },
+];
+
+const schema = [
+  medicalConditionSchema({
+    name: 'Co-Occurring Disorders (Dual Diagnosis)',
+    alternateName: ['Dual Diagnosis', 'Co-Occurring Mental Health and Substance Use Disorder', 'COMHSU'],
+    description:
+      'Co-occurring disorders, or dual diagnosis, refers to the simultaneous presence of a substance use disorder and one or more mental health conditions — such as depression, anxiety, PTSD, or bipolar disorder — in the same person. Integrated treatment addressing both conditions simultaneously produces significantly better outcomes than treating either in isolation.',
+    path: '/what-we-treat/dual-diagnosis',
+    signs: [
+      'Using substances to cope with anxiety, depression, or emotional distress',
+      'Mental health symptoms that worsen with substance use or during withdrawal',
+      'Difficulty controlling substance use despite awareness of its effects on mental health',
+      'History of trauma, mood disorder, or psychiatric diagnosis alongside substance use',
+      'Repeated relapses following treatment that addressed only addiction or only mental health',
+      'Social isolation or withdrawal from family and community',
+      'Significant changes in mood, perception, or behavior alongside substance use',
+    ],
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="treat" schema={schema}>
+
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">What We Treat</span>
+      <h1>Dual diagnosis treatment in <em>Northern California.</em></h1>
+      <p class="lead">Addiction and mental health conditions — depression, anxiety, PTSD, bipolar disorder — are deeply intertwined for many people. Sunbright treats both at once, backed by the behavioral health expertise of Parish Health &amp; Wellness.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>When people enter treatment for addiction and find that mental health symptoms continue to drive them back to substances — or when they pursue mental health care but find that nothing holds because the substance use is never addressed — they are living the dual diagnosis gap. It is one of the most common reasons people struggle to stay in recovery.</p>
+
+        <p>At Sunbright, we close that gap. Our integrated dual diagnosis program treats addiction and co-occurring mental health conditions together — in the same clinical environment, with the same care team — because that is how the research says it works best.</p>
+
+        <h2>Signs of co-occurring disorders</h2>
+        <p>Many people with co-occurring disorders are not fully aware of how closely their mental health and substance use are linked. These signs may suggest a dual diagnosis picture worth exploring:</p>
+
+        <ul class="checks">
+          <li><strong>Using substances to manage anxiety, depression, mood swings, or intrusive thoughts</strong> — self-medication that provides relief but deepens the cycle</li>
+          <li><strong>Mental health symptoms that get worse when substance use stops</strong> — or that started around the same time substance use began</li>
+          <li><strong>Repeated relapses</strong> after treatment that only addressed the addiction or only the mental health condition</li>
+          <li><strong>History of trauma, abuse, or adverse childhood experiences</strong> alongside current substance use</li>
+          <li><strong>Psychiatric diagnosis</strong> (depression, bipolar, PTSD, anxiety disorder) co-existing with substance use</li>
+          <li><strong>Difficulty regulating emotions</strong> — intense highs and lows, emotional unpredictability</li>
+          <li><strong>Social withdrawal</strong> and increasing isolation from family and community</li>
+        </ul>
+
+        <h2>Common co-occurring conditions we treat</h2>
+        <p>Dual diagnosis is not one pattern — it is many. Our clinical team is equipped to treat a range of co-occurring mental health conditions alongside substance use disorder:</p>
+        <ul>
+          <li><strong>Depression and substance use disorder</strong> — among the most common co-occurring combinations</li>
+          <li><strong>Anxiety disorders and addiction</strong> — including generalized anxiety, social anxiety, and panic disorder</li>
+          <li><strong>PTSD and substance use</strong> — often rooted in early trauma; see also our page on <a href="/what-we-treat/trauma-addiction">trauma-rooted addiction</a></li>
+          <li><strong>Bipolar disorder and substance use</strong> — mood dysregulation often drives substance use as a form of self-regulation</li>
+          <li><strong>Trauma-related conditions</strong> — complex trauma, adverse childhood experiences, and chronic stress</li>
+        </ul>
+
+        <h2>How Sunbright's dual diagnosis program works</h2>
+        <p>Our integrated approach addresses both conditions in the same program environment — not by splitting care between siloed providers, but by building the full picture into a single clinical plan:</p>
+        <ul>
+          <li><strong>Comprehensive intake assessment.</strong> We assess the full clinical picture during admissions — both substance use and mental health history — so nothing falls through the cracks.</li>
+          <li><strong><a href="/programs/residential">Residential care</a>.</strong> A structured, safe daily environment is itself therapeutic for people managing co-occurring conditions. 24/7 support, individual therapy, group programming, and medication continuity under one roof.</li>
+          <li><strong>Parish Health &amp; Wellness behavioral health expertise.</strong> Sunbright's parent organization, PHW Care, brings deep behavioral and mental health clinical knowledge that informs our dual diagnosis programming.</li>
+          <li><strong>Trauma-informed care throughout.</strong> Most dual diagnosis cases involve trauma somewhere in the history. Our model creates physical and emotional safety as the foundation for all therapeutic work.</li>
+          <li><strong>Step-down through <a href="/programs/outpatient">IOP</a> and <a href="/programs/sober-living">sober living</a>.</strong> Continued clinical support and community as you build a life that sustains recovery.</li>
+        </ul>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p><strong>Backed by Parish Health &amp; Wellness (PHW Care).</strong> Sunbright Recovery Center is a program of PHW Care — a Northern California behavioral health organization with deep expertise in mental health and substance use conditions. That clinical depth is built into our dual diagnosis approach. <a href="/about">Learn more about Sunbright.</a></p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Dual diagnosis at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Integrated addiction &amp; mental health treatment
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          PHW Care behavioral health expertise
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Comprehensive intake assessment
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Trauma-informed model throughout
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          30, 60 &amp; 90-day residential programs
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          501(c)(3) nonprofit — private pay accepted
+        </div>
+        <a href="/admissions" class="btn btn-navy">Check Availability</a>
+        <a href="tel:+15305282342" class="btn btn-outline" style="margin-top:10px;">Call (530) 528-2342</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The PHW Care Difference</span>
+        <h2>Mental health expertise built <em>into our foundation.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h3>Integrated — not referred out</h3>
+            <p>Too many rehab programs treat addiction in one silo and refer mental health elsewhere. Our integrated model means your mental health and your recovery are addressed by the same clinical team, in the same place, at the same time.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <h3>Behavioral health roots run deep</h3>
+            <p>Parish Health &amp; Wellness (PHW Care) is built on behavioral health expertise. When Sunbright was created, that clinical knowledge came with it — making our dual diagnosis programming more sophisticated than what most standalone rehabs can offer.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div>
+            <h3>Safety and stability first</h3>
+            <p>People with co-occurring disorders need a physically and emotionally safe environment before they can do the deeper work. Every element of our residential program is designed to create that stability as the foundation for healing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Dual diagnosis treatment <em>FAQs.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Related Conditions</span>
+        <h2>Dual diagnosis often involves <em>trauma and other conditions.</em></h2>
+        <p class="lead">Understanding the full picture — trauma, mental health, and substance use together — is what makes integrated treatment so much more effective than treating each in isolation.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="/what-we-treat/trauma-addiction" class="card is-link">
+          <span class="card-tag">Trauma &amp; Addiction</span>
+          <h3>Trauma-Rooted Addiction</h3>
+          <p>Trauma and PTSD are among the most common co-occurring conditions alongside addiction. Our trauma-informed approach addresses both root and symptom together.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/what-we-treat/alcohol" class="card is-link">
+          <span class="card-tag">Alcohol Use Disorder</span>
+          <h3>Alcohol Addiction</h3>
+          <p>Alcohol use disorder frequently co-occurs with depression and anxiety. Our program treats the full clinical picture, not just the drinking.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/our-approach" class="card is-link">
+          <span class="card-tag">Our Approach</span>
+          <h3>How We Treat Co-Occurring Disorders</h3>
+          <p>Evidence-based, trauma-informed, and deeply integrated — learn how Sunbright's clinical model supports whole-person healing.</p>
+          <span class="card-link">Our approach <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Dual Diagnosis Treatment — Northern California</span>
+    <h2>Both conditions deserve <em>to be treated.</em></h2>
+    <p>You do not have to choose between addiction treatment and mental health care. At Sunbright, you get both — in one place, from one team, on one integrated plan. Call us to learn more.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+
+</SiteLayout>

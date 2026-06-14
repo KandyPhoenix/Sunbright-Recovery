@@ -1,6 +1,7 @@
 # Sunbright Recovery Center
-# Site under construction — disallow all until launch
+# Site under construction — disallow all until nonprofit licensing is approved and we launch.
+# AT LAUNCH: replace the two lines below with "Allow: /" (or remove Disallow) to open indexing.
 User-agent: *
 Disallow: /
 
-Sitemap: https://sunbrightrecovery.com/sitemap-index.xml
+Sitemap: https://sunbrightrecovery.org/sitemap-index.xml

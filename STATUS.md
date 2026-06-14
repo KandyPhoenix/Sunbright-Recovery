@@ -5,6 +5,30 @@
 
 ---
 
+## ⭐ UPDATE 2026-06-14 — Full client-facing site structure built (pre-launch, noindex)
+
+The complete clinical site structure now exists, ready to **publish once nonprofit licensing is approved**. Everything is `noindex` + `robots.txt Disallow: /` until then.
+
+**New shared infrastructure (use these for any new page):**
+- `src/layouts/SiteLayout.astro` — standalone layout carrying the approved navy/gold design, full SEO meta (title/description/canonical/OG/Twitter), JSON-LD (Organization + auto BreadcrumbList + page schema), nav, footer, sticky call. Props: `title, description, primaryKeyword, canonical, noindex(=true), ogImage, schema[], breadcrumbs[], activeNav`.
+- `src/styles/site.css` — global design system extracted from `design-preview.astro` (buttons, nav, footer, page-header, sections, cards, grids, prose, checks, features, steps, callout, faq accordion, cta-band, stats). **Reuse these classes; don't add per-page `<style>`.**
+- Schema generators: `schema/organization.ts` (fixed → `.org`, `info@` email, NGO/501c3, **Medi-Cal claim removed**), `schema/medicalTherapy.ts`, `schema/medicalCondition.ts`, `schema/person.ts`, `schema/faqPage.ts`, `schema/breadcrumb.ts`.
+
+**Pages built (all link internally, each with target keyword + meta + schema + FAQ where useful):**
+`/about`, `/our-approach`, `/programs` (+`/residential` `/outpatient` `/sober-living`), `/what-we-treat` (+`/alcohol` `/opioids` `/dual-diagnosis` `/trauma-addiction`), `/admissions`, `/insurance`, `/team`, `/family-resources`, `/faqs`, `/tour`, `/contact` (clinical rebuild — mailto form to info@, replaced the old `/community`-linked version), `/donate`, `/get-involved`.
+
+**Homepage linking:** Nav/footer "Home" → `/design-preview` (the *original* homepage — linked, not republished). The pre-launch `community.astro` stopgap is **never linked**. `astro.config.mjs` sitemap filter excludes all staging routes (design-preview*, index-v2, admissions-preview, community).
+
+**INSURANCE MESSAGING (updated rule — confirmed by client 2026-06-14):** Credentialing is still in progress; **we do NOT take insurance yet.** Do NOT write "insurance network expanding" or imply acceptance anywhere. Site-wide payment line = **"Private pay accepted today."** Only `/insurance` discusses it, honestly: "does not accept insurance yet / credentialing in progress / working toward accepting coverage." General-page FAQs answer payment questions as private-pay-only.
+
+**TO PUBLISH (launch day, after licensing approval):**
+1. Promote `design-preview.astro` → `index.astro` (it becomes `/`).
+2. In `SiteLayout.astro`, set `const HOME = '/'` and flip the `noindex` default to `false` (or pass `noindex={false}` per page).
+3. Replace `public/robots.txt` `Disallow: /` with `Allow: /`.
+4. `npm run build`, submit sitemap to GSC, validate pages in Rich Results Test.
+
+---
+
 ## What this project is
 
 A preview-stage homepage build for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**. They are now in the **equipping/preparing-to-open phase**.

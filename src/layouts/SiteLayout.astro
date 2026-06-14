@@ -1,0 +1,204 @@
+---
+/**
+ * SiteLayout — shared layout for the full Sunbright Recovery site structure.
+ *
+ * Renders the approved navy/gold design system (src/styles/site.css), the
+ * site-wide nav + footer, full SEO meta (title, description, canonical, Open
+ * Graph, Twitter), and JSON-LD schema (Organization site-wide + any
+ * page-specific schema + an auto-generated BreadcrumbList).
+ *
+ * NOTE: every page defaults to noindex. The site stays unpublished until
+ * nonprofit licensing is approved — see STATUS.md. At launch: flip
+ * `noindex` off, update public/robots.txt, and point HOME below at "/".
+ */
+import '../styles/site.css';
+import { organizationSchema } from '../schema/organization';
+import { breadcrumbSchema } from '../schema/breadcrumb';
+
+interface Crumb { name: string; url: string; }
+
+interface Props {
+  title: string;            // <title> + og:title (brand suffix added automatically)
+  description: string;      // meta description (150–160 chars)
+  primaryKeyword?: string;  // documentation only — the page's target query
+  canonical?: string;       // defaults to the live .org URL for this path
+  noindex?: boolean;        // defaults true until launch
+  ogImage?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[]; // page-specific JSON-LD
+  breadcrumbs?: Crumb[];    // [{name,url}] — also emitted as BreadcrumbList schema
+  activeNav?: string;       // nav key to highlight: programs | treat | approach | admissions | insurance | team | contact
+}
+
+// The original homepage lives at /design-preview and is linked, not republished.
+// Flip this to "/" on launch day.
+const HOME = '/design-preview';
+const SITE = 'https://sunbrightrecovery.org';
+
+const {
+  title,
+  description,
+  canonical = SITE + Astro.url.pathname,
+  noindex = true,
+  ogImage = '/images/og-default.jpg',
+  schema,
+  breadcrumbs = [],
+  activeNav,
+} = Astro.props;
+
+const siteName = 'Sunbright Recovery Center';
+const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+const ogImageUrl = new URL(ogImage, SITE).href;
+
+// Assemble JSON-LD: org (site-wide) + breadcrumbs + page schema
+const schemaBlocks: Record<string, unknown>[] = [organizationSchema()];
+if (breadcrumbs.length) {
+  schemaBlocks.push(
+    breadcrumbSchema(breadcrumbs.map((c) => ({ name: c.name, url: SITE + c.url })))
+  );
+}
+if (Array.isArray(schema)) schemaBlocks.push(...schema);
+else if (schema) schemaBlocks.push(schema);
+
+const navLinks = [
+  { key: 'programs', href: '/programs', label: 'Programs' },
+  { key: 'treat', href: '/what-we-treat', label: 'What We Treat' },
+  { key: 'approach', href: '/our-approach', label: 'Our Approach' },
+  { key: 'admissions', href: '/admissions', label: 'Admissions' },
+  { key: 'insurance', href: '/insurance', label: 'Insurance' },
+  { key: 'team', href: '/team', label: 'Team' },
+  { key: 'contact', href: '/contact', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImageUrl} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  {schemaBlocks.map((block) => (
+    <script type="application/ld+json" set:html={JSON.stringify(block)} />
+  ))}
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href={HOME} aria-label="Sunbright Recovery Center — home"><img src="/logo.png" alt="Sunbright Recovery Center" /></a>
+    <div class="nav-links">
+      {navLinks.map((l) => (
+        <a href={l.href} aria-current={activeNav === l.key ? 'page' : undefined}>{l.label}</a>
+      ))}
+    </div>
+    <a href="tel:+15305282342" class="nav-cta">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      (530) 528-2342
+    </a>
+  </div>
+</nav>
+
+{breadcrumbs.length > 0 && (
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((c, i) => (
+        <li>
+          {i < breadcrumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<main>
+  <slot />
+</main>
+
+<footer>
+  <div class="f-crisis">Call us: <a href="tel:+15305282342">(530) 528-2342</a> &nbsp;·&nbsp; Medical emergency: 911</div>
+  <div class="f-main">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="/logo.png" alt="Sunbright Recovery Center" />
+        <p class="f-tagline">A Brighter Tomorrow. A Stronger You.</p>
+        <p>A nonprofit providing faith-integrated, evidence-based addiction recovery in Northern California.</p>
+      </div>
+      <div class="f-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="/programs/residential">Residential Rehab</a></li>
+          <li><a href="/programs/outpatient">Outpatient (IOP)</a></li>
+          <li><a href="/programs/sober-living">Sober Living</a></li>
+        </ul>
+        <h4 class="mt">What We Treat</h4>
+        <ul>
+          <li><a href="/what-we-treat/alcohol">Alcohol Use Disorder</a></li>
+          <li><a href="/what-we-treat/opioids">Opioid Addiction</a></li>
+          <li><a href="/what-we-treat/dual-diagnosis">Dual Diagnosis</a></li>
+          <li><a href="/what-we-treat/trauma-addiction">Trauma &amp; Addiction</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/about">About Sunbright</a></li>
+          <li><a href="/our-approach">Our Approach</a></li>
+          <li><a href="/team">Our Team</a></li>
+          <li><a href="/family-resources">Family Resources</a></li>
+          <li><a href="/admissions">Admissions</a></li>
+          <li><a href="/insurance">Insurance &amp; Payment</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+          <li><a href="/tour">Schedule a Tour</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Get in Touch</h4>
+        <div class="f-contact">
+          <a href="tel:+15305282342" class="phone"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(530) 528-2342</a>
+          <a href="mailto:info@sunbrightrecovery.org"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@sunbrightrecovery.org</a>
+          <a href="https://maps.google.com/?q=22425+Sunbright+Ave+Red+Bluff+CA+96080" target="_blank" rel="noopener"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>22425 Sunbright Ave<br/>Red Bluff, CA 96080</a>
+        </div>
+        <h4 class="mt">Payment</h4>
+        <ul>
+          <li><a href="/insurance">Private Pay Accepted</a></li>
+          <li><a href="/insurance">Insurance &amp; Payment</a></li>
+          <li><a href="/get-involved">Support Our Mission</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="f-samhsa">
+    Need help finding treatment elsewhere? The free, confidential <a href="tel:+18006624357">SAMHSA National Helpline</a> is available 24/7 at 1-800-662-4357.
+  </div>
+  <div class="f-bot">
+    <span>&copy; 2026 <a href={HOME}>Sunbright Recovery Center</a> · Site by <a href="https://phoenixmethodseo.com" target="_blank" rel="noopener">Phoenix Method SEO</a></span>
+    <span class="f-heal">Healing Today. Hope for Tomorrow. Freedom for Life.</span>
+  </div>
+</footer>
+
+<div class="sticky"><a href="tel:+15305282342"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call Now</a></div>
+
+</body>
+</html>

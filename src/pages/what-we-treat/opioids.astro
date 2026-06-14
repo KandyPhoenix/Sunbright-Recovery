@@ -1,0 +1,254 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalConditionSchema } from '../../schema/medicalCondition';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Opioid Addiction Treatment California | Sunbright Recovery',
+  description:
+    'Opioid and opiate addiction treatment in Northern California. Trauma-informed care, family support, and medication-assisted treatment referral.',
+  primaryKeyword: 'opioid addiction treatment california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'What We Treat', url: '/what-we-treat' },
+  { name: 'Opioid Addiction', url: '/what-we-treat/opioids' },
+];
+
+const faqs = [
+  {
+    question: 'Does Sunbright offer medication-assisted treatment (MAT)?',
+    answer:
+      'Sunbright does not prescribe or dispense MAT medications on-site, but we actively coordinate MAT referrals and work alongside prescribing partners when MAT is clinically appropriate. We support whatever evidence-based tools help you succeed in recovery.',
+  },
+  {
+    question: 'Do I need to detox before entering Sunbright?',
+    answer:
+      'Opioid withdrawal, while intensely uncomfortable, is rarely medically life-threatening — but medical supervision greatly improves comfort and safety. We do not provide on-site detox. Our admissions team will coordinate a detox referral so you arrive ready for residential treatment.',
+  },
+  {
+    question: 'What opioids does Sunbright treat?',
+    answer:
+      'We treat all forms of opioid and opiate use disorder, including heroin, fentanyl, prescription pain medications (oxycodone, hydrocodone, morphine), and synthetic opioids. The substance matters less than the person — our approach addresses the underlying patterns that sustain use.',
+  },
+  {
+    question: 'How long is opioid rehab at Sunbright?',
+    answer:
+      'We offer 30-, 60-, and 90-day residential programs. Research strongly supports longer treatment for opioid use disorder — 90 days or more significantly improves outcomes. After residential care, step-down to IOP and sober living further supports lasting recovery.',
+  },
+  {
+    question: 'Can family members be part of the treatment process?',
+    answer:
+      'Yes — and we encourage it. Opioid addiction changes family dynamics profoundly. We offer family education and involvement as part of our program, helping loved ones heal alongside the person in treatment.',
+  },
+  {
+    question: 'How do I start the admissions process?',
+    answer:
+      'Call us at (530) 528-2342 or email info@sunbrightrecovery.org. Our admissions team will listen to your situation, answer your questions honestly, help coordinate any needed detox, and walk you through the next steps — with no pressure and no judgment.',
+  },
+];
+
+const schema = [
+  medicalConditionSchema({
+    name: 'Opioid Use Disorder',
+    alternateName: ['Opioid Addiction', 'Opiate Addiction', 'OUD', 'Heroin Addiction', 'Fentanyl Addiction'],
+    description:
+      'Opioid use disorder (OUD) is a chronic medical condition involving problematic use of opioids — including heroin, fentanyl, and prescription pain medications — that causes significant impairment, cravings, and withdrawal symptoms.',
+    path: '/what-we-treat/opioids',
+    signs: [
+      'Strong craving or compulsion to use opioids',
+      'Inability to control or stop opioid use despite attempts',
+      'Using opioids in larger amounts or for longer than intended',
+      'Neglecting responsibilities at work, home, or school due to opioid use',
+      'Continued use despite negative consequences on health or relationships',
+      'Developing tolerance — needing more opioids to achieve the same effect',
+      'Experiencing withdrawal symptoms when opioids are reduced or stopped',
+    ],
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="treat" schema={schema}>
+
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">What We Treat</span>
+      <h1>Opioid addiction treatment in <em>Northern California.</em></h1>
+      <p class="lead">Opioid use disorder — from prescription painkillers to heroin and fentanyl — is treatable. Sunbright Recovery Center offers compassionate, evidence-based opioid addiction treatment in Red Bluff, CA, serving Redding, Chico, Sacramento, and Tehama County.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>The opioid crisis has touched nearly every county in Northern California. Families in Red Bluff, Redding, Chico, and across Tehama County have watched people they love become unrecognizable to themselves — not because of weakness, but because opioids fundamentally change how the brain processes pain, pleasure, and motivation.</p>
+
+        <p>At Sunbright, we meet that reality with facts and compassion, not judgment. Opioid use disorder is a chronic, relapsing brain condition — and it responds well to structured, evidence-based treatment that addresses the whole person.</p>
+
+        <h2>Signs it may be time to get help</h2>
+        <p>Opioid use disorder develops gradually and often in people who never imagined this would happen to them. These signs suggest it is time to seek professional support:</p>
+
+        <ul class="checks">
+          <li><strong>Using opioids more than intended</strong> — doses have crept up, or use has spread from pain management to daily need</li>
+          <li><strong>Failed attempts to cut back</strong> on your own, despite genuine desire to stop</li>
+          <li><strong>Withdrawal symptoms</strong> when you reduce or stop: muscle aches, sweating, nausea, anxiety, agitation</li>
+          <li><strong>Tolerance</strong> — needing increasing amounts to feel the same relief</li>
+          <li><strong>Preoccupation with obtaining and using opioids</strong> — it consumes mental energy</li>
+          <li><strong>Declining work, relationships, or health</strong> due to opioid use</li>
+          <li><strong>Using alone or hiding use</strong> from people who care about you</li>
+        </ul>
+
+        <h2>How Sunbright treats opioid use disorder</h2>
+        <p>We offer a full continuum of care to support recovery from initial stabilization through long-term community:</p>
+        <ul>
+          <li><strong>Detox referral &amp; coordination.</strong> Opioid withdrawal is rarely life-threatening but is intensely uncomfortable. We coordinate medical detox referrals before admission so you arrive in a stable, ready state.</li>
+          <li><strong>MAT coordination.</strong> Medication-assisted treatment (buprenorphine, naltrexone, and related medications) has strong research support. While we do not prescribe or dispense MAT on-site, we coordinate actively with prescribing partners when MAT is part of your recovery plan.</li>
+          <li><strong><a href="/programs/residential">Residential rehab</a> (30, 60, or 90 days).</strong> Immersive care in our 16-bed center — structured programming, individual therapy, trauma-informed group work, and faith-integrated support for those who want it.</li>
+          <li><strong><a href="/programs/outpatient">Intensive outpatient (IOP) and PHP</a>.</strong> Structured step-down care for those transitioning from residential or needing significant support alongside home life.</li>
+          <li><strong><a href="/programs/sober-living">Sober living &amp; aftercare</a>.</strong> Community accountability and peer connection — critical for protecting recovery in the months after residential care, when relapse risk is highest.</li>
+        </ul>
+
+        <h2>Trauma-informed opioid care</h2>
+        <p>A significant proportion of people with opioid use disorder have histories of trauma — adverse childhood experiences, physical injury, chronic pain, or violence. Many were self-medicating pain, physical or emotional, before they understood what was happening to them.</p>
+        <p>Our <a href="/our-approach">clinical approach</a> at Sunbright is grounded in trauma-informed principles: establishing physical and emotional safety before asking people to do difficult therapeutic work, and treating the underlying pain alongside the opioid use itself. If trauma is part of your story, we have clinical tools designed specifically for that. You can also learn more about our <a href="/what-we-treat/trauma-addiction">trauma &amp; addiction treatment</a>.</p>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p><strong>If someone is experiencing an opioid overdose,</strong> call 911 immediately. Naloxone (Narcan) reverses opioid overdose and is available at most pharmacies in California without a prescription. When the emergency has passed, call us at <a href="tel:+15305282342">(530) 528-2342</a> — treatment can begin as soon as your loved one is medically stable.</p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Opioid treatment at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Detox referral &amp; coordination
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          MAT coordination with partner providers
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          30, 60 &amp; 90-day residential programs
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Trauma-informed clinical model
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Family involvement &amp; education
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          501(c)(3) nonprofit — private pay accepted
+        </div>
+        <a href="/admissions" class="btn btn-navy">Check Availability</a>
+        <a href="tel:+15305282342" class="btn btn-outline" style="margin-top:10px;">Call (530) 528-2342</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What Makes Us Different</span>
+        <h2>Why Sunbright for <em>opioid addiction treatment.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h3>Evidence-based &amp; non-judgmental</h3>
+            <p>Opioid use disorder carries enormous stigma. We do not deal in stigma. We deal in evidence, compassion, and clinical care that actually works — whatever the substance, whatever the history.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <h3>20+ years of clinical leadership</h3>
+            <p>Sunbright was founded by Linda Spyres, LCSW, LAADC-CA, who has spent more than two decades working in addiction treatment. That depth of experience is built into every aspect of how we operate.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <div>
+            <h3>A continuum that goes the distance</h3>
+            <p>Opioid recovery takes time. Our continuum — residential to IOP to sober living — is designed to support people all the way through the highest-risk early period and into stable long-term recovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Opioid treatment <em>FAQs.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Related Conditions</span>
+        <h2>Opioid addiction rarely stands <em>alone.</em></h2>
+        <p class="lead">Many people with opioid use disorder also experience depression, anxiety, PTSD, or chronic pain. Our clinical programs are built to treat all of it together.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="/what-we-treat/dual-diagnosis" class="card is-link">
+          <span class="card-tag">Co-Occurring Disorders</span>
+          <h3>Dual Diagnosis</h3>
+          <p>Depression, anxiety, and PTSD frequently co-occur with opioid use disorder. Our dual diagnosis track treats both conditions simultaneously for lasting results.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/what-we-treat/trauma-addiction" class="card is-link">
+          <span class="card-tag">Trauma &amp; Addiction</span>
+          <h3>Trauma-Rooted Addiction</h3>
+          <p>Many opioid use disorders began as self-medication of pain — physical or emotional. Trauma-informed care gets to the root of why substances became necessary.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/our-approach" class="card is-link">
+          <span class="card-tag">Our Approach</span>
+          <h3>How We Treat Addiction</h3>
+          <p>Learn how Sunbright's evidence-based, trauma-informed clinical model supports whole-person recovery from opioid and other substance use disorders.</p>
+          <span class="card-link">Our approach <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Opioid Addiction Treatment — Northern California</span>
+    <h2>Recovery from opioids is <em>possible.</em></h2>
+    <p>People recover from opioid use disorder every day. The right treatment, at the right time, makes the difference. Call us for a private conversation about what recovery can look like for you or your loved one.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+
+</SiteLayout>

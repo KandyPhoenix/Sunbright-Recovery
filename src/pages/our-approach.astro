@@ -1,0 +1,223 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { faqPageSchema } from '../schema/faqPage';
+
+const meta = {
+  title: 'Faith-Integrated, Evidence-Based Recovery | Our Approach',
+  description:
+    'CBT, motivational interviewing, trauma-informed care, family systems, plus optional faith integration. The Sunbright Recovery approach to lasting recovery.',
+  primaryKeyword: 'faith-based rehab california',
+  activeNav: 'approach',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Our Approach', url: '/our-approach' },
+];
+
+const faqs = [
+  {
+    question: 'Is faith participation required at Sunbright?',
+    answer:
+      'No. Faith integration is always optional. We offer chaplaincy, prayer, Scripture study, and spiritually grounded group sessions for those who want them — and we never pressure anyone who does not. Our clinical program stands fully on its own without any religious component.',
+  },
+  {
+    question: 'What evidence-based therapies does Sunbright use?',
+    answer:
+      'Our core clinical modalities include Cognitive Behavioral Therapy (CBT), Motivational Interviewing (MI), trauma-informed care, and family systems therapy. We use the same approaches recommended by SAMHSA and the National Institute on Drug Abuse.',
+  },
+  {
+    question: 'How does faith integration actually work in practice?',
+    answer:
+      'For clients who choose it, faith is woven into the rhythm of the day — optional morning devotionals, chaplaincy sessions, faith-based recovery groups, and the opportunity to explore how spiritual grounding supports lasting change. Clients who prefer a secular program participate in all the same clinical services without the faith-specific components.',
+  },
+  {
+    question: 'Do you treat co-occurring mental health conditions?',
+    answer:
+      'Yes. We take a whole-person approach that treats addiction and mental health as inseparable. Our clinical team screens every client for co-occurring conditions — anxiety, depression, PTSD, and others — and integrates dual-diagnosis treatment into the care plan from day one. Learn more on our dual-diagnosis page.',
+  },
+  {
+    question: 'What is "trauma-informed care" and why does it matter?',
+    answer:
+      'Trauma-informed care means recognizing that many people in recovery have experienced significant trauma — and that unresolved trauma is often at the root of substance use. Rather than asking "What is wrong with you?" we ask "What happened to you?" Every staff interaction, every group session, is designed to feel safe, predictable, and empowering.',
+  },
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} schema={[faqPageSchema(faqs)]}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Our Approach</span>
+      <h1>Evidence-based care with <em>optional faith integration.</em></h1>
+      <p class="lead">Sunbright combines the clinical modalities that research shows work — CBT, motivational interviewing, trauma-informed care — with an optional faith dimension for those who want it. Northern California's faith-based rehab built on science, not just belief.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>Most people searching for a <strong>faith-based rehab in California</strong> are looking for two things at once: treatment that actually works, and a place where their values are respected. Sunbright was built to deliver both. We start with the clinical evidence — the modalities that decades of research have shown produce lasting recovery — and we layer in optional faith integration for clients who want their spiritual life to be part of the healing.</p>
+
+        <h2>Cognitive Behavioral Therapy (CBT)</h2>
+        <p>CBT is the most researched psychotherapy for addiction. It teaches clients to identify the thoughts, emotions, and situations that trigger substance use — and to replace automatic, destructive reactions with deliberate, healthy ones. At Sunbright, CBT is delivered in both individual and group sessions, giving clients tools they can use long after they leave our care.</p>
+
+        <h2>Motivational Interviewing (MI)</h2>
+        <p>Recovery requires change, and change requires motivation that comes from within. Motivational Interviewing is a collaborative, non-confrontational counseling style that helps clients find and strengthen their own reasons to change. Our counselors are trained in MI so that every conversation — from the first call to discharge planning — is built on partnership, not pressure.</p>
+
+        <h2>Trauma-Informed Care</h2>
+        <p>For a large portion of people in recovery, addiction is inseparable from trauma. Adverse childhood experiences, domestic violence, grief, accidents — trauma reshapes the nervous system and drives many people toward substances as a form of survival. Our entire program is built on trauma-informed principles: safety, trustworthiness, choice, collaboration, and empowerment. This connects directly to our <a href="/what-we-treat/trauma-addiction">trauma and addiction</a> specialty.</p>
+
+        <h2>Family Systems Therapy</h2>
+        <p>Addiction doesn't happen in isolation — and neither does recovery. Family systems therapy helps clients and their loved ones understand the patterns, roles, and communication cycles that may have enabled or escalated substance use. We involve family members (with client consent) in education sessions and structured family therapy when appropriate, because the people who will surround a client after discharge are among the most powerful forces for lasting change. See our <a href="/family-resources">family resources</a> page for more.</p>
+
+        <h2>Group &amp; Individual Therapy</h2>
+        <p>Both modalities are essential. Individual therapy gives clients space for the work that is deeply personal — unresolved trauma, specific relationship ruptures, private shame. Group therapy creates something individual sessions cannot: the lived experience of not being alone. Hearing others name the same fears, celebrate the same milestones, and hold each other accountable builds a recovery community that often becomes one of the most sustaining parts of a client's long-term sobriety.</p>
+
+        <h2>Holistic &amp; Whole-Person Elements</h2>
+        <p>Recovery happens in the body as well as the mind. We incorporate structured physical wellness, nutrition education, mindfulness practices, and recreational activities into the weekly schedule. Our setting in the foothills of Northern California — the clean air, the open space, the pace of Red Bluff — is itself therapeutic. We treat the whole person, not just the diagnosis.</p>
+
+        <h2>Optional Faith Integration — The Sunbright Difference</h2>
+        <p>For clients who want it, faith is woven into the life of the center. Sunbright is one of the few treatment programs in Northern California that deliberately bridges <strong>christian rehab california</strong> values with licensed clinical care — not as an either/or, but as a "yes, and." Optional offerings include:</p>
+        <ul>
+          <li>Morning devotionals and prayer for those who choose them</li>
+          <li>Chaplaincy and pastoral counseling</li>
+          <li>Faith-based 12-Step integration and spiritual direction</li>
+          <li>Scripture study and meaning-making groups</li>
+          <li>Connection to local faith communities for post-discharge support</li>
+        </ul>
+        <p>For clients who do not identify with a faith tradition — or who prefer a fully secular program — every clinical service is available without any religious component. <strong>Faith is never required.</strong></p>
+      </div>
+
+      <aside class="aside">
+        <h3>Clinical modalities</h3>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Cognitive Behavioral Therapy (CBT)</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Motivational Interviewing (MI)</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Trauma-Informed Care</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Family Systems Therapy</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Group &amp; Individual Therapy</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Dual-Diagnosis Treatment</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Optional faith integration</div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What we treat</span>
+        <h2>Comprehensive care for the <em>whole person.</em></h2>
+        <p class="lead">Our evidence-based approach treats the full range of conditions that bring people to us — often overlapping and always interconnected.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-tag">Substance Use</div>
+          <h3>Alcohol Use Disorder</h3>
+          <p>Medical assessment, CBT-based relapse prevention, and peer community for those recovering from alcohol dependence.</p>
+          <a href="/what-we-treat/alcohol" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-tag">Substance Use</div>
+          <h3>Opioid Addiction</h3>
+          <p>Evidence-based treatment for prescription opioid and heroin dependence, including care coordination for MAT when clinically indicated.</p>
+          <a href="/what-we-treat/opioids" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-tag">Co-Occurring</div>
+          <h3>Dual Diagnosis</h3>
+          <p>Integrated treatment for addiction alongside depression, anxiety, PTSD, bipolar disorder, and other mental health conditions.</p>
+          <a href="/what-we-treat/dual-diagnosis" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-tag">Root Causes</div>
+          <h3>Trauma &amp; Addiction</h3>
+          <p>Specialized trauma-informed care that addresses the adverse experiences that often underlie substance use disorders.</p>
+          <a href="/what-we-treat/trauma-addiction" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-tag">Programs</div>
+          <h3>Residential Rehab</h3>
+          <p>30, 60, and 90-day inpatient programs with round-the-clock clinical support in our 16-bed Red Bluff center.</p>
+          <a href="/programs/residential" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card">
+          <div class="card-tag">Programs</div>
+          <h3>Outpatient &amp; Sober Living</h3>
+          <p>IOP, PHP, and structured sober-living options that support the step-down from residential care into everyday life.</p>
+          <a href="/programs/outpatient" class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The evidence base</span>
+        <h2>Why these modalities — and why <em>here.</em></h2>
+        <p class="lead">Every modality we use has a peer-reviewed evidence base. We choose what works, not what sounds good.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div>
+            <h3>SAMHSA-aligned clinical protocols</h3>
+            <p>Our clinical protocols follow SAMHSA's Treatment Improvement Protocols (TIPs) and the ASAM criteria for level-of-care placement. Evidence, not trend.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
+          <div>
+            <h3>Small cohort, real relationships</h3>
+            <p>Our 16-bed model means counselors actually know their clients. The therapeutic relationship is itself evidence-based — it is one of the strongest predictors of treatment outcome.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+          <div>
+            <h3>Northern California roots</h3>
+            <p>We serve Red Bluff, Redding, Chico, Sacramento, Tehama County, and communities throughout Northern California. Staying close to home preserves family ties — and family ties improve outcomes.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+          <div>
+            <h3>Founded on 20+ years of clinical experience</h3>
+            <p>Founder Linda Spyres, LCSW, LAADC-CA has spent more than two decades in addiction treatment. The approach she built here comes from real-world experience with what actually helps people recover. <a href="/team">Meet our team.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Frequently asked questions</span>
+        <h2>Questions about <em>our approach.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Ready to take the first step?</span>
+    <h2>Start with a <em>private conversation.</em></h2>
+    <p>Call us to ask about our clinical approach, faith integration options, or what program might be the right fit. No pressure. No judgment.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

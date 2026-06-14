@@ -1,0 +1,259 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalConditionSchema } from '../../schema/medicalCondition';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Alcohol Rehab California | Alcohol Addiction Treatment',
+  description:
+    'Alcohol addiction treatment in Northern California. Residential, IOP, and sober living. Faith-integrated, evidence-based, nonprofit care. Call today.',
+  primaryKeyword: 'alcohol rehab california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'What We Treat', url: '/what-we-treat' },
+  { name: 'Alcohol Addiction', url: '/what-we-treat/alcohol' },
+];
+
+const faqs = [
+  {
+    question: 'Does Sunbright treat alcohol withdrawal safely?',
+    answer:
+      'Alcohol withdrawal can be medically serious. Sunbright does not provide on-site medical detox, but our admissions team will coordinate a safe medical detox referral before you arrive so you can transition into our residential program in a stable state.',
+  },
+  {
+    question: 'How long does alcohol rehab take?',
+    answer:
+      'Research consistently shows that longer treatment leads to better outcomes. Sunbright offers 30-, 60-, and 90-day residential programs, followed by step-down to IOP and sober living. Many people with severe alcohol use disorder benefit most from 90 days or longer of structured care.',
+  },
+  {
+    question: 'What does a typical day look like in residential alcohol treatment?',
+    answer:
+      'Days are structured and purposeful: morning wellness activities, individual therapy sessions, evidence-based group counseling (CBT, motivational interviewing), faith-integrated programming for those who want it, meals together, and evening reflection. Structure itself is part of the healing.',
+  },
+  {
+    question: 'Can my family be involved in my treatment?',
+    answer:
+      'Yes — family involvement is strongly encouraged. We offer family education and support as part of the program. Alcohol use disorder affects entire families, and we help loved ones understand the condition and build healthier patterns alongside the person in recovery.',
+  },
+  {
+    question: 'How do I pay for alcohol rehab at Sunbright?',
+    answer:
+      'Private pay is accepted today. Sunbright is not currently in-network with insurance plans. Contact our admissions team at (530) 528-2342 or info@sunbrightrecovery.org and we will give you an honest picture of cost and the options available.',
+  },
+  {
+    question: 'Do I need to be religious to get help at Sunbright?',
+    answer:
+      'No. Faith-integrated programming is available for those who find it meaningful, and never required of anyone who does not. Our evidence-based clinical model works for people of all backgrounds and beliefs.',
+  },
+];
+
+const schema = [
+  medicalConditionSchema({
+    name: 'Alcohol Use Disorder',
+    alternateName: ['Alcoholism', 'Alcohol Addiction', 'AUD'],
+    description:
+      'Alcohol use disorder (AUD) is a chronic, treatable medical condition characterized by an inability to control or stop alcohol use despite negative consequences, strong cravings, and physical dependence.',
+    path: '/what-we-treat/alcohol',
+    signs: [
+      'Strong craving or urge to drink alcohol',
+      'Inability to stop or limit alcohol consumption',
+      'Spending a great deal of time obtaining, using, or recovering from alcohol',
+      'Continuing to drink despite negative effects on relationships, work, or health',
+      'Needing to drink more to get the same effect (tolerance)',
+      'Experiencing withdrawal symptoms when not drinking',
+      'Giving up important activities to drink',
+    ],
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="treat" schema={schema}>
+
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">What We Treat</span>
+      <h1>Alcohol rehab in <em>Northern California.</em></h1>
+      <p class="lead">If alcohol has started running your life — or the life of someone you love — you are not alone, and you are not without options. Sunbright Recovery Center offers evidence-based alcohol rehab in Red Bluff, CA, close to Redding, Chico, and Sacramento.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>Alcohol use disorder is the most common substance use condition in California — and one of the most under-treated. Many people live for years in a cycle of trying to cut back, struggling to succeed, and feeling shame about the gap between intention and reality. That cycle is not a character flaw. It is the nature of a chronic, treatable medical condition.</p>
+
+        <p>At Sunbright, we approach alcohol addiction the way it deserves to be approached: with clinical rigor and human compassion. Our program addresses the physical, psychological, and social dimensions of alcohol use disorder so that recovery is not just possible — it lasts.</p>
+
+        <h2>Signs it may be time to get help</h2>
+        <p>Alcohol use disorder exists on a spectrum. You do not have to hit a dramatic "rock bottom" before treatment makes sense. These signs suggest professional support is worth exploring:</p>
+
+        <ul class="checks">
+          <li><strong>Drinking more than planned</strong> — or longer than you intended, most of the time</li>
+          <li><strong>Persistent desire to cut back</strong> but difficulty doing so on your own</li>
+          <li><strong>Increasing tolerance</strong> — needing more alcohol to feel the same effect</li>
+          <li><strong>Withdrawal symptoms</strong> when you stop: tremors, sweating, anxiety, nausea</li>
+          <li><strong>Giving up activities</strong> you used to enjoy because of drinking</li>
+          <li><strong>Continued use</strong> despite clear harm to relationships, work, or health</li>
+          <li><strong>Drinking to manage anxiety, grief, trauma, or stress</strong> rather than to enjoy it</li>
+        </ul>
+
+        <h2>How Sunbright treats alcohol use disorder</h2>
+        <p>We offer a continuum of care so you can step through treatment at the clinically appropriate pace:</p>
+        <ul>
+          <li><strong>Detox coordination.</strong> Alcohol withdrawal can be medically serious. We do not provide on-site detox, but our team coordinates a safe referral so you arrive at Sunbright ready for the work of recovery.</li>
+          <li><strong><a href="/programs/residential">Residential rehab</a> (30, 60, or 90 days).</strong> Structured daily programming — individual therapy, group counseling, evidence-based modalities, and faith-integrated support — in our 16-bed center in Red Bluff.</li>
+          <li><strong><a href="/programs/outpatient">Intensive outpatient (IOP) and PHP</a>.</strong> For those stepping down from residential or who need meaningful support while maintaining home responsibilities.</li>
+          <li><strong><a href="/programs/sober-living">Sober living &amp; aftercare</a>.</strong> Community accountability and peer support to protect early sobriety and build a life that sustains it.</li>
+        </ul>
+
+        <h2>Evidence-based clinical approaches</h2>
+        <p>Our clinical model draws on the modalities with the strongest research base for alcohol use disorder:</p>
+        <ul>
+          <li><strong>Cognitive Behavioral Therapy (CBT)</strong> — identifying and changing thoughts and behaviors that drive drinking</li>
+          <li><strong>Motivational Interviewing (MI)</strong> — building internal motivation to change, rather than pushing compliance</li>
+          <li><strong>Trauma-informed care</strong> — because unresolved trauma often underlies alcohol use, especially in those who began drinking young</li>
+          <li><strong>Family systems work</strong> — involving loved ones in the healing process</li>
+          <li><strong>12-step and peer support integration</strong> — connecting people to long-term community in recovery</li>
+        </ul>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p><strong>Alcohol withdrawal can be dangerous.</strong> Seizures and severe symptoms are possible, particularly for heavy or long-term drinkers. Never try to detox from alcohol alone. Call us at <a href="tel:+15305282342">(530) 528-2342</a> — we will help you find the right first step safely.</p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Alcohol treatment at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Detox coordination before arrival
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          30, 60 &amp; 90-day residential programs
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          IOP &amp; PHP step-down options
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          CBT, motivational interviewing, trauma-informed care
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Family involvement encouraged
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          501(c)(3) nonprofit — private pay accepted
+        </div>
+        <a href="/admissions" class="btn btn-navy">Check Availability</a>
+        <a href="tel:+15305282342" class="btn btn-outline" style="margin-top:10px;">Call (530) 528-2342</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What Makes Us Different</span>
+        <h2>Why families choose Sunbright for <em>alcohol rehab.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <div>
+            <h3>Close to Northern California families</h3>
+            <p>Located in Red Bluff, Sunbright is accessible from Redding, Chico, Sacramento, and all of Tehama County — close enough for family visits, far enough from the environments that make early recovery harder.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h3>Nonprofit — no profit motive in your care</h3>
+            <p>As a 501(c)(3) nonprofit founded by Linda Spyres, LCSW, LAADC-CA, every decision about your treatment is clinical — not financial. We are not accountable to investors; we are accountable to you.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <h3>Whole-person approach</h3>
+            <p>We treat the conditions beneath the alcohol use — trauma, anxiety, grief, relationship patterns — because sobriety built only on willpower rarely holds. Real recovery goes deeper.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Alcohol rehab <em>FAQs.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Related Conditions</span>
+        <h2>Alcohol use disorder often occurs <em>alongside other conditions.</em></h2>
+        <p class="lead">Many people who struggle with alcohol also experience co-occurring mental health challenges or trauma. Our programs are designed to address all of it together.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="/what-we-treat/dual-diagnosis" class="card is-link">
+          <span class="card-tag">Co-Occurring Disorders</span>
+          <h3>Dual Diagnosis</h3>
+          <p>Anxiety, depression, bipolar disorder, and PTSD frequently co-occur with alcohol use disorder. Learn how we treat both at the same time.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/what-we-treat/trauma-addiction" class="card is-link">
+          <span class="card-tag">Trauma &amp; Addiction</span>
+          <h3>Trauma-Rooted Addiction</h3>
+          <p>Alcohol is frequently used to manage the weight of unprocessed trauma. Our trauma-informed care gets to the root.</p>
+          <span class="card-link">Learn more <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/our-approach" class="card is-link">
+          <span class="card-tag">Our Approach</span>
+          <h3>How We Treat Addiction</h3>
+          <p>Evidence-based, faith-integrated, and deeply human — learn how Sunbright's clinical approach works for the whole person.</p>
+          <span class="card-link">Our approach <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Northern California Alcohol Rehab</span>
+    <h2>A conversation changes <em>everything.</em></h2>
+    <p>You deserve real answers, not a sales pitch. Call us for a private, no-pressure conversation about alcohol treatment options at Sunbright Recovery Center in Red Bluff, CA.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+
+</SiteLayout>

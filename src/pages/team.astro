@@ -1,0 +1,169 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { personSchema } from '../schema/person';
+
+const meta = {
+  title: 'Meet Our Recovery Team | Sunbright Recovery Center',
+  description:
+    'Linda Spyres LCSW LAADC-CA, Faith Odell SUDRC, and the Sunbright team — 20+ years of compassionate, evidence-based addiction expertise in Red Bluff, CA.',
+  primaryKeyword: 'addiction counselor red bluff',
+  activeNav: 'team',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Our Team', url: '/team' },
+];
+
+const schema = [
+  personSchema({
+    name: 'Linda Spyres',
+    jobTitle: 'Founder &amp; Clinical Director',
+    description:
+      'Linda Spyres has more than 20 years of experience in addiction treatment and clinical behavioral health. She founded Sunbright Recovery Center on the belief that compassionate, evidence-based care should be available to everyone in Northern California, regardless of income or background. As a Licensed Clinical Social Worker and Licensed Advanced Alcohol and Drug Counselor, she brings both rigorous clinical training and a deeply personal commitment to the people she serves.',
+    credentials: ['LCSW', 'LAADC-CA'],
+  }),
+  personSchema({
+    name: 'Faith Odell',
+    jobTitle: 'Substance Use Disorder Recovery Counselor',
+    description:
+      'Faith Odell brings warmth, lived knowledge of the recovery landscape, and specialized training in substance use disorder recovery counseling. She works directly with residents and their families throughout the treatment process.',
+    credentials: ['SUDRC'],
+  }),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} schema={schema}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Our Team</span>
+      <h1>People who became <em>addiction counselors</em> because it matters.</h1>
+      <p class="lead">At Sunbright, clinical expertise and human compassion aren't separate things — they're the same thing. Our team of licensed counselors and support staff in Red Bluff, CA brings more than 20 combined years of experience walking alongside people in recovery.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/about" class="btn btn-ghost">About Sunbright</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2>Recovery is a relationship, <em>not a transaction.</em></h2>
+        <p class="lead">The people who do best in treatment aren't the ones given the perfect program — they're the ones who feel genuinely seen and supported by the staff around them. That belief shapes every hire we make and every interaction at Sunbright.</p>
+      </div>
+
+      <div class="prose wide" style="margin: 0 auto">
+        <p>Sunbright Recovery Center is a program of <strong>Parish Health and Wellness (PHW Care)</strong> — a Northern California organization with deep roots in integrated behavioral and primary health care. That partnership means our residents benefit from PHW's mental-health infrastructure and clinical oversight, while receiving addiction treatment in a dedicated, residential setting built specifically for recovery.</p>
+        <p>Our clinical approach is evidence-based and personalized: Cognitive Behavioral Therapy (CBT), Motivational Interviewing, trauma-informed care, and peer community support — woven together with the optional spiritual dimension that many people in recovery find essential. <a href="/our-approach">Learn more about how we approach care.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Named Staff</span>
+        <h2>Meet the people who lead <em>your care.</em></h2>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Linda Spyres -->
+        <div class="card featured">
+          <div class="card-tag">Founder &amp; Clinical Director</div>
+          <h3>Linda Spyres</h3>
+          <p style="font-size:13px;font-weight:700;color:var(--gold-dk);margin-bottom:14px;margin-top:-6px">LCSW &nbsp;·&nbsp; LAADC-CA</p>
+          <p>Linda has spent more than 20 years in addiction treatment — in community clinics, hospital behavioral health units, and private practice. She founded Sunbright because she saw too many people in Tehama County and surrounding communities fall through the gaps: too far from a quality center, or priced out of the ones they could reach.</p>
+          <p>As a <strong>Licensed Clinical Social Worker</strong> and <strong>Licensed Advanced Alcohol and Drug Counselor</strong>, Linda oversees all clinical programming, supervises staff, and remains directly involved with residents throughout treatment. She believes recovery is possible for everyone, and she built Sunbright to prove it.</p>
+          <a href="/admissions" class="card-link">Start Admissions
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Faith Odell -->
+        <div class="card">
+          <div class="card-tag">Recovery Counselor</div>
+          <h3>Faith Odell</h3>
+          <p style="font-size:13px;font-weight:700;color:var(--gold-dk);margin-bottom:14px;margin-top:-6px">SUDRC</p>
+          <p>Faith is a certified <strong>Substance Use Disorder Recovery Counselor</strong> who works directly with residents and their families throughout the treatment process. She brings warmth and a deep understanding of what the early weeks of sobriety actually feel like — and what it takes to move through them with confidence.</p>
+          <p>She leads individual and group sessions, coordinates family communication, and helps each resident build a personal recovery plan grounded in their own strengths and circumstances.</p>
+          <a href="/our-approach" class="card-link">Our Approach
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Generic role: Residential Support -->
+        <div class="card">
+          <div class="card-tag">Around the Clock</div>
+          <h3>Residential Support Team</h3>
+          <p>Our residential support staff are present 24 hours a day, seven days a week. They manage the daily rhythms of the center — meals, activities, evening check-ins, and the many small moments between formal sessions where recovery is often quietly made or lost.</p>
+          <p>These team members are trained in de-escalation, crisis response, and trauma-informed communication. Many have personal experience with addiction or with loving someone who does. That matters.</p>
+          <a href="/programs/residential" class="card-link">Residential Program
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <h2>Admissions &amp; care coordination</h2>
+        <p>Before you ever meet your counselor, you'll speak with our <strong>Admissions Coordinator</strong> — a member of our team whose entire job is to make sure the process of entering treatment is as clear and low-stress as possible. They'll answer your questions, walk you through what to expect on arrival, help you understand your payment options, and coordinate any pre-admission requirements.</p>
+        <p>We don't use an answering service. When you call <a href="tel:+15305282342">(530) 528-2342</a>, you reach someone who is part of Sunbright and who genuinely wants to help. If we're caring for a resident, we'll call you back within the hour.</p>
+
+        <h2>A 16-person center — on purpose</h2>
+        <p>We chose 16 beds deliberately. At that size, staff actually know the people they're caring for. Counselors remember the details of your story. Support staff notice when something seems off. The clinical director knows your name. That level of attention is simply not possible in a 60- or 80-bed facility — and it makes a meaningful difference in outcomes.</p>
+        <p>Our co-ed center serves men and women from across Northern California: Red Bluff, Redding, Chico, Sacramento, Tehama County, and beyond. <a href="/about">Learn more about who we are</a> and <a href="/our-approach">how we approach care.</a></p>
+      </div>
+
+      <aside class="aside">
+        <h3>The Sunbright team</h3>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Licensed clinical leadership (LCSW, LAADC-CA)</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Certified recovery counselors (SUDRC)</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>24/7 residential support staff</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>20+ years combined expertise</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Part of the PHW Care network</div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our Values in Practice</span>
+        <h2>What you can expect from <em>every member of our team.</em></h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="step">
+          <span class="step-n">01</span>
+          <h3>Dignity first, always</h3>
+          <p>No shaming, no moralizing, no lectures about choices. Addiction is a treatable condition — not a character flaw — and every interaction at Sunbright reflects that.</p>
+        </div>
+        <div class="step">
+          <span class="step-n">02</span>
+          <h3>Honest, clear communication</h3>
+          <p>We tell you what we know, what we don't know, and what your options are — without overselling or minimizing. You deserve accurate information to make the best decision for yourself.</p>
+        </div>
+        <div class="step">
+          <span class="step-n">03</span>
+          <h3>Family as part of healing</h3>
+          <p>Addiction affects the whole family system, and so does recovery. We actively involve families — with your consent — and provide resources so loved ones can heal alongside you. <a href="/family-resources">Family resources →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">We're here when you're ready</span>
+    <h2>Talk to our team <em>today.</em></h2>
+    <p>A private, no-pressure conversation with our admissions team costs nothing and commits you to nothing. We'll listen, answer your questions honestly, and help you understand all your options.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

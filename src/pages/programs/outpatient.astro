@@ -1,0 +1,251 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalTherapySchema } from '../../schema/medicalTherapy';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'IOP & PHP California | Intensive Outpatient at Sunbright',
+  description:
+    'Intensive outpatient (IOP) and partial hospitalization (PHP) programs in California. Step-down from residential or standalone structured treatment.',
+  primaryKeyword: 'intensive outpatient program california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Programs', url: '/programs' },
+  { name: 'Outpatient', url: '/programs/outpatient' },
+];
+
+const faqs = [
+  {
+    question: 'What is the difference between IOP and PHP?',
+    answer:
+      'Partial Hospitalization (PHP) is the more intensive of the two — typically 5 days a week, 5–6 hours per day of structured therapy. It bridges the gap between residential care and standard outpatient treatment. Intensive Outpatient (IOP) involves 3–5 days per week of group and individual therapy, usually 3 hours per session, and gives participants more time in their daily lives while still providing substantial clinical support. Our team will recommend the right level based on where you are in recovery.',
+  },
+  {
+    question: 'Can I start IOP or PHP without doing residential rehab first?',
+    answer:
+      'Yes — outpatient programs are a strong starting point for people whose home environment is stable and supportive, and whose addiction does not require 24/7 inpatient support. Many people begin recovery directly at the IOP or PHP level. During our admissions conversation we will help you identify the right entry point. Call us at (530) 528-2342.',
+  },
+  {
+    question: 'How many hours per week does the outpatient program involve?',
+    answer:
+      'PHP typically runs 25–30 hours per week across 5 days. IOP typically involves 9–15 hours per week across 3–5 sessions. Both include a mix of individual therapy, group therapy, psychoeducation, and skills training. We build sessions around your schedule as much as possible so that the program fits alongside work, school, or family obligations.',
+  },
+  {
+    question: 'What happens after I complete the outpatient program?',
+    answer:
+      'Step-down planning begins well before you complete the program. Most people transition to weekly individual therapy, peer support groups, and community resources. Those who need more structure transition to our sober living program. We work with you to build a real aftercare plan — not a referral list — before your final day.',
+  },
+  {
+    question: 'Can I live in sober living while attending IOP?',
+    answer:
+      'Yes, and this is often the ideal combination. Living in our structured sober-living environment while attending IOP gives you the accountability of a recovery home alongside the clinical structure of outpatient therapy. The two programs are designed to complement each other. Visit our sober living page to learn more.',
+  },
+  {
+    question: 'How do I pay for outpatient treatment?',
+    answer:
+      'Private pay is accepted today. Treatment is not free, but as a nonprofit we are committed to making our programs as accessible as possible. Call us to talk through your situation — we will give you an honest picture of costs and options without pressure.',
+  },
+];
+
+const schema = [
+  medicalTherapySchema({
+    name: 'Intensive Outpatient Program (IOP)',
+    alternateName: 'Partial Hospitalization Program (PHP)',
+    description:
+      'IOP and PHP outpatient addiction treatment at a nonprofit recovery center in Red Bluff, Northern California. Structured group and individual therapy as a step-down from residential or standalone treatment.',
+    path: '/programs/outpatient',
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="programs" schema={schema}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Outpatient Programs</span>
+      <h1>Intensive outpatient programs in California — <em>structure that fits your life.</em></h1>
+      <p class="lead">Our IOP and PHP programs deliver real clinical treatment across multiple sessions per week — as a step-down from residential rehab, or as a powerful standalone path to recovery for people in Red Bluff, Redding, Chico, Sacramento, and across Northern California.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>Not everyone can step away from life for 30, 60, or 90 days. And not everyone needs to. For many people, intensive outpatient treatment provides exactly the right level of structure and clinical support — while allowing them to return home each evening, maintain employment, and stay connected to family. Done well, outpatient treatment is not a lighter version of care. It is a different mode of care, and a powerful one.</p>
+
+        <h2>Who outpatient treatment is for</h2>
+        <p>IOP and PHP are a strong fit when:</p>
+        <ul>
+          <li>You are stepping down from residential rehab and need continued structure as you re-enter daily life</li>
+          <li>Your home environment is stable and supportive of recovery</li>
+          <li>Your addiction does not require 24/7 inpatient medical oversight</li>
+          <li>Work, family, or other obligations make full residential care impractical</li>
+          <li>You want to begin recovery without an inpatient stay and have a safe place to live</li>
+        </ul>
+        <p>We serve people from Red Bluff, Redding, Chico, Sacramento, and throughout Tehama County and Northern California. If you're unsure whether outpatient is the right level of care for your situation, call us — we'll help you think through it honestly.</p>
+
+        <h2>PHP vs. IOP: two levels of outpatient intensity</h2>
+        <p>Outpatient care comes in two distinct levels, and the right one depends on where you are in recovery:</p>
+        <ul>
+          <li><strong>Partial Hospitalization Program (PHP)</strong> — The most intensive outpatient option. Typically 5 days a week, 5&ndash;6 hours per day. Provides near-residential clinical intensity while you return home (or to sober living) in the evenings. PHP is the natural step-down immediately after residential care.</li>
+          <li><strong>Intensive Outpatient Program (IOP)</strong> — Three to five sessions per week, typically 3 hours each. Group therapy, individual sessions, psychoeducation, and skills training organized around your weekly schedule. IOP is appropriate after PHP, or as a starting point for those who don't need PHP-level intensity.</li>
+        </ul>
+        <p>Our clinical team recommends the right level after a thorough assessment during admissions — or as part of discharge planning from residential.</p>
+
+        <h2>What the program includes</h2>
+        <p>Whether you are in PHP or IOP, your Sunbright outpatient program includes:</p>
+        <ul>
+          <li><strong>Group therapy</strong> — the core of outpatient treatment; structured sessions on relapse prevention, coping skills, communication, and healthy relationships</li>
+          <li><strong>Individual therapy</strong> — regular one-on-one sessions with your primary counselor</li>
+          <li><strong>Cognitive Behavioral Therapy (CBT)</strong> — identifying and changing the thought patterns that drive addictive behavior</li>
+          <li><strong>Dual diagnosis support</strong> — treating co-occurring mental health conditions alongside addiction (see <a href="/what-we-treat/dual-diagnosis">dual diagnosis</a>)</li>
+          <li><strong>Trauma-informed approaches</strong> — many people in outpatient have trauma histories that need careful attention (see <a href="/what-we-treat/trauma-addiction">trauma &amp; addiction</a>)</li>
+          <li><strong>Family involvement</strong> — education and counseling sessions for family members; see <a href="/family-resources">family resources</a></li>
+          <li><strong>Faith-integrated programming</strong> — available and optional; never required</li>
+          <li><strong>Aftercare and step-down planning</strong> — a transition plan you actually believe in before you leave</li>
+        </ul>
+
+        <h2>Continuing care after outpatient</h2>
+        <p>Completing IOP or PHP is a major milestone, and it is not the end of the work. Our clinical team begins step-down planning well before your final session. Common transitions include weekly individual therapy, community peer support groups, and — for those who benefit from structured housing — our <a href="/programs/sober-living">sober living program</a>. We also stay connected to <a href="/family-resources">your family</a> throughout the process.</p>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p><strong>Private pay accepted today.</strong> Treatment isn't free — but as a nonprofit we work hard to make it accessible. <a href="/insurance">Insurance &amp; payment details →</a></p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Outpatient at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          IOP &amp; PHP levels of care
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          PHP: ~5 days/week, 5&ndash;6 hrs/day
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          IOP: 3&ndash;5 sessions/week, 3 hrs each
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Red Bluff, CA &mdash; Northern California
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Step-down or standalone entry
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Combinable with sober living
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Faith-integrated, never required
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Private pay accepted today
+        </div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="stats" style="justify-content:center">
+        <div class="stat" style="text-align:center"><div class="num">2</div><div class="lbl">Levels of Outpatient Care</div></div>
+        <div class="stat" style="text-align:center"><div class="num">IOP</div><div class="lbl">Intensive Outpatient</div></div>
+        <div class="stat" style="text-align:center"><div class="num">PHP</div><div class="lbl">Partial Hospitalization</div></div>
+        <div class="stat" style="text-align:center"><div class="num">100%</div><div class="lbl">Nonprofit</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How It Fits Together</span>
+        <h2>Outpatient as part of the <em>continuum of care.</em></h2>
+        <p class="lead">Outpatient treatment doesn't exist in isolation. It connects to both residential care before it and ongoing aftercare after it — part of a designed recovery journey.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="card-tag">Before</span>
+          <h3>Residential Rehab</h3>
+          <p>Many outpatient participants have completed a 30, 60, or 90-day residential program. PHP or IOP provides continued structure as they re-engage with daily life.</p>
+          <a href="/programs/residential" class="card-link">
+            Residential programs
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card featured">
+          <span class="card-tag">Now</span>
+          <h3>Intensive Outpatient</h3>
+          <p>IOP and PHP provide structured clinical treatment multiple days a week — the core of this level of care, whether entered as a step-down or as a standalone program.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">After</span>
+          <h3>Sober Living &amp; Aftercare</h3>
+          <p>Many outpatient participants transition into sober living for peer accountability and stable housing, or directly into community-based aftercare and ongoing therapy.</p>
+          <a href="/programs/sober-living" class="card-link">
+            Sober living
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Treat</span>
+        <h2>Outpatient treatment for a <em>range of conditions.</em></h2>
+        <p class="lead">Our outpatient programs address substance use disorders and co-occurring conditions that shape and complicate addiction.</p>
+      </div>
+      <ul class="checks" style="max-width:700px;margin:0 auto">
+        <li><strong>Alcohol use disorder</strong> &mdash; see <a href="/what-we-treat/alcohol" style="color:var(--gold-lt)">alcohol treatment</a></li>
+        <li><strong>Opioid addiction</strong> (prescription painkillers, heroin, fentanyl) &mdash; see <a href="/what-we-treat/opioids" style="color:var(--gold-lt)">opioid treatment</a></li>
+        <li><strong>Stimulant and methamphetamine use</strong></li>
+        <li><strong>Co-occurring mental health conditions</strong> (dual diagnosis) &mdash; see <a href="/what-we-treat/dual-diagnosis" style="color:var(--gold-lt)">dual diagnosis</a></li>
+        <li><strong>Trauma-rooted addiction</strong> &mdash; see <a href="/what-we-treat/trauma-addiction" style="color:var(--gold-lt)">trauma &amp; addiction</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Frequently asked questions about <em>IOP &amp; PHP.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Let's talk about your options</span>
+    <h2>Recovery is possible — and <em>closer than you think.</em></h2>
+    <p>Call us for a private, no-pressure conversation. We'll help you figure out whether IOP, PHP, or residential is the right fit, and walk you through exactly what to expect.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

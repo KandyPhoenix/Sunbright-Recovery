@@ -9,7 +9,16 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/draft'),
+      // Exclude staging/preview routes and the pre-launch community stopgap.
+      // The production homepage is promoted from design-preview at launch.
+      filter: (page) => {
+        const staging = [
+          '/admin', '/draft',
+          '/design-preview', '/design-preview-v5', '/design-preview-no-greenery',
+          '/index-v2', '/admissions-preview', '/community',
+        ];
+        return !staging.some((s) => page.includes(s));
+      },
       changefreq: 'monthly',
       priority: 0.8,
       lastmod: new Date(),

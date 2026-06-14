@@ -1,0 +1,241 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { faqPageSchema } from '../schema/faqPage';
+
+const meta = {
+  title: 'Insurance & Payment | Affordable Nonprofit Rehab California',
+  description:
+    'Sunbright Recovery Center accepts private pay today. As a 501(c)(3) nonprofit, we are working through the process of accepting insurance — call us to talk through your options.',
+  primaryKeyword: 'rehab that accepts medi-cal',
+  activeNav: 'insurance',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Insurance &amp; Payment', url: '/insurance' },
+];
+
+const faqs = [
+  {
+    question: 'Does Medi-Cal cover addiction treatment in California?',
+    answer:
+      'Medi-Cal generally does cover substance use disorder (SUD) treatment services in California, including residential rehab, outpatient programs, and detox services under the Drug Medi-Cal Organized Delivery System (DMC-ODS). However, coverage depends on your specific plan, county, and the facility\'s Medi-Cal certification status. Sunbright does not accept Medi-Cal yet — our credentialing is in progress. Call us at <a href="tel:+15305282342">(530) 528-2342</a> to talk through private-pay options today and check the latest as our options grow.',
+  },
+  {
+    question: 'Does Medicare cover addiction treatment?',
+    answer:
+      'Yes, Medicare Part A and Part B cover certain addiction treatment services, including inpatient rehabilitation (Part A), outpatient mental health and substance use counseling (Part B), and in some cases medication-assisted treatment. As with Medi-Cal, coverage depends on the specific facility\'s Medicare certification. Sunbright does not bill Medicare yet — credentialing is underway. Call us to talk through private-pay options today.',
+  },
+  {
+    question: 'What if I cannot afford treatment?',
+    answer:
+      'Cost should not be the reason someone cannot get help. As a 501(c)(3) nonprofit, Sunbright is committed to making recovery accessible — but treatment is not free, and we believe in being honest about that. Here is what we can tell you: we accept private pay today, we are working toward accepting insurance, and we are willing to have a real conversation about your situation. If Sunbright is not the right financial fit, we will help you identify other resources. Call <a href="tel:+15305282342">(530) 528-2342</a> and let\'s talk.',
+  },
+  {
+    question: 'Do you offer a sliding scale or payment plans?',
+    answer:
+      'Call us to discuss options. As a nonprofit, we aim to work with people on cost when we are able to. We cannot promise a sliding scale or specific payment plan terms in advance — the options depend on circumstance and capacity — but we do not want cost to be an automatic barrier. The conversation starts at <a href="tel:+15305282342">(530) 528-2342</a>.',
+  },
+  {
+    question: 'What insurances does Sunbright currently accept?',
+    answer:
+      'Sunbright accepts private pay today. Our credentialing with commercial insurance carriers and government payers is actively in progress. We do not want to claim specific payer relationships that are still being formalized — so call us to get the most current information on which insurance plans we are currently able to work with. This is changing as we grow.',
+  },
+  {
+    question: 'What is private pay, and how does it work?',
+    answer:
+      'Private pay means paying directly for treatment without going through an insurance company. This is the payment option currently available at Sunbright. Rates are based on the level of care and length of stay. On your admissions call, our team will walk through the cost clearly so you have a complete picture before making any decisions. There are no hidden charges.',
+  },
+  {
+    question: 'Why does it matter that Sunbright is a nonprofit?',
+    answer:
+      'As a 501(c)(3) nonprofit, Sunbright\'s financial decisions are driven by mission — not profit margins. Surplus revenue goes back into care, not to shareholders. This structure also makes us eligible for grants and donations that allow us to pursue insurance credentialing and expand accessibility over time. When you choose Sunbright, you are choosing a center accountable to its community, not its investors.',
+  },
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} schema={[faqPageSchema(faqs)]}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Insurance &amp; Payment</span>
+      <h1>Nonprofit care built to be <em>accessible.</em></h1>
+      <p class="lead">As a 501(c)(3) nonprofit, Sunbright Recovery Center is committed to making addiction treatment reachable in Northern California. Private pay is accepted today, and we are working through the process of accepting insurance. Call us — let's figure out what works for your situation.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">Start Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>One of the most common barriers to getting help for addiction is the belief that treatment is simply out of reach financially. We understand that concern — and we want to address it directly and honestly, without false promises.</p>
+
+        <h2>What is available today</h2>
+        <p>Sunbright currently accepts <strong>private pay</strong> for all levels of care — residential, outpatient, and sober living. Private pay means paying directly for treatment. Our admissions team will walk through the cost of your specific program on your first or second call, clearly and without surprises. There are no hidden fees.</p>
+
+        <h2>Insurance — in progress</h2>
+        <p>To be clear: <strong>Sunbright does not accept insurance yet.</strong> Today, care is private pay. We are actively working through the credentialing process with both commercial insurance carriers and government payers, because we believe insurance coverage is one of the most important levers for making recovery accessible in Northern California — but that process is not complete.</p>
+        <p>We will not name specific payers as accepted until credentialing is finalized, because we do not want to create expectations we cannot yet fulfill. What we can tell you is that this work is underway, that it matters to us, and that <strong>calling us is the best way to get the most current information</strong> as our options grow.</p>
+
+        <h2>Why nonprofit status matters for cost</h2>
+        <p>Most residential rehab programs in California are for-profit businesses. Their pricing reflects the need to generate returns for investors. Sunbright, as a <strong>501(c)(3) nonprofit</strong>, operates differently. Every dollar of surplus goes back into the program — into clinical staff, facility quality, and the pursuit of insurance coverage that brings treatment within reach of more people.</p>
+        <p>This structure also makes us eligible for grants and philanthropic support that allow us to fund accessibility initiatives over time. Choosing a nonprofit is not just a values choice — it is a practical one for people who want their treatment dollars working for care, not quarterly earnings.</p>
+
+        <h2>Being honest about cost</h2>
+        <p>Treatment is not free. We believe in saying that plainly, because over-promising on cost creates a painful experience for people already in a difficult moment. What we can offer is a straightforward conversation about what care costs, what your options are, and — if Sunbright is not the right financial fit — an honest referral to resources that might be. We would rather help you find the right care than admit you into the wrong situation.</p>
+        <p>If cost is a concern, please call. It is much more productive to talk through the specifics than to assume the answer. <a href="tel:+15305282342">Call (530) 528-2342</a> and ask to speak with our admissions team about payment.</p>
+      </div>
+
+      <aside class="aside">
+        <h3>Payment options</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Private pay accepted today
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Insurance credentialing in progress
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          501(c)(3) nonprofit — no investor pressure
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Transparent pricing — no hidden fees
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Call to discuss your situation
+        </div>
+        <a href="tel:+15305282342" class="btn btn-navy">Call (530) 528-2342</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our Commitment</span>
+        <h2>A nonprofit built on <em>mission, not margin.</em></h2>
+        <p class="lead">Here is what our 501(c)(3) status means in practice for the people we serve.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>No investor pressure</h3>
+          <p>There are no shareholders to satisfy, no quarterly earnings calls, and no incentive to over-bill or upsell services. The only goal is your recovery.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Grants &amp; philanthropic support</h3>
+          <p>Our nonprofit status makes us eligible for grant funding and donations — resources that directly support our ability to pursue insurance credentialing and increase accessibility over time.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3>Community-accountable</h3>
+          <p>Sunbright is governed by a board and accountable to the communities of Northern California we serve — Red Bluff, Redding, Chico, Sacramento, and Tehama County — not to private equity or a national chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Understanding Insurance</span>
+        <h2>How insurance works for <em>addiction treatment.</em></h2>
+        <p class="lead">Navigating insurance for rehab can be confusing. Here is a plain-language overview of the main coverage types and what they generally cover in California.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <h3>Private / commercial insurance</h3>
+            <p>The Mental Health Parity and Addiction Equity Act (MHPAEA) requires commercial insurers to cover substance use disorder treatment at the same level as other medical conditions. Coverage typically includes inpatient residential care, IOP, PHP, and medication-assisted treatment. Deductibles and copays vary by plan. Call your insurer to ask about SUD benefits, and then call us to discuss current network status.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <div>
+            <h3>Medi-Cal (California Medicaid)</h3>
+            <p>Medi-Cal generally covers substance use disorder treatment through the Drug Medi-Cal Organized Delivery System (DMC-ODS), including residential programs, outpatient treatment, and medication-assisted treatment. Coverage is available to eligible low-income Californians. Whether Sunbright is in your specific Medi-Cal network is something to confirm by calling us directly, as our credentialing is actively in progress.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <h3>Medicare</h3>
+            <p>Medicare Part A covers inpatient hospital-based treatment; Part B covers outpatient mental health and SUD services and medication-assisted treatment. Medicare Advantage plans may have different coverage rules. As with other government payers, call us to confirm current network status — our credentialing is underway.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3>Private pay</h3>
+            <p>Private pay is available at Sunbright today. It means paying directly, without routing through insurance. This gives flexibility around timing and eliminates certain insurance-related delays. Our admissions team will walk through pricing clearly before any commitment is made. No surprises, no hidden charges.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:40px">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p><strong>Not sure what you have or what it covers?</strong> Call us anyway. Our admissions team can help you understand your options and suggest next steps — including who to call at your insurance company and what questions to ask. We do this every day. <a href="tel:+15305282342">Call (530) 528-2342.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="stats" style="justify-content:center">
+        <div class="stat" style="text-align:center"><div class="num">501(c)(3)</div><div class="lbl">Nonprofit Status</div></div>
+        <div class="stat" style="text-align:center"><div class="num">16</div><div class="lbl">Residential Beds</div></div>
+        <div class="stat" style="text-align:center"><div class="num">20+</div><div class="lbl">Years Clinical Experience</div></div>
+        <div class="stat" style="text-align:center"><div class="num">0</div><div class="lbl">Shareholders</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Insurance &amp; Payment FAQs</span>
+        <h2>Common questions about <em>cost and coverage.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body" set:html={faq.answer} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">Red Bluff · Redding · Chico · Sacramento · Tehama County</span>
+    <h2>Let's figure out what <em>works for you.</em></h2>
+    <p>Cost should not stop someone from getting help. Call our admissions team — we will answer your questions about payment honestly and help you understand what options are available right now.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

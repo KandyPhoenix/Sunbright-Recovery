@@ -1,0 +1,267 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { medicalTherapySchema } from '../../schema/medicalTherapy';
+import { faqPageSchema } from '../../schema/faqPage';
+
+const meta = {
+  title: 'Sober Living & Aftercare California | Sunbright Recovery',
+  description:
+    'Transitional sober living and aftercare support in Northern California. Structured environment, ongoing therapy, and a real recovery community.',
+  primaryKeyword: 'sober living california',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'Programs', url: '/programs' },
+  { name: 'Sober Living', url: '/programs/sober-living' },
+];
+
+const faqs = [
+  {
+    question: 'What is sober living and how is it different from residential rehab?',
+    answer:
+      'Residential rehab is an intensive clinical treatment program where you live on-site and receive structured therapy and medical support around the clock. Sober living is a transitional housing environment that comes after (or alongside) formal treatment. You have greater independence, return to daily responsibilities like work or school, and live with others in recovery — but within a structured, accountable environment with house rules, peer support, and continued counseling. It bridges the gap between intensive treatment and fully independent life.',
+  },
+  {
+    question: 'Do I need to complete residential rehab before entering sober living?',
+    answer:
+      'Not necessarily. Sober living can follow residential rehab as a natural step-down, but it can also be combined with outpatient treatment (IOP or PHP) for people who did not complete a residential program. If you are stable in your recovery, committed to the program structure, and looking for a supportive living environment as you rebuild your life, sober living may be the right fit. Call us to talk through whether it makes sense for your situation.',
+  },
+  {
+    question: 'Can I attend IOP while living in sober living?',
+    answer:
+      'Yes — and this is often the most effective combination. Attending our intensive outpatient program (IOP or PHP) while living in the sober living environment gives you both clinical structure and community accountability. The two programs are designed to work together. Many residents participate in both simultaneously as they transition back to independent life.',
+  },
+  {
+    question: 'How long can I stay in sober living?',
+    answer:
+      'Length of stay varies based on your individual needs, your progress in recovery, and your readiness for independent living. There is no single answer. Some people stay for 90 days; others benefit from a longer stay as they secure employment, rebuild finances, and strengthen their support network. Our team works with you on a realistic and personalized plan for transitioning out when you are genuinely ready.',
+  },
+  {
+    question: 'What are the rules and expectations in sober living?',
+    answer:
+      'Residents are expected to remain abstinent from all substances, submit to regular drug testing, contribute to household responsibilities, attend required programming sessions (including continued therapy or support meetings), and respect fellow residents. These expectations exist not to punish, but to create the predictable, safe environment that early recovery requires. The structure is part of what makes sober living effective.',
+  },
+  {
+    question: 'Is faith participation required in sober living?',
+    answer:
+      'No. Just as with our residential and outpatient programs, faith is woven into the life of the center for those who welcome it and never imposed on anyone who does not. Residents can fully participate in the sober living program without any religious component. Faith programming is available and optional.',
+  },
+];
+
+const schema = [
+  medicalTherapySchema({
+    name: 'Sober Living & Aftercare',
+    alternateName: 'Transitional Sober Living',
+    description:
+      'Structured transitional sober living and aftercare support in Northern California. A recovery community with peer accountability, ongoing counseling, and life-skills support as a bridge from treatment to independent living.',
+    path: '/programs/sober-living',
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs} activeNav="programs" schema={schema}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">Sober Living &amp; Aftercare</span>
+      <h1>Sober living in California — a real community for <em>lasting recovery.</em></h1>
+      <p class="lead">Sunbright's sober living program provides the structure, accountability, and peer community that make recovery stick long after formal treatment ends — a stable, supportive environment in Northern California for men and women rebuilding their lives.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>Completing residential rehab or an intensive outpatient program is a real achievement. What happens in the weeks and months that follow is just as important. The transition from structured treatment to independent living is one of the highest-risk periods in recovery — and sober living exists to make that transition slower, safer, and supported.</p>
+
+        <h2>Who sober living is for</h2>
+        <p>Our sober living program is designed for people who:</p>
+        <ul>
+          <li>Have recently completed residential rehab and are not yet ready for fully independent living</li>
+          <li>Are attending IOP or PHP and need a stable, recovery-focused place to live</li>
+          <li>Have an unstable or triggering home environment that would put early recovery at serious risk</li>
+          <li>Want to rebuild employment, finances, and relationships within a structured and accountable community</li>
+          <li>Are committed to sustained recovery and ready to take the next step beyond intensive treatment</li>
+        </ul>
+        <p>We serve people from Red Bluff, Redding, Chico, Sacramento, Tehama County, and across Northern California. The center is located at 22425 Sunbright Ave, Red Bluff, CA 96080.</p>
+
+        <h2>What sober living at Sunbright looks like</h2>
+        <p>Sober living at Sunbright is not simply housing. It is a structured program that combines a safe living environment with ongoing clinical support, peer accountability, and life-skills development. Residents can expect:</p>
+        <ul>
+          <li><strong>A structured, substance-free environment</strong> — clear house guidelines, regular drug testing, and shared accountability keep the community safe for everyone</li>
+          <li><strong>Ongoing individual counseling</strong> — continued therapy sessions with a counselor to work on relapse prevention, goals, and the practical challenges of rebuilding life</li>
+          <li><strong>Group sessions and peer support</strong> — regular group meetings with fellow residents, facilitated by staff, focused on real issues in early recovery</li>
+          <li><strong>Life skills and practical support</strong> — help with resume building, job searching, budgeting, and the everyday tasks that feel overwhelming in early recovery</li>
+          <li><strong>Peer recovery community</strong> — living and working alongside others who understand what you're going through; this community is one of the most powerful predictors of sustained recovery</li>
+          <li><strong>12-step and alternative meetings</strong> — regular attendance at peer support programs as part of the weekly schedule</li>
+          <li><strong>Faith-integrated programming</strong> — available for those who want it; never required</li>
+        </ul>
+
+        <h2>Sober living combined with outpatient care</h2>
+        <p>Many residents attend our <a href="/programs/outpatient">IOP or PHP outpatient program</a> while living in sober living — a combination that delivers both the clinical intensity of structured therapy and the daily community of a recovery environment. This pairing is often the most effective path for people stepping down from residential care. Your treatment team will help you determine whether this combination makes sense for your situation.</p>
+
+        <h2>Planning your transition out</h2>
+        <p>Sober living is a bridge, not a destination. From the beginning of your stay, our team works with you on a realistic transition plan. We help you build the employment, relationships, and community connections that make independent recovery sustainable. When you leave, you leave with a plan — and with people in your corner. Learn more about what that looks like on our <a href="/family-resources">family resources page</a> or by reading about <a href="/our-approach">our approach to continuing care</a>.</p>
+
+        <div class="callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p><strong>Private pay accepted today.</strong> Treatment isn't free — but as a nonprofit we work hard to make it accessible. <a href="/insurance">Insurance &amp; payment details →</a></p>
+        </div>
+      </div>
+
+      <aside class="aside">
+        <h3>Sober living at a glance</h3>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Structured transitional housing
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Red Bluff, CA &mdash; Northern California
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Ongoing individual counseling
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Peer accountability &amp; community
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Combinable with IOP &amp; PHP
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Life skills &amp; transition planning
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Faith-integrated, never required
+        </div>
+        <div class="aside-row">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Private pay accepted today
+        </div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="stats" style="justify-content:center">
+        <div class="stat" style="text-align:center"><div class="num">24/7</div><div class="lbl">Peer Community</div></div>
+        <div class="stat" style="text-align:center"><div class="num">0</div><div class="lbl">Tolerance for Substances</div></div>
+        <div class="stat" style="text-align:center"><div class="num">100%</div><div class="lbl">Nonprofit</div></div>
+        <div class="stat" style="text-align:center"><div class="num">20+</div><div class="lbl">Years of Expertise</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The Continuum of Care</span>
+        <h2>Sober living as part of a <em>designed recovery journey.</em></h2>
+        <p class="lead">Sober living doesn't stand alone — it connects to the levels of care before it and the community and independence that follow.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="card-tag">Before</span>
+          <h3>Residential or Outpatient</h3>
+          <p>Most sober living residents enter from residential rehab or outpatient (IOP/PHP). Sober living provides the safe bridge from structured clinical care to independent life.</p>
+          <a href="/programs/residential" class="card-link">
+            Residential rehab
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card featured">
+          <span class="card-tag">Now</span>
+          <h3>Sober Living</h3>
+          <p>A structured, recovery-focused environment with peer community, accountability, ongoing therapy, and life-skills support as you rebuild daily life.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Alongside</span>
+          <h3>IOP &amp; PHP Outpatient</h3>
+          <p>Attending outpatient treatment while in sober living is one of the most effective combinations available — clinical structure plus community accountability.</p>
+          <a href="/programs/outpatient" class="card-link">
+            Outpatient programs
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why Sober Living Works</span>
+        <h2>The evidence for <em>transitional housing.</em></h2>
+        <p class="lead">Research consistently shows that people who transition through structured sober living after treatment have significantly better long-term outcomes than those who move directly to independent living.</p>
+      </div>
+      <div class="features" style="max-width:760px;margin:0 auto">
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          </div>
+          <div>
+            <h3>Peer community reduces relapse</h3>
+            <p>Living alongside others in recovery creates natural accountability and genuine understanding. You are never the only person in the room who knows what this is like.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <div>
+            <h3>Structure bridges the hardest gap</h3>
+            <p>The weeks immediately after leaving intensive treatment are the highest-risk period. Sober living fills that gap with routine, rules, and real support.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="f-ic">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3>Time for real rebuilding</h3>
+            <p>Recovery requires time — time to repair relationships, rebuild credit and employment, and develop the habits and support networks that sustain sobriety long term.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Frequently asked questions about <em>sober living.</em></h2>
+      </div>
+      <div class="faq">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-body">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">A stable foundation for lasting recovery</span>
+    <h2>You've done the hard work. <em>Let's protect it.</em></h2>
+    <p>Call us to talk about whether sober living is the right next step — or to ask any question about our programs. The conversation is private, no-pressure, and free.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>

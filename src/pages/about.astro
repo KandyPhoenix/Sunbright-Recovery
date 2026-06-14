@@ -1,0 +1,89 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const meta = {
+  title: 'About Sunbright Recovery Center | Northern California Rehab',
+  description:
+    'A 16-bed nonprofit addiction recovery center in Red Bluff, CA, founded by Linda Spyres, LCSW, LAADC-CA with 20+ years in treatment. Faith-integrated, evidence-based care.',
+  primaryKeyword: 'sunbright recovery center',
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/design-preview' },
+  { name: 'About', url: '/about' },
+];
+---
+
+<SiteLayout {...meta} breadcrumbs={breadcrumbs}>
+  <header class="page-header">
+    <div class="wrap ph-inner">
+      <span class="eyebrow">About Sunbright</span>
+      <h1>A place built for <em>healing.</em></h1>
+      <p class="lead">Sunbright Recovery Center is a 16-bed nonprofit residential center in Red Bluff, California — created so that people in Northern California can find real recovery close to home, without traveling hundreds of miles or facing a price built for profit.</p>
+      <div class="btn-row">
+        <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+        <a href="/our-approach" class="btn btn-ghost">Our Approach</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--white">
+    <div class="wrap split">
+      <div class="prose wide">
+        <p>For too many families in Northern California, finding addiction treatment has meant a long drive, a long waitlist, or a price tag built for shareholders. Sunbright exists to change that. We are a recovery center rooted in this community — a calm, finished, purpose-built space where men and women can step out of crisis and into the work of getting well.</p>
+        <p>Our model is simple and human: meet people with dignity, give them evidence-based care that actually works, and surround them with the kind of support that makes recovery last. Faith is woven into the life of the center for those who want it, and never required of anyone who doesn't.</p>
+
+        <h2>Why nonprofit matters</h2>
+        <p>Most residential rehabs in California are owned by national chains charging tens of thousands of dollars a month to maximize returns. Sunbright is different. As a <strong>501(c)(3) nonprofit</strong>, every dollar — from program fees, donations, and grants — goes back into care. Not profits. Not investors. Care.</p>
+        <ul>
+          <li><strong>Real care, not revenue targets.</strong> No upselling, no surprise charges, no quarterly earnings calls. Our only goal is your recovery.</li>
+          <li><strong>Community-accountable.</strong> Governed by a board and answerable to the people we serve — not Wall Street, not private equity.</li>
+          <li><strong>Built to be reachable.</strong> Treatment isn't free, but as a nonprofit we work hard to make it accessible. Call us and we'll talk through your options.</li>
+        </ul>
+
+        <h2>Founded on 20+ years of experience</h2>
+        <p>Sunbright was founded by <strong>Linda Spyres, LCSW, LAADC-CA</strong>, who has spent more than two decades walking alongside people in recovery. Her conviction is the foundation of this center: that addiction is treatable, that people are not their worst moments, and that the right environment changes everything. You can <a href="/team">meet our team</a> or read more about <a href="/our-approach">how we approach recovery</a>.</p>
+
+        <h2>What we offer</h2>
+        <p>Sunbright provides a continuum of care so people can step down through recovery at the right pace:</p>
+        <ul>
+          <li><a href="/programs/residential">Residential rehab</a> — 30, 60, and 90-day inpatient programs with 24/7 support.</li>
+          <li><a href="/programs/outpatient">Intensive outpatient (IOP) and partial hospitalization (PHP)</a> — structured treatment that fits around life.</li>
+          <li><a href="/programs/sober-living">Sober living &amp; aftercare</a> — community and accountability for the long road.</li>
+        </ul>
+        <p>We treat <a href="/what-we-treat/alcohol">alcohol</a>, <a href="/what-we-treat/opioids">opioids</a>, stimulants, <a href="/what-we-treat/dual-diagnosis">co-occurring mental health conditions</a>, and <a href="/what-we-treat/trauma-addiction">trauma-rooted addiction</a> — because addiction rarely stands alone.</p>
+      </div>
+
+      <aside class="aside">
+        <h3>Sunbright at a glance</h3>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>16-bed co-ed residential center</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>501(c)(3) nonprofit</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Red Bluff, CA — serving Northern California</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Faith-integrated, never required</div>
+        <div class="aside-row"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Private pay accepted today</div>
+        <a href="/admissions" class="btn btn-navy">Start Admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="wrap">
+      <div class="stats" style="justify-content:center">
+        <div class="stat" style="text-align:center"><div class="num">16</div><div class="lbl">Residential Beds</div></div>
+        <div class="stat" style="text-align:center"><div class="num">20+</div><div class="lbl">Years of Expertise</div></div>
+        <div class="stat" style="text-align:center"><div class="num">30/60/90</div><div class="lbl">Day Programs</div></div>
+        <div class="stat" style="text-align:center"><div class="num">100%</div><div class="lbl">Nonprofit</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="eyebrow">You don't have to figure this out alone</span>
+    <h2>Recovery starts with <em>one conversation.</em></h2>
+    <p>Call us for a private, no-pressure conversation. We'll listen, answer your questions, and help you understand the options.</p>
+    <div class="btn-row">
+      <a href="tel:+15305282342" class="btn btn-gold">Call (530) 528-2342</a>
+      <a href="/admissions" class="btn btn-ghost">How Admissions Works</a>
+    </div>
+  </section>
+</SiteLayout>
