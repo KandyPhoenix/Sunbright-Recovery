@@ -17,15 +17,17 @@ The complete clinical site structure now exists, ready to **publish once nonprof
 **Pages built (all link internally, each with target keyword + meta + schema + FAQ where useful):**
 `/about`, `/our-approach`, `/programs` (+`/residential` `/outpatient` `/sober-living`), `/what-we-treat` (+`/alcohol` `/opioids` `/dual-diagnosis` `/trauma-addiction`), `/admissions`, `/insurance`, `/team`, `/family-resources`, `/faqs`, `/tour`, `/contact` (clinical rebuild — mailto form to info@, replaced the old `/community`-linked version), `/donate`, `/get-involved`.
 
-**Homepage linking:** Nav/footer "Home" → `/design-preview` (the *original* homepage — linked, not republished). The pre-launch `community.astro` stopgap is **never linked**. `astro.config.mjs` sitemap filter excludes all staging routes (design-preview*, index-v2, admissions-preview, community).
+**Homepage:** The flyer homepage was **promoted to the site root** — `design-preview.astro` is now `index.astro` (`/`), with full SEO `<head>` + Organization JSON-LD (still `noindex`). Old placeholder homepages (`index.astro` v1, `index-v2.astro`) were retired; `/design-preview` 301-redirects to `/` via `public/_redirects`. Nav/footer "Home" → `/` (`HOME` const in SiteLayout). The pre-launch `community.astro` stopgap is **never linked**. Sitemap excludes remaining staging snapshots (design-preview-v5, design-preview-no-greenery, admissions-preview, community).
+
+**Breadcrumbs:** The visible breadcrumb bar was removed from `SiteLayout` per client preference; the `BreadcrumbList` JSON-LD is still emitted on every subpage for SEO (pages still pass a `breadcrumbs` prop).
 
 **INSURANCE MESSAGING (updated rule — confirmed by client 2026-06-14):** Credentialing is still in progress; **we do NOT take insurance yet.** Do NOT write "insurance network expanding" or imply acceptance anywhere. Site-wide payment line = **"Private pay accepted today."** Only `/insurance` discusses it, honestly: "does not accept insurance yet / credentialing in progress / working toward accepting coverage." General-page FAQs answer payment questions as private-pay-only.
 
 **TO PUBLISH (launch day, after licensing approval):**
-1. Promote `design-preview.astro` → `index.astro` (it becomes `/`).
-2. In `SiteLayout.astro`, set `const HOME = '/'` and flip the `noindex` default to `false` (or pass `noindex={false}` per page).
-3. Replace `public/robots.txt` `Disallow: /` with `Allow: /`.
-4. `npm run build`, submit sitemap to GSC, validate pages in Rich Results Test.
+1. In `SiteLayout.astro`, flip the `noindex` default to `false` (or pass `noindex={false}` per page), and remove `<meta name="robots" content="noindex"/>` from `index.astro`.
+2. Replace `public/robots.txt` `Disallow: /` with `Allow: /`.
+3. `npm run build`, submit sitemap to GSC, validate pages in Rich Results Test.
+(Homepage is already at `/` and all Home links already point to `/`.)
 
 ---
 

@@ -29,9 +29,9 @@ interface Props {
   activeNav?: string;       // nav key to highlight: programs | treat | approach | admissions | insurance | team | contact
 }
 
-// The original homepage lives at /design-preview and is linked, not republished.
-// Flip this to "/" on launch day.
-const HOME = '/design-preview';
+// The site homepage now lives at the root "/" (design-preview was promoted to
+// index.astro). On launch, just flip the `noindex` default below to false.
+const HOME = '/';
 const SITE = 'https://sunbrightrecovery.org';
 
 const {
@@ -120,17 +120,8 @@ const navLinks = [
   </div>
 </nav>
 
-{breadcrumbs.length > 0 && (
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      {breadcrumbs.map((c, i) => (
-        <li>
-          {i < breadcrumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}
-        </li>
-      ))}
-    </ol>
-  </nav>
-)}
+<!-- Breadcrumbs are emitted as BreadcrumbList JSON-LD (above) for SEO, but the
+     visible breadcrumb bar is intentionally omitted from the page chrome. -->
 
 <main>
   <slot />

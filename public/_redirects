@@ -1,2 +1,6 @@
+# Old preview path → homepage (design-preview was promoted to the site root)
+/design-preview / 301
+/design-preview/ / 301
+
 # Redirect www to non-www
-https://www.sunbrightrecovery.com/* https://sunbrightrecovery.com/:splat 301
+https://www.sunbrightrecovery.org/* https://sunbrightrecovery.org/:splat 301
