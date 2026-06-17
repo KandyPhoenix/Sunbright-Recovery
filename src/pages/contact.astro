@@ -231,6 +231,11 @@
           <p class="sub">Tell us a little about yourself and how you'd like to get involved. Every inquiry is welcome.</p>
 
           <form id="contact-form" onsubmit="handleSubmit(event)">
+            <!-- Web3Forms: get access key at web3forms.com using info@sunbrightrecovery.org -->
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY"/>
+            <input type="hidden" name="subject" id="form-subject" value="Sunbright Inquiry"/>
+            <input type="hidden" name="from_name" value="Sunbright Recovery Website"/>
+            <input type="checkbox" name="botcheck" style="display:none"/>
             <div class="form-row">
               <div class="form-group">
                 <label>Your Name <span>*</span></label>
@@ -343,40 +348,41 @@
 </footer>
 
 <script>
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const f = e.target;
-    const name = f.name.value;
-    const org  = f.organization.value;
-    const email = f.email.value;
-    const phone = f.phone.value;
-    const type  = f.inquiry_type.value;
-    const msg   = f.message.value;
+    const btn = f.querySelector('.btn-submit');
 
-    const body = [
-      `Name: ${name}`,
-      org   ? `Organization: ${org}` : null,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      `Inquiry: ${type}`,
-      ``,
-      msg
-    ].filter(Boolean).join('\n');
+    // Update hidden subject with inquiry type
+    const type = f.inquiry_type.value;
+    document.getElementById('form-subject').value = `Sunbright Inquiry — ${type}`;
 
-    const subject = encodeURIComponent(`Sunbright Inquiry — ${type}`);
-    const bodyEnc = encodeURIComponent(body);
+    // Disable button while submitting
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
 
-    window.location.href = `mailto:info@sunbrightrecovery.org?subject=${subject}&body=${bodyEnc}`;
+    const data = new FormData(f);
 
-    // Show success message after a short delay
-    setTimeout(() => {
-      const form = document.getElementById('contact-form');
-      const success = document.getElementById('form-success');
-      if (form && success) {
-        form.style.display = 'none';
-        success.style.display = 'block';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        f.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>';
+        alert('Something went wrong. Please email us directly at info@sunbrightrecovery.org');
       }
-    }, 800);
+    } catch(err) {
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>';
+      alert('Could not send — please email us at info@sunbrightrecovery.org');
+    }
   }
 </script>
 
