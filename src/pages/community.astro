@@ -173,6 +173,26 @@
     .why-card h3{font-family:'Lora',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:12px;letter-spacing:-.01em;line-height:1.2}
     .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75}
 
+    /* EVENTS STRIP */
+    .events-strip{padding:48px 0;background:var(--navy-dk);border-top:3px solid var(--gold)}
+    .ev-strip-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
+    .ev-strip-head h2{font-family:'Lora',serif;font-size:clamp(20px,2.2vw,26px);color:#fff}
+    .ev-strip-head a{font-size:13px;font-weight:700;color:var(--gold-lt);display:inline-flex;align-items:center;gap:5px;transition:color .2s}
+    .ev-strip-head a:hover{color:#fff}
+    .ev-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:640px){.ev-cards{grid-template-columns:1fr}}
+    .ev-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 24px;display:flex;gap:20px;align-items:flex-start;transition:background .2s}
+    .ev-card:hover{background:rgba(255,255,255,.1)}
+    .ev-date-box{background:var(--gold);border-radius:10px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:52px}
+    .ev-date-box .ev-mon{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.6);display:block}
+    .ev-date-box .ev-day{font-family:'Lora',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;display:block}
+    .ev-date-box .ev-tbd{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff;line-height:1.2;display:block;padding-top:2px}
+    .ev-card-body h4{font-family:'Lora',serif;font-size:17px;color:#fff;margin-bottom:5px}
+    .ev-card-body p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.55;margin-bottom:10px}
+    .ev-chip{display:inline-block;background:rgba(240,192,64,.15);border:1px solid rgba(240,192,64,.3);color:var(--gold-lt);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+    .ev-learn{font-size:12.5px;font-weight:700;color:var(--gold-lt);display:inline-flex;align-items:center;gap:4px;margin-top:8px;transition:color .2s}
+    .ev-learn:hover{color:#fff}
+
     /* DONATIONS */
     .donations{padding:80px 0;background:var(--cream)}
     .don-intro{max-width:680px;margin:0 0 32px}
@@ -306,12 +326,13 @@
   <div class="nav-in">
     <a href="/community"><img src="/logo.png" alt="Sunbright Recovery Center"/></a>
     <div class="nav-links">
-      <a href="#about">About</a>
+      <a href="#what-we-build">About</a>
       <a href="#what-we-build">What We're Planning</a>
-      <a href="#donate">Get Involved</a>
+      <a href="/events">Events</a>
+      <a href="/give">Give</a>
       <a href="/contact">Contact</a>
     </div>
-    <a href="#donate" class="nav-cta">
+    <a href="/give" class="nav-cta">
       <svg class="ph" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" stroke="none"/></svg>
       Donate Now
     </a>
@@ -568,6 +589,36 @@
           </div>
           <h3>You won't walk alone</h3>
           <p>Family involvement, community connection, and lifelong aftercare. Recovery doesn't end when treatment does — and neither do we.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS STRIP -->
+<section class="events-strip">
+  <div class="wrap">
+    <div class="ev-strip-head">
+      <h2>Upcoming Events</h2>
+      <a href="/events">See all events <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    </div>
+    <div class="ev-cards">
+      <div class="ev-card">
+        <div class="ev-date-box"><span class="ev-tbd">Date<br/>TBA</span></div>
+        <div class="ev-card-body">
+          <h4>Basket Raffle</h4>
+          <p>Gift baskets from local businesses and community supporters — buy tickets for a chance to win.</p>
+          <span class="ev-chip">Raffle</span>
+          <a href="/events" class="ev-learn">Details &amp; tickets <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date-box"><span class="ev-tbd">Date<br/>TBA</span></div>
+        <div class="ev-card-body">
+          <h4>Spaghetti Fundraiser</h4>
+          <p>A community dinner with great food and great people — all proceeds go toward opening day.</p>
+          <span class="ev-chip">Fundraiser Dinner</span>
+          <a href="/events" class="ev-learn">Details &amp; tickets <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </div>
     </div>
@@ -861,6 +912,14 @@
           <a href="mailto:info@sunbrightrecovery.org"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@sunbrightrecovery.org</a>
           <a href="https://maps.google.com/?q=22425+Sunbright+Ave,+Red+Bluff,+CA+96080" target="_blank" rel="noopener"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>22425 Sunbright Ave<br/>Red Bluff, CA 96080</a>
           <a href="/contact"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>Send a Message</a>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a href="https://www.facebook.com/profile.php?id=61590180493030" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.5);transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.16)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='rgba(255,255,255,.5)'">
+            <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/sunbrightrecovery" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.5);transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.16)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='rgba(255,255,255,.5)'">
+            <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
         </div>
       </div>
     </div>
