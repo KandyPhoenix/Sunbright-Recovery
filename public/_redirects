@@ -1,5 +1,8 @@
 # Redirect www to non-www
 https://www.sunbrightrecovery.com/* https://sunbrightrecovery.com/:splat 301
 
-# Root goes to community site until full site is licensed and ready
-/  /community  301
+# Serve community page as homepage until licensed
+/  /community  200
+
+# Redirect /community back to root so logo/nav links resolve cleanly
+/community  /  301
