@@ -345,12 +345,13 @@
     .f-crisis{background:var(--navy);padding:11px 28px;text-align:center;font-size:13px;color:rgba(255,255,255,.6)}
     .f-crisis a{color:var(--gold-lt);font-weight:700;transition:color .2s}
     .f-crisis a:hover{color:#fff}
-    .f-main{padding:20px 28px 14px;max-width:1160px;margin:0 auto}
-    .f-grid{display:grid;grid-template-columns:1.5fr 2fr 1fr;gap:28px;align-items:start}
-    .f-col-pair{display:flex;gap:32px}
-    .f-brand img{width:100%;max-width:280px;height:auto;margin-bottom:6px;margin-top:-8px;filter:brightness(0) invert(1);opacity:.92;display:block}
-    .f-tagline{font-family:'Dancing Script',cursive;font-size:17px;color:rgba(255,255,255,.35);margin-bottom:8px;line-height:1.2}
-    .f-brand-p{font-size:12.5px;color:rgba(255,255,255,.32);line-height:1.55;margin-bottom:10px}
+    .f-main{padding:30px 28px 16px;max-width:1160px;margin:0 auto}
+    .f-grid{display:grid;grid-template-columns:140px 1.3fr 1fr 1fr 1.2fr;gap:30px;align-items:start}
+    @media(max-width:880px){.f-grid{grid-template-columns:1fr 1fr;gap:26px}}
+    @media(max-width:520px){.f-grid{grid-template-columns:1fr}}
+    .f-brand img{width:140px;max-width:140px;height:auto;filter:brightness(0) invert(1);opacity:.95;display:block}
+    .f-tagline{font-family:'Dancing Script',cursive;font-size:18px;color:var(--gold-lt);margin-bottom:8px;line-height:1.25}
+    .f-brand-p{font-size:12.5px;color:rgba(255,255,255,.4);line-height:1.6;margin:0}
     .f-contact{display:flex;flex-direction:column;gap:12px;margin-bottom:4px}
     .f-contact a{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;line-height:1.5}
     .f-contact a svg{margin-top:2px;flex-shrink:0;color:var(--gold-lt)}
@@ -792,12 +793,11 @@
   <div class="f-crisis">Questions or want to help? <a href="tel:+15307272211">(530) 727-2211</a> &nbsp;·&nbsp; <a href="mailto:info@sunbrightrecovery.org">info@sunbrightrecovery.org</a></div>
   <div class="f-main">
     <div class="f-grid">
+      <div class="f-brand"><img src="/logo.png" alt="Sunbright Recovery Center"/></div>
       <div>
-        <div class="f-brand"><img src="/logo.png" alt="Sunbright Recovery Center"/></div>
         <p class="f-tagline">A Brighter Tomorrow. A Stronger You.</p>
         <p class="f-brand-p">A 16-bed addiction recovery center preparing to open in Red Bluff, CA.</p>
       </div>
-      <div class="f-col-pair">
         <div class="f-col">
           <h4>Get Involved</h4>
           <ul>
@@ -817,7 +817,6 @@
             <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
-      </div>
       <div class="f-col">
         <h4>Get in Touch</h4>
         <div class="f-contact">
