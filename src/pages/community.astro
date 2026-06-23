@@ -221,7 +221,9 @@
     .donate-now-head{position:relative;margin-bottom:28px}
     .donate-now-head h3{font-family:'Lora',serif;font-size:clamp(22px,2.8vw,32px);color:#fff;margin-bottom:8px}
     .donate-now-head p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.6;max-width:500px}
-    .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;margin-bottom:18px}
+    .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;margin-bottom:18px}
+    @media(max-width:860px){.method-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.method-grid{grid-template-columns:1fr}}
     .method-card{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:all .25s;cursor:pointer;text-align:center}
     .method-card:hover{background:rgba(255,255,255,.14);border-color:var(--gold-lt);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.2)}
     .method-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
@@ -626,8 +628,8 @@
     <!-- DONATE NOW: payment methods -->
     <div class="donate-now">
       <div class="donate-now-head">
-        <h3>Give Now — It's Easy</h3>
-        <p>Choose the option that works for you. Every dollar goes directly toward opening Sunbright's doors.</p>
+        <h3>Every Contribution Makes a Difference</h3>
+        <p>Choose what works for you. Every dollar goes directly toward opening Sunbright's doors and changing lives in our community.</p>
       </div>
       <div class="method-grid">
         <!-- TODO: Replace [VENMO_LINK] with the actual Venmo payment link -->
