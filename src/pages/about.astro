@@ -76,7 +76,14 @@
     .about-story p{font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:14px}
     .about-story p:last-child{margin-bottom:0}
     .stats-col{display:flex;flex-direction:column;gap:20px}
-    .stat-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px 24px;display:flex;align-items:center;gap:16px}
+    .stat-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px 24px;display:flex;align-items:center;gap:16px;opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease,box-shadow .25s ease,border-color .25s ease}
+    .stats-col.in .stat-card{opacity:1;transform:none}
+    .stats-col.in .stat-card:nth-child(2){transition-delay:.08s}
+    .stats-col.in .stat-card:nth-child(3){transition-delay:.16s}
+    .stats-col.in .stat-card:nth-child(4){transition-delay:.24s}
+    .stats-col.in .stat-card:nth-child(5){transition-delay:.32s}
+    .stats-col.in .stat-card:nth-child(6){transition-delay:.40s}
+    .stats-col.in .stat-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(26,46,90,.1);border-color:var(--gold-lt);transition-delay:0s}
     .stat-icon{width:44px;height:44px;border-radius:11px;background:var(--navy-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .stat-icon svg{width:20px;height:20px;color:var(--navy)}
     .stat-num{font-family:'Lora',serif;font-size:28px;font-weight:700;color:var(--navy);display:block;line-height:1}
@@ -273,7 +280,7 @@
       <div class="stats-col">
         <div class="stat-card">
           <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12V8a2 2 0 012-2h14a2 2 0 012 2v4M3 12v6a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-6M3 12h18"/></svg></div>
-          <div><span class="stat-num">16</span><span class="stat-label">Planned residential beds</span></div>
+          <div><span class="stat-num" data-count="16">16</span><span class="stat-label">Planned residential beds</span></div>
         </div>
         <div class="stat-card">
           <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
@@ -289,7 +296,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <div><span class="stat-num">20+</span><span class="stat-label">Years of leadership experience</span></div>
+          <div><span class="stat-num" data-count="20" data-suffix="+">20+</span><span class="stat-label">Years of leadership experience</span></div>
         </div>
         <div class="stat-card">
           <div class="stat-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 114 0 2 2 0 01-4 0zM7.5 13a4.5 4.5 0 019 0v.5H7.5V13z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 17v4m-2-2h4"/></svg></div>
@@ -448,6 +455,38 @@
     <span class="f-heal">Healing Today. Hope for Tomorrow. Freedom for Life.</span>
   </div>
 </footer>
+
+<script is:inline>
+  (function(){
+    var col = document.querySelector('.stats-col');
+    if(!col) return;
+    var ran = false;
+    function countUp(el){
+      var target = parseInt(el.getAttribute('data-count'),10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      if(isNaN(target)) return;
+      var dur = 1100, start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts-start)/dur,1);
+        el.textContent = Math.round(p*target) + suffix;
+        if(p<1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && !ran){
+          ran = true;
+          col.classList.add('in');
+          col.querySelectorAll('[data-count]').forEach(countUp);
+          obs.disconnect();
+        }
+      });
+    }, {threshold:0.3});
+    obs.observe(col);
+  })();
+</script>
 
 </body>
 </html>
