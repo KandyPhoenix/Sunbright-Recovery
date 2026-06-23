@@ -19,12 +19,25 @@ A preview-stage homepage build for **Sunbright Recovery Center** — a 16-bed co
 
 ---
 
+## ⚠️ WHICH PAGE IS LIVE (read this first)
+
+The **live, public, pre-licensing site** is `src/pages/community.astro`. It is served at the
+root `/` via `public/_redirects` (`/  /community  200`). **This is the file to edit for any
+homepage/site work right now.** Linked live pages: `about.astro`, `events.astro`,
+`get-involved.astro`, `contact.astro` (all `index,follow`).
+
+The full clinical site (`design-preview.astro`, `index.astro`, `index-v2.astro`,
+`admissions-preview.astro`, etc.) is the **future** build and is `noindex` — do NOT edit it
+for current work. The old 528-2342 phone only appears in those noindex files; the live site
+uses **(530) 727-2211**.
+
 ## Where things live
 
 | Asset | Path |
 |---|---|
-| **Active homepage (the one being iterated on)** | `src/pages/design-preview.astro` |
-| Original homepage (old Hero component layout) | `src/pages/index.astro` |
+| **LIVE homepage (edit this)** | `src/pages/community.astro` (served at `/`) |
+| Live subpages | `about.astro`, `events.astro`, `get-involved.astro`, `contact.astro` |
+| Future full clinical site (noindex) | `src/pages/design-preview.astro`, `index.astro`, `index-v2.astro` |
 | Saved snapshots | `src/pages/design-preview-v5.astro`, `src/pages/design-preview-no-greenery.astro` |
 | Admissions page mockup | `src/pages/admissions-preview.astro` |
 | All photos | `public/images/` |
@@ -32,7 +45,7 @@ A preview-stage homepage build for **Sunbright Recovery Center** — a 16-bed co
 | Strategy docs | `STRATEGY.md`, `BRAND_VOICE.md`, `SITE.md`, `NEXT_STEPS.md`, `CLAUDE.md` |
 | Reserved nonprofit content (for future about/donate page) | `content/page-briefs/nonprofit-content-for-about-or-donate-page.md` |
 | Repo on GitHub | https://github.com/KandyPhoenix/Sunbright-Recovery |
-| Live preview URL | https://sunbright-recovery.pages.dev/design-preview |
+| Live URL | https://sunbright-recovery.pages.dev/ |
 
 ---
 
