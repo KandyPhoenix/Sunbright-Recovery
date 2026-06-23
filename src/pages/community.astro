@@ -142,8 +142,8 @@
     .sec-h2{font-size:clamp(26px,3.5vw,40px);color:var(--navy);margin-bottom:8px}
     .sec-sub{font-size:16px;color:var(--soft);max-width:540px;margin:0 auto}
     .offer-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-    .offer-card:nth-child(1){grid-column:1/3}.offer-card:nth-child(2){grid-column:3/5}.offer-card:nth-child(3){grid-column:5/7}
-    .offer-card:nth-child(4){grid-column:2/4}.offer-card:nth-child(5){grid-column:4/6}
+    .offer-card:nth-child(1){grid-column:1/4}.offer-card:nth-child(2){grid-column:4/7}
+    .offer-card:nth-child(3){grid-column:1/3}.offer-card:nth-child(4){grid-column:3/5}.offer-card:nth-child(5){grid-column:5/7}
     @media(max-width:720px){.offer-grid{grid-template-columns:1fr}.offer-card:nth-child(n){grid-column:auto}}
     .offer-card{border:1.5px solid var(--border);border-radius:16px;padding:28px;background:var(--white);transition:all .25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
     .offer-top-bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .25s}
@@ -176,27 +176,30 @@
     .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75}
 
     /* COMPACT ABOUT */
-    .about-mini{padding:44px 0;background:var(--white);border-bottom:1px solid var(--border)}
-    .about-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-mini{padding:56px 0;background:var(--white);border-bottom:1px solid var(--border)}
+    .about-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
     @media(max-width:720px){.about-mini-grid{grid-template-columns:1fr}}
     .about-mini-text .eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0;display:block}
     .about-mini-text p{font-size:15px;color:var(--mid);line-height:1.75}
-    .ev-mini-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-    .ev-mini-all{font-size:12px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:4px}
+    .ev-mini-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px}
+    .ev-mini-head h3{font-family:'Lora',serif;font-size:clamp(19px,2.2vw,24px);color:var(--navy);font-weight:700;letter-spacing:-.01em;line-height:1.2}
+    .ev-mini-all{font-size:12px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:4px;flex-shrink:0}
     .ev-mini-all:hover{text-decoration:underline}
-    .ev-mini-list{display:flex;flex-direction:column;gap:14px}
-    .ev-mini-item{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--navy-lt);border-radius:10px;border-left:3px solid var(--gold)}
-    .ev-mini-date{display:flex;flex-direction:column;align-items:center;background:var(--navy);border-radius:8px;padding:6px 10px;flex-shrink:0;min-width:44px}
+    .ev-mini-list{display:flex;flex-direction:column;gap:16px}
+    .ev-mini-item{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--navy-lt);border-radius:12px;border-left:4px solid var(--gold);transition:box-shadow .2s}
+    .ev-mini-item:hover{box-shadow:0 4px 16px rgba(26,46,90,.1)}
+    .ev-mini-date{display:flex;flex-direction:column;align-items:center;background:var(--navy);border-radius:10px;padding:8px 12px;flex-shrink:0;min-width:52px}
     .ev-mini-mon{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt)}
-    .ev-mini-day{font-size:20px;font-weight:800;color:#fff;line-height:1}
-    .ev-mini-body strong{display:block;font-size:14px;color:var(--navy);margin-bottom:3px}
-    .ev-mini-body p{font-size:12.5px;color:var(--soft);line-height:1.5;margin-bottom:6px}
-    .ev-mini-link{font-size:12px;font-weight:700;color:var(--gold)}
+    .ev-mini-day{font-size:26px;font-weight:800;color:#fff;line-height:1}
+    .ev-mini-body strong{display:block;font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+    .ev-mini-body p{font-size:13.5px;color:var(--soft);line-height:1.5;margin-bottom:8px}
+    .ev-mini-link{font-size:13px;font-weight:700;color:var(--gold)}
     .ev-mini-link:hover{text-decoration:underline}
-    .about-mini-quote{border-left:3px solid var(--gold);padding:6px 0 6px 24px}
-    .amq-mark{display:none}
-    .about-mini-quote blockquote{font-family:'Lora',Georgia,serif;font-size:15.5px;font-style:italic;color:var(--navy);line-height:1.75;margin-bottom:10px}
-    .about-mini-quote cite{font-size:12px;color:var(--soft);font-style:normal;font-weight:600;letter-spacing:.04em}
+    .about-mini-quote{border-left:4px solid var(--gold);padding:12px 0 12px 28px;margin-top:4px}
+    .amq-mark{font-family:'Dancing Script',cursive;font-size:72px;color:var(--gold);line-height:.6;display:block;margin-bottom:12px;opacity:.5}
+    .about-mini-quote blockquote{font-family:'Lora',Georgia,serif;font-size:clamp(18px,1.8vw,21px);font-style:italic;color:var(--navy);line-height:1.75;margin-bottom:14px}
+    .about-mini-quote cite{font-size:13px;color:var(--soft);font-style:normal;font-weight:600;letter-spacing:.04em}
+    .amq-section-label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
 
     /* EVENTS STRIP */
     .events-strip{padding:48px 0;background:var(--navy-dk);border-top:3px solid var(--gold)}
@@ -352,9 +355,10 @@
   <div class="nav-in">
     <a href="/"><img src="/logo.png" alt="Sunbright Recovery Center"/></a>
     <div class="nav-links">
-      <a href="#what-we-build"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>About</a>
+      <a href="/about"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>About</a>
       <a href="/events"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Events</a>
       <a href="/get-involved"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>Get Involved</a>
+      <a href="#faq"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>FAQ</a>
       <a href="/contact"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Contact</a>
     </div>
     <a href="/get-involved" class="nav-cta">
@@ -438,7 +442,7 @@
     <div class="about-mini-grid">
       <div class="about-mini-text">
         <div class="ev-mini-head">
-          <span class="eyebrow">Upcoming Events</span>
+          <h3>News, Updates &amp;<br/>Upcoming Events</h3>
           <a href="/events" class="ev-mini-all">See all <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
         <div class="ev-mini-list">
@@ -461,6 +465,7 @@
         </div>
       </div>
       <div class="about-mini-quote">
+        <span class="amq-section-label">From Our Founder</span>
         <span class="amq-mark">"</span>
         <blockquote>I've watched recovery happen for more than twenty years. It's real, it's possible, and it happens in safe places. So we built one — and the door is almost open.</blockquote>
         <cite>— Linda Spyres, LCSW, LAADC-CA · Founder</cite>
@@ -786,7 +791,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
+<section class="faq-sec" id="faq">
   <div class="wrap">
     <div class="faq-grid">
       <div class="faq-side">
