@@ -175,6 +175,17 @@
     .why-card h3{font-family:'Lora',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:12px;letter-spacing:-.01em;line-height:1.2}
     .why-card p{font-size:14.5px;color:var(--mid);line-height:1.75}
 
+    /* COMPACT ABOUT */
+    .about-mini{padding:44px 0;background:var(--white);border-bottom:1px solid var(--border)}
+    .about-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    @media(max-width:720px){.about-mini-grid{grid-template-columns:1fr}}
+    .about-mini-text .eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+    .about-mini-text p{font-size:15px;color:var(--mid);line-height:1.75}
+    .about-mini-quote{border-left:3px solid var(--gold);padding:6px 0 6px 24px}
+    .amq-mark{display:none}
+    .about-mini-quote blockquote{font-family:'Lora',Georgia,serif;font-size:15.5px;font-style:italic;color:var(--navy);line-height:1.75;margin-bottom:10px}
+    .about-mini-quote cite{font-size:12px;color:var(--soft);font-style:normal;font-weight:600;letter-spacing:.04em}
+
     /* EVENTS STRIP */
     .events-strip{padding:48px 0;background:var(--navy-dk);border-top:3px solid var(--gold)}
     .ev-strip-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
@@ -407,46 +418,54 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- COMPACT ABOUT -->
+<section class="about-mini">
   <div class="wrap">
-    <div class="about-grid">
-      <div class="about-text-main">
+    <div class="about-mini-grid">
+      <div class="about-mini-text">
         <span class="eyebrow">About Sunbright</span>
-        <h2>A center built for healing.</h2>
-        <p>Sunbright Recovery Center is preparing to open with one belief at its core: every person who walks through our doors deserves to be treated with dignity, met with compassion, and given real tools for lasting recovery.</p>
-        <p>Our 16-bed residential center in Red Bluff will combine evidence-based therapy, faith-integrated support, and the warmth of a small community that learns your name and walks with you — through recovery, and long after.</p>
-        <p style="font-size:14px;color:var(--soft);font-style:italic;">Every donation goes directly toward furnishing, equipping, and opening the center — so we can serve the people of Northern California who need it most.</p>
+        <p>Sunbright Recovery Center is preparing to open a 16-bed residential center in Red Bluff, CA. Every person who walks through our doors will be treated with dignity, given real tools, and surrounded by a community that walks with them — through recovery, and long after.</p>
+        <p style="font-size:13.5px;color:var(--soft);font-style:italic;margin-top:10px;">Every donation goes directly toward furnishing, equipping, and opening our doors.</p>
       </div>
-      <div class="about-visual">
-        <div class="aq-top">
-          <span class="aq-mark">"</span>
-          <blockquote>I've watched recovery happen for more than twenty years. It's real, it's possible, and it happens in safe places. So we built one — and the door is almost open.</blockquote>
-          <cite>— Linda Spyres, LCSW, LAADC-CA · Founder</cite>
-        </div>
-        <div class="aq-heal">
-          <p>Healing Today. Hope for Tomorrow. Freedom for Life.</p>
+      <div class="about-mini-quote">
+        <span class="amq-mark">"</span>
+        <blockquote>I've watched recovery happen for more than twenty years. It's real, it's possible, and it happens in safe places. So we built one — and the door is almost open.</blockquote>
+        <cite>— Linda Spyres, LCSW, LAADC-CA · Founder</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS STRIP -->
+<section class="events-strip">
+  <div class="wrap">
+    <div class="ev-strip-head">
+      <h2>Upcoming Events</h2>
+      <a href="/events">See all events <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    </div>
+    <div class="ev-cards">
+      <div class="ev-card">
+        <div class="ev-date-box"><span class="ev-mon">Jun</span><span class="ev-day">27</span></div>
+        <div class="ev-card-body">
+          <h4>Silent Auction Fundraiser</h4>
+          <p>An evening of silent auction bidding to help open Sunbright's doors — June 27, 5–8 PM at 22425 Sunbright Ave, Red Bluff.</p>
+          <span class="ev-chip">Silent Auction</span>
+          <a href="/events" class="ev-learn">Details &amp; how to help <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </div>
-      <div class="about-stats-row">
-        <div class="about-stats">
-          <div class="about-stat">
-            <strong>16</strong>
-            <span>Planned Beds</span>
-          </div>
-          <div class="about-stat">
-            <strong>Family</strong>
-            <span>Inclusive Care</span>
-          </div>
-          <div class="about-stat">
-            <strong>20+</strong>
-            <span>Years of Experience</span>
-          </div>
+      <div class="ev-card">
+        <div class="ev-date-box"><span class="ev-mon">Sep</span><span class="ev-day">26</span></div>
+        <div class="ev-card-body">
+          <h4>Spaghetti Fundraiser</h4>
+          <p>A community dinner with great food and great people — $10 per plate, all proceeds go toward opening day.</p>
+          <span class="ev-chip">Fundraiser Dinner</span>
+          <a href="/events" class="ev-learn">Details &amp; tickets <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- WHY NONPROFIT MATTERS -->
 <section class="nonprofit-band">
@@ -589,36 +608,6 @@
           </div>
           <h3>You won't walk alone</h3>
           <p>Family involvement, community connection, and lifelong aftercare. Recovery doesn't end when treatment does — and neither do we.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- UPCOMING EVENTS STRIP -->
-<section class="events-strip">
-  <div class="wrap">
-    <div class="ev-strip-head">
-      <h2>Upcoming Events</h2>
-      <a href="/events">See all events <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-    </div>
-    <div class="ev-cards">
-      <div class="ev-card">
-        <div class="ev-date-box"><span class="ev-mon">Jun</span><span class="ev-day">27</span></div>
-        <div class="ev-card-body">
-          <h4>Silent Auction Fundraiser</h4>
-          <p>An evening of silent auction bidding to help open Sunbright's doors — June 27, 5–8 PM at 22425 Sunbright Ave, Red Bluff.</p>
-          <span class="ev-chip">Silent Auction</span>
-          <a href="/events" class="ev-learn">Details &amp; how to help <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </div>
-      </div>
-      <div class="ev-card">
-        <div class="ev-date-box"><span class="ev-mon">Sep</span><span class="ev-day">26</span></div>
-        <div class="ev-card-body">
-          <h4>Spaghetti Fundraiser</h4>
-          <p>A community dinner with great food and great people — $10 per plate, all proceeds go toward opening day.</p>
-          <span class="ev-chip">Fundraiser Dinner</span>
-          <a href="/events" class="ev-learn">Details &amp; tickets <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </div>
     </div>
