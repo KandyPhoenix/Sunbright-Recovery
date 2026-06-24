@@ -378,18 +378,24 @@
     .sticky a{display:flex;align-items:center;gap:8px;background:var(--gold);color:#fff;padding:12px 20px;border-radius:100px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(200,144,10,.5);transition:all .2s}
     .sticky a:hover{background:#a87008;transform:translateY(-2px)}
     svg.ph{width:15px;height:15px;flex-shrink:0}
-    /* --- motion polish (hero) --- */
-    @keyframes sunFloat{0%,100%{transform:translateX(95px) translateY(0)}50%{transform:translateX(95px) translateY(-16px)}}
-    .hero-sun-only img{animation:sunFloat 7.5s ease-in-out infinite;position:relative;z-index:1}
-    .hero-sun-only::before{content:'';position:absolute;top:0;left:50%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(240,192,64,.4),rgba(240,192,64,.12) 45%,transparent 68%);filter:blur(16px);animation:sunGlow 7.5s ease-in-out infinite;pointer-events:none;z-index:0}
-    @keyframes sunGlow{0%,100%{opacity:.45;transform:translateX(calc(-50% + 95px)) scale(1)}50%{opacity:.85;transform:translateX(calc(-50% + 95px)) scale(1.1)}}
+    /* --- hero sun: rises in the east, arcs west, sets, and repeats --- */
+    @keyframes sunArc{
+      0%{transform:translate(250px,95px) scale(.86);opacity:0}
+      14%{opacity:.7}
+      30%{transform:translate(120px,6px) scale(.96);opacity:1}
+      50%{transform:translate(0,-16px) scale(1);opacity:1}
+      70%{transform:translate(-120px,6px) scale(.96);opacity:1}
+      86%{opacity:.7}
+      100%{transform:translate(-250px,95px) scale(.86);opacity:0}
+    }
+    .hero-sun-only img{animation:sunArc 20s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(240,192,64,.55));position:relative;z-index:1}
     @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:.6}}
     .hero-stars{animation:twinkle 6s ease-in-out infinite}
     /* --- scroll reveal --- */
     .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
     .rv.in{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){
-      .hero-sun-only img,.hero-stars,.hero-sun-only::before{animation:none}
+      .hero-sun-only img,.hero-stars{animation:none}
       .rv{opacity:1!important;transform:none!important}
     }
   </style>
