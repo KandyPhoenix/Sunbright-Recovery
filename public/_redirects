@@ -1,5 +1,5 @@
 # Redirect www to non-www
-https://www.sunbrightrecovery.com/* https://sunbrightrecovery.com/:splat 301
+https://www.sunbrightrecovery.org/* https://sunbrightrecovery.org/:splat 301
 
 # Serve community page as homepage until licensed
 /  /community  200
