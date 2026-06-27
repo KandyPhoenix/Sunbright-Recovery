@@ -1,17 +1,17 @@
 # Sunbright Recovery — Build Status
 
-> **Last updated:** 2026-06-04
+> **Last updated:** 2026-06-27 — 🟢 **LIVE** at https://www.sunbrightrecovery.org
 > **For:** Any Claude session picking this up. Read this FIRST before making changes.
 
 ---
 
 ## What this project is
 
-A preview-stage homepage build for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**. They are now in the **equipping/preparing-to-open phase**.
+The **live** community / pre-licensing site for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**; they're in the **equipping/preparing-to-open phase**. **Went live 2026-06-27** at **https://www.sunbrightrecovery.org** (community pages only — the full clinical site stays hidden until licensed).
 
 - **Org:** 501(c)(3) nonprofit (will be by go-live)
-- **Phone:** (530) 528-2342
-- **Email:** info@sunbrightrecovery.com
+- **Phone (live site):** (530) 727-2211 (Faith's line; old (530) 528-2342 only in the hidden clinical files)
+- **Email:** info@sunbrightrecovery.org (Google Workspace)
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
 - **Domain:** sunbrightrecovery.**org** (NOT .com — flyer shows .com but client confirmed .org)
 - **Founder:** Linda Spyres, LCSW, LAADC-CA · 20+ years in addiction treatment
@@ -19,41 +19,44 @@ A preview-stage homepage build for **Sunbright Recovery Center** — a 16-bed co
 
 ---
 
-## ⚠️ WHICH PAGE IS LIVE (read this first)
+## ⚠️ WHICH PAGES ARE LIVE (read this first)
 
-The **live, public, pre-licensing site** is `src/pages/community.astro`. It is served at the
-root `/` via `public/_redirects` (`/  /community  200`). **This is the file to edit for any
-homepage/site work right now.** Linked live pages: `about.astro`, `events.astro`,
-`get-involved.astro`, `contact.astro` (all `index,follow`).
+At the 2026-06-27 launch the homepage became the root: the old `community.astro` was
+**renamed to `src/pages/index.astro`** and serves cleanly at `/` (no more `/community` in the
+URL). **Edit `index.astro` for any homepage work.**
 
-The full clinical site (`design-preview.astro`, `index.astro`, `index-v2.astro`,
-`admissions-preview.astro`, etc.) is the **future** build and is `noindex` — do NOT edit it
-for current work. The old 528-2342 phone only appears in those noindex files; the live site
-uses **(530) 727-2211**.
+**Live, deployed, indexable (6):** `index.astro` (homepage), `about.astro`, `events.astro`,
+`get-involved.astro`, `contact.astro`, plus `thank-you.astro` (post-form confirmation, noindex).
 
-## 🚀 Pre-launch queue (live community site)
+**Hidden — NOT deployed** (underscore-prefixed so Astro never builds them; preserved in the
+repo for the future *licensed* full-site launch): `_index-full.astro` (old official homepage),
+`_index-v2.astro`, `_design-preview.astro`, `_design-preview-v5.astro`,
+`_design-preview-no-greenery.astro`, `_admissions-preview.astro`. **To bring the full clinical
+site live later, drop the `_` prefix** (and review noindex/links first). The old (530) 528-2342
+phone only lives in these hidden files; the live site uses **(530) 727-2211**.
 
-Deferred until the `sunbrightrecovery.org` domain is connected in Cloudflare:
+## 🚀 Post-launch open items (tracked in Jira — project **SBR**)
 
-- **Mailing list / event signups** — the contact form has a *"Get notified about events or updates"* option, but there is **no real mailing list behind it yet**. Need to wire up actual email capture (e.g. Mailchimp/Brevo embed, or route those submissions into a list) so signups go somewhere usable.
-- **Facebook live feed** on `/events` — Meta killed the free native embed, so use a third-party widget (SociableKit/Elfsight free tier): sign up, connect the Sunbright FB page, paste the embed into a "Latest from Facebook" section. ~5 min of Kandy's time.
-- **Domain swap** — flip `og:image` / `og:url` on the 5 live pages and the `sitemap` line in `robots.txt` from `sunbright-recovery.pages.dev` → `sunbrightrecovery.org`. Also decide the `robots.txt` crawl policy (currently `Disallow: /`).
+Launched 2026-06-27. og/sitemap/robots/canonical already flipped to `www.sunbrightrecovery.org`. Remaining work is ticketed:
+
+- **[SBR-18] Domain redirects** — bare `sunbrightrecovery.org` + the `.com` still need to redirect to `www`. Both are HostGator **DNS-only** (no hosting, no Forwarding tool), so the fix is moving each domain's DNS to **Cloudflare**, then add as Pages custom domains / 301 to www. **Preserve email** (Google Workspace MX → `aspmx.l.google.com` + SPF/DKIM/DMARC) before any nameserver switch.
+- **[SBR-19] Contact-form email** — decide which inbox web3forms submissions go to + set the access key.
+- **[SBR-20] Mailing list** — the *"Get notified about events or updates"* form option has **no real list behind it yet** (Mailchimp/Brevo).
+- **[SBR-21] Facebook feed** — add a "Latest from Facebook" widget on `/events` (3rd-party, since Meta killed the native embed).
 
 ## Where things live
 
 | Asset | Path |
 |---|---|
-| **LIVE homepage (edit this)** | `src/pages/community.astro` (served at `/`) |
-| Live subpages | `about.astro`, `events.astro`, `get-involved.astro`, `contact.astro` |
-| Future full clinical site (noindex) | `src/pages/design-preview.astro`, `index.astro`, `index-v2.astro` |
-| Saved snapshots | `src/pages/design-preview-v5.astro`, `src/pages/design-preview-no-greenery.astro` |
-| Admissions page mockup | `src/pages/admissions-preview.astro` |
+| **LIVE homepage (edit this)** | `src/pages/index.astro` (the renamed community page, served at `/`) |
+| Live subpages | `about.astro`, `events.astro`, `get-involved.astro`, `contact.astro`, `thank-you.astro` |
+| Hidden full clinical site + snapshots (underscore = NOT deployed) | `_index-full.astro`, `_index-v2.astro`, `_design-preview.astro`, `_design-preview-v5.astro`, `_design-preview-no-greenery.astro`, `_admissions-preview.astro` |
 | All photos | `public/images/` |
 | Logo | `public/logo.png` |
 | Strategy docs | `STRATEGY.md`, `BRAND_VOICE.md`, `SITE.md`, `NEXT_STEPS.md`, `CLAUDE.md` |
 | Reserved nonprofit content (for future about/donate page) | `content/page-briefs/nonprofit-content-for-about-or-donate-page.md` |
 | Repo on GitHub | https://github.com/KandyPhoenix/Sunbright-Recovery |
-| Live URL | https://sunbright-recovery.pages.dev/ |
+| Live URL | **https://www.sunbrightrecovery.org** (Cloudflare Pages; `sunbright-recovery.pages.dev` still works) |
 
 ---
 
@@ -66,12 +69,14 @@ Deferred until the `sunbrightrecovery.org` domain is connected in Cloudflare:
 
 ---
 
-## Preview-only protection (DO NOT REMOVE)
+## Launch config (live as of 2026-06-27)
 
-Three layers of safety so Google can't index this:
-1. `<meta name="robots" content="noindex">` on every page
-2. `public/robots.txt` with `Disallow: /`
-3. No real domain attached yet — only the `pages.dev` preview URL
+- **Canonical address:** `https://www.sunbrightrecovery.org` (the `www` is primary; apex + `.com` redirects still pending — SBR-18). `www` CNAME at HostGator → Cloudflare Pages.
+- **DNS:** domain registered at **HostGator** (nameservers `hgns1/2.hostgator.com`); only the `www` CNAME points to Cloudflare. Email is **Google Workspace** (independent of HostGator).
+- **robots.txt:** crawlable (`Allow: /`); hidden clinical paths + `/thank-you` are `Disallow`ed; `Sitemap:` → `www.sunbrightrecovery.org/sitemap-index.xml`.
+- **Sitemap / canonical / og:** all → `https://www.sunbrightrecovery.org`. Sitemap filtered to the 5 indexable pages (homepage + about/events/get-involved/contact).
+- **Astro `site`** = `https://www.sunbrightrecovery.org`.
+- The full clinical site is kept out of the build entirely (underscore-prefixed) — review noindex + links before ever un-prefixing.
 
 ---
 
