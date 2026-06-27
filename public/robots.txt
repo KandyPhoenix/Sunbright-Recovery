@@ -1,6 +1,11 @@
 # Sunbright Recovery Center
-# Site under construction — disallow all until launch
 User-agent: *
-Disallow: /
+Allow: /
 
-Sitemap: https://sunbrightrecovery.com/sitemap-index.xml
+# Pre-licensing clinical build — not for indexing yet
+Disallow: /design-preview
+Disallow: /admissions-preview
+Disallow: /index-v2
+Disallow: /thank-you
+
+Sitemap: https://www.sunbrightrecovery.org/sitemap-index.xml
