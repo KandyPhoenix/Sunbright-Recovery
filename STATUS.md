@@ -31,6 +31,14 @@ The full clinical site (`design-preview.astro`, `index.astro`, `index-v2.astro`,
 for current work. The old 528-2342 phone only appears in those noindex files; the live site
 uses **(530) 727-2211**.
 
+## 🚀 Pre-launch queue (live community site)
+
+Deferred until the `sunbrightrecovery.org` domain is connected in Cloudflare:
+
+- **Mailing list / event signups** — the contact form has a *"Get notified about events or updates"* option, but there is **no real mailing list behind it yet**. Need to wire up actual email capture (e.g. Mailchimp/Brevo embed, or route those submissions into a list) so signups go somewhere usable.
+- **Facebook live feed** on `/events` — Meta killed the free native embed, so use a third-party widget (SociableKit/Elfsight free tier): sign up, connect the Sunbright FB page, paste the embed into a "Latest from Facebook" section. ~5 min of Kandy's time.
+- **Domain swap** — flip `og:image` / `og:url` on the 5 live pages and the `sitemap` line in `robots.txt` from `sunbright-recovery.pages.dev` → `sunbrightrecovery.org`. Also decide the `robots.txt` crawl policy (currently `Disallow: /`).
+
 ## Where things live
 
 | Asset | Path |
