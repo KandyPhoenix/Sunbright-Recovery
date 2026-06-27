@@ -71,8 +71,8 @@ Launched 2026-06-27. og/sitemap/robots/canonical already flipped to `www.sunbrig
 
 ## Launch config (live as of 2026-06-27)
 
-- **Canonical address:** `https://www.sunbrightrecovery.org` (the `www` is primary; apex + `.com` redirects still pending — SBR-18). `www` CNAME at HostGator → Cloudflare Pages.
-- **DNS:** domain registered at **HostGator** (nameservers `hgns1/2.hostgator.com`); only the `www` CNAME points to Cloudflare. Email is **Google Workspace** (independent of HostGator).
+- **Canonical address:** `https://www.sunbrightrecovery.org` (primary). Bare `sunbrightrecovery.org` **301-redirects to www** (Cloudflare Redirect Rule, path-preserving) — ✅ live. **`sunbrightrecovery.com` still pending** (SBR-18).
+- **DNS:** `sunbrightrecovery.org` is **registered at HostGator but its DNS is now on Cloudflare** (nameservers `leanna/bruce.ns.cloudflare.com`) — that's what made the bare-domain redirect possible. Email = **Google Workspace** (Gmail MX preserved through the move). **SPF + DMARC** TXT records added ✅; **DKIM still to do** (SBR-22, needs Google admin). The `.com` is still on HostGator DNS.
 - **robots.txt:** crawlable (`Allow: /`); hidden clinical paths + `/thank-you` are `Disallow`ed; `Sitemap:` → `www.sunbrightrecovery.org/sitemap-index.xml`.
 - **Sitemap / canonical / og:** all → `https://www.sunbrightrecovery.org`. Sitemap filtered to the 5 indexable pages (homepage + about/events/get-involved/contact).
 - **Astro `site`** = `https://www.sunbrightrecovery.org`.
