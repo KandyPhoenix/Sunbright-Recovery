@@ -143,7 +143,7 @@ Validate with: `npm run build && npm run preview`, then test each URL at https:/
 ## Privacy & HIPAA
 
 - **No PHI in markdown content.** Testimonials must be composite (clearly disclaimed) or have signed releases.
-- **Forms** route to `admissions@sunbrightrecovery.com`. If using standard Vercel/Astro form: do NOT collect medical details (only name, phone, email, "how can we help" free text). For insurance verification (collects DOB, member ID, etc.): MUST use HIPAA-compliant provider (Jotform Healthcare or similar).
+- **Forms** route to `kandy@phwcare.com` (set in the Web3Forms account tied to the access key in `contact.astro` — there is NO `admissions@` mailbox). If using standard Vercel/Astro form: do NOT collect medical details (only name, phone, email, "how can we help" free text). For insurance verification (collects DOB, member ID, etc.): MUST use HIPAA-compliant provider (Jotform Healthcare or similar).
 - **Analytics:** GA4 standard tracking only. No PII in event names. Do not track form field values.
 
 ## Open decisions (link to PHWCare strategy)
