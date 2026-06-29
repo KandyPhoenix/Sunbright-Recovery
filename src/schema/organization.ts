@@ -18,8 +18,7 @@ export function organizationSchema() {
           url: 'https://www.phwcare.com',
         },
         telephone: '+1-530-727-2211',
-        // TODO: confirm separate Sunbright email or share PHW's
-        email: 'admissions@sunbrightrecovery.com',
+        email: 'info@sunbrightrecovery.org',
         address: {
           '@type': 'PostalAddress',
           // TODO: confirm exact street address with Linda
