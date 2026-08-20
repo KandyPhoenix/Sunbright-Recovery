@@ -9,7 +9,7 @@
 
 The **live** community / pre-licensing site for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**; they're in the **equipping/preparing-to-open phase**. **Went live 2026-06-27** at **https://www.sunbrightrecovery.org** (community pages only — the full clinical site stays hidden until licensed).
 
-- **Org:** 501(c)(3) nonprofit (will be by go-live)
+- **Org:** 501(c)(3) nonprofit — **APPROVED** by IRS 2026-07-27 (effective 2026-05-23), EIN 42-2737546, public charity 509(a)(2), donations tax-deductible. Letter on file at `C:\Users\kandy\REHAB CENTER\IRS 501 C3.pdf`. State licensing still in process.
 - **Phone (live site):** (530) 727-2211 (Faith's line; old (530) 528-2342 only in the hidden clinical files)
 - **Email:** info@sunbrightrecovery.org (Google Workspace)
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
