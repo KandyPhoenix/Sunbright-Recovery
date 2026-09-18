@@ -17,7 +17,7 @@ export function organizationSchema() {
           name: 'Parish Health and Wellness',
           url: 'https://www.phwcare.com',
         },
-        telephone: '+1-530-727-2211',
+        telephone: '+1-530-513-4294',
         email: 'info@sunbrightrecovery.org',
         address: {
           '@type': 'PostalAddress',

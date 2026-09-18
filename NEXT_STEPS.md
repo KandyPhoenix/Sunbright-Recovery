@@ -12,7 +12,7 @@
 - [ ] HIPAA form: standard form OK, or Jotform Healthcare ($30/mo)?
 - [ ] Photos: facility photos at launch, or use stock until ready?
 - [ ] Pricing approved at $2,000 flat (or $1,000 phased alternative)?
-- [ ] Phone: keep PHW's 530-528-2342 or get Sunbright-specific line?
+- [x] Phone: RESOLVED — Sunbright-specific line 530-513-4294 (set 2026-09-18, SBR-33)
 - [ ] Email: add new Google Workspace user (~$6/mo) or forward to PHW inbox?
 
 ### Kandy actions (~3 hrs before Phase 1)

@@ -14,7 +14,7 @@ Sunbright Recovery Center offers three levels of care for individuals and famili
 
 Founded by **Linda Spyres, LCSW, LAADC-CA** — 20+ years of specialized addiction treatment experience. Medi-Cal and most major insurance accepted; sliding scale available.
 
-📞 **Call:** 530-528-2342
+📞 **Call:** 530-513-4294
 📍 **Visit:** 22425 Sunbright Ave, Red Bluff, CA 96080
 
 ## Tech Stack

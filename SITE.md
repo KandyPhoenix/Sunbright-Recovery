@@ -9,7 +9,7 @@
 - **Founder:** Linda Spyres, LCSW, LAADC-CA (20+ years addiction treatment)
 - **Co-counselor:** Faith Odell, SUDRC
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
-- **Phone (current PHW):** 530-528-2342 (will likely keep for Sunbright launch; new line possible later)
+- **Phone:** 530-513-4294 — the main SRC line (set 2026-09-18, SBR-33). Sunbright has its own number now; it no longer shares PHW’s.
 - **Email (planned):** admissions@sunbrightrecovery.com, info@sunbrightrecovery.com
 - **Funding model:** Self-funded by Linda; donations accepted via existing `phwcare.com/rehab-center-donations`
 

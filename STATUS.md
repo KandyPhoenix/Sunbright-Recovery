@@ -10,7 +10,7 @@
 The **live** community / pre-licensing site for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**; they're in the **equipping/preparing-to-open phase**. **Went live 2026-06-27** at **https://www.sunbrightrecovery.org** (community pages only — the full clinical site stays hidden until licensed).
 
 - **Org:** 501(c)(3) nonprofit — **APPROVED** by IRS 2026-07-27 (effective 2026-05-23), EIN 42-2737546, public charity 509(a)(2), donations tax-deductible. Letter on file at `C:\Users\kandy\REHAB CENTER\IRS 501 C3.pdf`. State licensing still in process.
-- **Phone (live site):** (530) 727-2211 (Faith's line; old (530) 528-2342 only in the hidden clinical files)
+- **Phone (everywhere):** **(530) 513-4294** — the main SRC line. Set 2026-09-18 per Faith ODell (SBR-33), replacing Faith's personal cell (530) 727-2211 on the live site and the retired PHW number (530) 528-2342 in the hidden clinical files. **Neither old number appears anywhere in the repo now — do not reintroduce either.**
 - **Email:** info@sunbrightrecovery.org (Google Workspace)
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
 - **Domain:** sunbrightrecovery.**org** (NOT .com — flyer shows .com but client confirmed .org)
@@ -32,8 +32,9 @@ URL). **Edit `index.astro` for any homepage work.**
 repo for the future *licensed* full-site launch): `_index-full.astro` (old official homepage),
 `_index-v2.astro`, `_design-preview.astro`, `_design-preview-v5.astro`,
 `_design-preview-no-greenery.astro`, `_admissions-preview.astro`. **To bring the full clinical
-site live later, drop the `_` prefix** (and review noindex/links first). The old (530) 528-2342
-phone only lives in these hidden files; the live site uses **(530) 727-2211**.
+site live later, drop the `_` prefix** (and review noindex/links first). These hidden files now
+carry the same main line as the live pages, **(530) 513-4294** (swapped 2026-09-18, SBR-33), so
+bringing them live later cannot resurface an old number.
 
 ## 🚀 Post-launch open items (tracked in Jira — project **SBR**)
 
@@ -84,7 +85,7 @@ Launched 2026-06-27. og/sitemap/robots/canonical already flipped to `www.sunbrig
 
 ### Section order (current)
 1. **Nav** — Fixed/sticky, transparent over hero, becomes solid white on scroll (>20px). Logo turns white when transparent, full color when scrolled. CTA button is white over hero, navy when scrolled.
-2. **Hero** — Navy sky background, sun graphic on right (cropped from logo, golden, scaled, positioned at translateX 95px). Headline "Recovery / Starts Here." CTAs: gold "Call (530) 528-2342" + "Start Admissions" ghost. Tagline below: "Completely private · HIPAA confidential · No commitment required"
+2. **Hero** — Navy sky background, sun graphic on right (cropped from logo, golden, scaled, positioned at translateX 95px). Headline "Recovery / Starts Here." CTAs: gold "Call (530) 513-4294" + "Start Admissions" ghost. Tagline below: "Completely private · HIPAA confidential · No commitment required"
 3. **What to Know band** (navy) — 4 cards with gold circular icons: Personal & Connected (16-Bed Residential), 30/60/90 Days (Programs That Fit You), Men & Women (Co-Ed Residential), Red Bluff, CA (Serving Northern California)
 4. **About** — Two-column. Left: "About Sunbright" eyebrow + "A place built for healing." headline + 2 paragraphs + small italic 501(c)(3) note + stats row (16 Residential Beds / Family Inclusive Care / 30/60/90 Day Programs). Right column: Linda's quote on softer navy gradient + "Healing Today. Hope for Tomorrow. Freedom for Life." tagline in lighter blue panel below. Card spans both grid rows.
 5. **Programs** (soft gold-tinted background `#fef9ee` with gold accent divider bar at top) — 3 cards: Residential Rehab (with detox referral note), Outpatient (IOP), Sober Living & Aftercare
@@ -95,7 +96,7 @@ Launched 2026-06-27. og/sitemap/robots/canonical already flipped to `www.sunbrig
 10. **Get Involved / Donations** (cream) — Intro paragraph + tax-deductible note. 9 cards in 3 rows: Adopt a Space (Churches: Adopt a Room featured / Adopt a Bed / Adopt a Wing) · Most Needed (16 Mattresses / 20-30 Washable Chairs / Kitchen & Cookware) · Share Your Time (Lead a Class / Beautification & Outdoor / Cash & Gift Cards). Partners callout with "Start a Conversation →" button. Facility photo strip (4 photos: wide property + 3 interior). Dark CTA banner: "Donate or Volunteer" + "Explore Ways to Help"
 11. **FAQ** (cream gradient) — Two-column. Left: heading + small "Still have questions?" card with navy "Send a Message" button to /contact. Right: 7 FAQ items including new "Do you provide medical detox?"
 12. **Final CTA** (gold-pale) — "You don't have to figure this out alone." Navy phone CTA + outlined "Schedule a Tour"
-13. **Footer** — Navy crisis bar: "Call us: (530) 528-2342 · Medical emergency: 911". SAMHSA referral as fine print above copyright. 4-column main footer: Brand (big white logo, tagline, description) · Programs/What We Treat · About · Get in Touch (yellow phone, email, address) + Payment. Footer titles have gold underline accents. Copyright: "© 2026 Sunbright Recovery Center · Site by Phoenix Method SEO" with Sunbright linked to /, Phoenix Method to https://phoenixmethodseo.com (gold hover).
+13. **Footer** — Navy crisis bar: "Call us: (530) 513-4294 · Medical emergency: 911". SAMHSA referral as fine print above copyright. 4-column main footer: Brand (big white logo, tagline, description) · Programs/What We Treat · About · Get in Touch (yellow phone, email, address) + Payment. Footer titles have gold underline accents. Copyright: "© 2026 Sunbright Recovery Center · Site by Phoenix Method SEO" with Sunbright linked to /, Phoenix Method to https://phoenixmethodseo.com (gold hover).
 
 ### Major design decisions made
 - **Brand palette:** Navy `#1a2e5a` + Gold `#c8900a` + Cream `#ede4d0` + warm whites. Logo navy + gold drove this.

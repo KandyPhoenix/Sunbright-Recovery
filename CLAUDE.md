@@ -153,6 +153,6 @@ See `KandyPhoenix/PHWCare#1` PR for the full strategy + open decisions Linda nee
 1. DHCS licensure scope (what can we publicly claim now)
 2. Telehealth scope (statewide IOP via video, or in-person Red Bluff only)
 3. Branding (adapt PHW kit or design fresh)
-4. Phone (separate Sunbright line or share PHW's 530-528-2342)
+4. Phone — RESOLVED: Sunbright has its own line, 530-513-4294 (set 2026-09-18, SBR-33)
 5. HIPAA form provider
 6. Legal entity (DBA, LLC, or nonprofit)

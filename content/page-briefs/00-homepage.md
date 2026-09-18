@@ -3,7 +3,7 @@ url: /
 primary_keyword: faith-based rehab california
 secondary_keywords: [rehab northern california, addiction treatment california, christian rehab california]
 meta_title: "Sunbright Recovery Center | Faith-Based Rehab California"
-meta_description: "Faith-integrated, evidence-based addiction recovery in Northern California. Residential, outpatient & sober living. Medi-Cal accepted. Call 530-528-2342."
+meta_description: "Faith-integrated, evidence-based addiction recovery in Northern California. Residential, outpatient & sober living. Medi-Cal accepted. Call 530-513-4294."
 word_count: 1200-1500
 h1: "Recovery Starts Here"
 schema: [Organization, LocalBusiness, MedicalBusiness, WebSite, FAQPage]
@@ -20,7 +20,7 @@ schema: [Organization, LocalBusiness, MedicalBusiness, WebSite, FAQPage]
 ### Hero
 - H1 + subhead
 - Trust line: "Founded by Linda Spyres, LCSW, LAADC-CA · 20+ years specialized addiction expertise"
-- Primary CTA: "Call 530-528-2342" (phone button)
+- Primary CTA: "Call 530-513-4294" (phone button)
 - Secondary CTA: "Verify Your Insurance" (form modal or anchor to /admissions)
 - Privacy reassurance: "Your call is private. We follow HIPAA confidentiality."
 - Background: warm, hopeful imagery (Northern CA landscape, NOT clinical hallway)
@@ -83,4 +83,4 @@ Top 4-5 high-conversion FAQs:
 1. Want a hero image of facility (when ready) vs. Northern CA landscape vs. team photo?
 2. Do we have a testimonial/story we can use, or write a composite?
 3. "Most admissions within 3-5 days" — is this accurate? Adjust to actual timing.
-4. Phone number: keep PHW's 530-528-2342 or get a Sunbright-specific line?
+4. Phone number: RESOLVED — Sunbright-specific line 530-513-4294 (set 2026-09-18, SBR-33)

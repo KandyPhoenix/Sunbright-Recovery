@@ -147,7 +147,7 @@ Full voice guide: `BRAND_VOICE.md`
 ```
 
 **Primary nav:**
-`Programs` · `What We Treat` · `Our Approach` · `Admissions` · `Insurance` · `Team` · `Contact` · **`Call Now: 530-528-2342`** (sticky button on every page)
+`Programs` · `What We Treat` · `Our Approach` · `Admissions` · `Insurance` · `Team` · `Contact` · **`Call Now: 530-513-4294`** (sticky button on every page)
 
 Page-by-page briefs: `content/pages/*.md`
 

@@ -34,7 +34,7 @@ These adjustments address that.
 
 ### 1. Urgency-aware
 Every page needs a clear, persistent next step. Don't bury CTAs.
-- Sticky phone button on every page: **"Call 530-528-2342"**
+- Sticky phone button on every page: **"Call 530-513-4294"**
 - Secondary CTA on most pages: **"Verify Your Insurance"** or **"Schedule a Tour"**
 - Above-the-fold CTA on Homepage, Programs, Admissions
 - Avoid generic "Contact Us" — use action verbs ("Start Admissions", "Talk to Linda Today")
