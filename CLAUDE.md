@@ -4,12 +4,15 @@
 >
 > **⚠️ START HERE — READ `STATUS.md` FIRST.** That file documents exactly what's been done, what's pending, where each thing lives, key user preferences, and approved messaging. This CLAUDE.md is foundational context; STATUS.md is the live progress log.
 >
-> Active design lives in `src/pages/design-preview.astro` (NOT index.astro). Preview URL: https://sunbright-recovery.pages.dev/design-preview
+> **⚠️ THE SITE IS LIVE** at https://www.sunbrightrecovery.org (since 2026-06-27). A push to `main` publishes publicly in ~30s.
+> Homepage work happens in `src/pages/index.astro`. Pages whose filename starts with `_` are the hidden clinical site and are NOT built — never un-hide one until Kandy says the facility is licensed.
+> *(Corrected 2026-09-18: this line used to name `design-preview.astro` as the active file and a pages.dev preview URL. Both were stale.)*
 
 ## Project
 
 - **Name:** Sunbright Recovery Center
-- **Site:** sunbrightrecovery.com
+- **Site:** www.sunbrightrecovery.**org** (NOT .com — the flyer shows .com, client confirmed .org)
+- **Phone:** (530) 513-4294 — main SRC line (set 2026-09-18, SBR-33)
 - **Parent Org:** Parish Health and Wellness (PHW Care) — phwcare.com
 - **Strategy doc:** Originally drafted in `KandyPhoenix/PHWCare` under `sites/sunbright/`. The master strategy (STRATEGY.md, BRAND_VOICE.md, SEO keyword map, etc.) lives there as the source of truth for non-code planning. This repo holds the actual Astro site code + content.
 
@@ -17,7 +20,7 @@
 
 - **Framework:** Astro 4.x (static site generator)
 - **Styling:** Tailwind CSS 3.x
-- **Hosting:** Vercel (free tier, auto-deploy on push to `main`)
+- **Hosting:** **Cloudflare Pages** (auto-deploy on push to `main`) — NOT Vercel; that was the original plan and never happened
 - **Content:** Astro Content Collections (markdown in `src/content/`)
 - **Forms:** TBD with Linda — standard Astro form vs Jotform Healthcare ($30/mo for HIPAA compliance)
 - **Analytics:** Google Analytics 4 (new property, separate from PHW)
@@ -98,9 +101,10 @@ npm run preview
 
 ## Deploy
 
-- Push to `main` → Vercel auto-deploys to production
-- Push to any other branch → Vercel auto-deploys preview URL
-- Custom domain configured in Vercel dashboard
+- Push to `main` → **Cloudflare Pages** auto-deploys to the LIVE public site (~30s)
+- Push to any other branch → Cloudflare builds a preview URL
+- Custom domain (`www.sunbrightrecovery.org`) configured in the Cloudflare Pages dashboard
+- Verify a deploy with `curl` against the live URL — don't assume it landed
 
 ## Brand voice (MANDATORY)
 
@@ -138,12 +142,12 @@ Validate with: `npm run build && npm run preview`, then test each URL at https:/
 - **Branch from:** `main`
 - **Branch naming:** `feature/<short-description>` or `content/<page-name>` or `seo/<change>`
 - **Commit style:** Imperative mood, focus on why ("Add Medi-Cal callout to insurance hero" not "Updated insurance.astro")
-- **PRs:** Always against `main`. Vercel auto-deploys preview URLs for review before merge.
+- **PRs:** Always against `main`. Cloudflare Pages builds a preview URL per branch for review before merge.
 
 ## Privacy & HIPAA
 
 - **No PHI in markdown content.** Testimonials must be composite (clearly disclaimed) or have signed releases.
-- **Forms** route to `kandy@phwcare.com` (set in the Web3Forms account tied to the access key in `contact.astro` — there is NO `admissions@` mailbox). If using standard Vercel/Astro form: do NOT collect medical details (only name, phone, email, "how can we help" free text). For insurance verification (collects DOB, member ID, etc.): MUST use HIPAA-compliant provider (Jotform Healthcare or similar).
+- **Forms** route to `info@sunbrightrecovery.org` (changed 2026-07-09, SBR-19, in the Web3Forms dashboard — the access key in `contact.astro` was NOT changed. There is NO `admissions@` mailbox.) If using a standard Astro form: do NOT collect medical details (only name, phone, email, "how can we help" free text). For insurance verification (collects DOB, member ID, etc.): MUST use HIPAA-compliant provider (Jotform Healthcare or similar).
 - **Analytics:** GA4 standard tracking only. No PII in event names. Do not track form field values.
 
 ## Open decisions (link to PHWCare strategy)
