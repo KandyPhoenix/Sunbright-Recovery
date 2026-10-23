@@ -25,8 +25,15 @@ At the 2026-06-27 launch the homepage became the root: the old `community.astro`
 **renamed to `src/pages/index.astro`** and serves cleanly at `/` (no more `/community` in the
 URL). **Edit `index.astro` for any homepage work.**
 
-**Live, deployed, indexable (6):** `index.astro` (homepage), `about.astro`, `events.astro`,
-`get-involved.astro`, `contact.astro`, plus `thank-you.astro` (post-form confirmation, noindex).
+**Live, deployed (8 — `npm run build` must say 8):** `index.astro` (homepage), `about.astro`, `events.astro`,
+`get-involved.astro`, `contact.astro`, `client-rights.astro`, `workplace-safety.astro`, plus `thank-you.astro` (post-form confirmation, noindex).
+
+**Compliance pages (added 2026-10-23, from Linda's 2026-09-26 "Website" email):**
+- `/client-rights` — "Client Bill of Rights & Grievances". Text is Linda's *Website Text* doc **verbatim** (required by CA H&SC §11857.2 / SB 349) — don't rewrite it. Links 3 PDFs in `public/docs/`: Client Bill of Rights, Client Grievance Form, Notice of Privacy Practices.
+- `/workplace-safety` — the staff IIPP (`public/docs/sunbright-injury-illness-prevention-program.pdf`). Kept separate from client documents on purpose.
+- Kandy wants both **low-key**: plain styling, linked only from the small footer bottom line on every page (and the contact-form note). Don't promote them in the nav or on the homepage.
+- **Never add an online grievance form or "submit grievance" email button** — grievances contain PHI (HIPAA / 42 CFR Part 2). The line under the contact form ("Please do not include health or treatment information…") must stay.
+- New footer links must be added to every live page's footer by hand — each page carries its own footer.
 
 **Hidden — NOT deployed** (underscore-prefixed so Astro never builds them; preserved in the
 repo for the future *licensed* full-site launch): `_index-full.astro` (old official homepage),
