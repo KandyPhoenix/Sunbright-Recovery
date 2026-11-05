@@ -25,8 +25,10 @@ At the 2026-06-27 launch the homepage became the root: the old `community.astro`
 **renamed to `src/pages/index.astro`** and serves cleanly at `/` (no more `/community` in the
 URL). **Edit `index.astro` for any homepage work.**
 
-**Live, deployed (8 — `npm run build` must say 8):** `index.astro` (homepage), `about.astro`, `events.astro`,
-`get-involved.astro`, `contact.astro`, `client-rights.astro`, `workplace-safety.astro`, plus `thank-you.astro` (post-form confirmation, noindex).
+**Live, deployed (9 — `npm run build` must say 9):** `index.astro` (homepage), `about.astro`, `events.astro`,
+`get-involved.astro`, `contact.astro`, `client-rights.astro`, `workplace-safety.astro`, `privacy-policy.astro` (added 2026-11-05, SBR-38), plus `thank-you.astro` (post-form confirmation, noindex).
+
+**Privacy Policy (`/privacy-policy`, SBR-38, 2026-11-05):** website-only policy adapted from phwcare.com/privacy-policy. Footer bottom line on every live page now reads Client Rights · Workplace Safety · Privacy Policy. PHW's SMS opt-out, "HIPAA-compliant systems" and BAA claims were left out on purpose (not true for Sunbright's site). Health records point to the Notice of Privacy Practices PDF.
 
 **Compliance pages (added 2026-10-23, from Linda's 2026-09-26 "Website" email):**
 - `/client-rights` — page title "Client Bill of Rights & Grievances"; footer + contact-form links read **"Client Rights"** (Kandy, 2026-10-23). Text is Linda's *Website Text* doc **verbatim** (required by CA H&SC §11857.2 / SB 349) — don't rewrite it. Links 3 PDFs in `public/docs/`: Client Bill of Rights, Client Grievance Form, Notice of Privacy Practices.
