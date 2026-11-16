@@ -25,10 +25,18 @@ At the 2026-06-27 launch the homepage became the root: the old `community.astro`
 **renamed to `src/pages/index.astro`** and serves cleanly at `/` (no more `/community` in the
 URL). **Edit `index.astro` for any homepage work.**
 
-**Live, deployed (9 — `npm run build` must say 9):** `index.astro` (homepage), `about.astro`, `events.astro`,
+**Live, deployed (9 on `main` — `npm run build` must say 9; becomes 10 once branch `content/blackout-policy-and-doc-updates` is merged, see below):** `index.astro` (homepage), `about.astro`, `events.astro`,
 `get-involved.astro`, `contact.astro`, `client-rights.astro`, `workplace-safety.astro`, `privacy-policy.astro` (added 2026-11-05, SBR-38), plus `thank-you.astro` (post-form confirmation, noindex).
 
 **Privacy Policy (`/privacy-policy`, SBR-38, 2026-11-05):** website-only policy adapted from phwcare.com/privacy-policy. Footer legal links (Kandy, 2026-11-05, SBR-39): in the brand column under the social icons + 501(c)(3) Letter, two lines — **Client Rights & Grievances**, then **IIPP | Privacy Policy** (`.f-legal`). Removed from the bottom © line. `thank-you` now uses the same full main footer as every other page (Kandy: "just use the main global footer"). PHW's SMS opt-out, "HIPAA-compliant systems" and BAA claims were left out on purpose (not true for Sunbright's site). Health records point to the Notice of Privacy Practices PDF.
+
+**Linda's 2026-11-14 "updates to website" email — STAGED on branch `content/blackout-policy-and-doc-updates`, NOT published (Kandy: "don't publish until I approve", 2026-11-16):**
+- `/first-14-days` — new page "Your First 14 Days at Sunbright" (the 14-day blackout policy). Text is Linda's *Website Text - 14-Day Blackout Period* doc **verbatim**. Same plain, low-key treatment as `/client-rights`; footer link **"First 14 Days Policy"** added to `.f-legal` on every live page, between Client Rights and IIPP. Build count is **10** with this page. When it is merged, update the 9 → 10 count here, in `CLAUDE.md` context and in the `/sunbright` skill file.
+  - Open question: the text is present tense ("when someone starts residential treatment…") while the facility is still unlicensed. Kandy to decide whether to publish as-is, soften, or hold.
+- IIPP (`/workplace-safety` + PDF) — Linda's revised SRC-SAF-009: adds "Program Manager, or Designee" beside the Clinical Director throughout, and "SRC keeps all training records at least 7 years". Page text and PDF (converted from her .docx with Word) match her document.
+  - **Open question for Linda:** her revised document says **Version 1, effective January 1, 2027** (approved 9/28/2026), but the copy that was live said **Version 2, effective October 1, 2026**. Confirm the right version/effective date before publishing. This is its own commit so it can be held back.
+- Client Bill of Rights PDF — **NOT swapped.** The file Linda sent has the same wording as the posted one, but its footers read "Page 1 of 3 / 2 of 3" and the file only has 2 pages (page 3 is missing). Ask Linda for the complete file, or whether page 3 is the signature page and is meant to be left off the web copy.
+- Team / About items from the same email — not started, waiting on Linda: Dr. Banani as Medical Director (approved to list; photo + bio coming), Kandy as Billing Specialist, Lu Parish tribute (designed and built the building; photos of her paintings coming). **Max Parish (Substance Use Counselor) must NOT be listed until he approves.**
 
 **Compliance pages (added 2026-10-23, from Linda's 2026-09-26 "Website" email):**
 - `/client-rights` — page title "Client Bill of Rights & Grievances"; footer + contact-form links read **"Client Rights"** (Kandy, 2026-10-23). Text is Linda's *Website Text* doc **verbatim** (required by CA H&SC §11857.2 / SB 349) — don't rewrite it. Links 3 PDFs in `public/docs/`: Client Bill of Rights, Client Grievance Form, Notice of Privacy Practices.
