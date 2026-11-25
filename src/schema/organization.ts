@@ -1,90 +1,63 @@
+import { SITE, SITE_NAME, PHONE_SCHEMA, EMAIL, ADDRESS } from '../config/site';
+
+/**
+ * Site-wide JSON-LD for the full (post-licensing) site.
+ * Only facts that are verified in the repo (STATUS.md, live pages) are stated here.
+ * Removed on purpose (2026-11-25) because they could not be confirmed:
+ *   - parentOrganization (Parish Health and Wellness): Sunbright is its own 501(c)(3), EIN 42-2737546
+ *   - geo coordinates and opening hours
+ *   - PHP / IOP / sober living as Sunbright services (pending Linda's confirmation of licensed scope)
+ *   - medicalSpecialty "Psychiatry", priceRange
+ * Add services back here only once Linda confirms what the DHCS license covers.
+ */
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'MedicalBusiness', 'LocalBusiness'],
-        '@id': 'https://sunbrightrecovery.com/#organization',
-        name: 'Sunbright Recovery Center',
+        '@type': ['NGO', 'MedicalBusiness'],
+        '@id': `${SITE}/#organization`,
+        name: SITE_NAME,
         alternateName: 'Sunbright Recovery',
-        url: 'https://sunbrightrecovery.com',
-        logo: 'https://sunbrightrecovery.com/images/logo.png',
-        image: 'https://sunbrightrecovery.com/images/og-default.jpg',
+        url: `${SITE}/`,
+        logo: `${SITE}/logo.png`,
+        image: `${SITE}/images/facility-wide.jpg`,
         description:
-          'Faith-integrated, evidence-based addiction recovery in Northern California. Residential, outpatient (IOP/PHP), and sober living programs. Medi-Cal accepted.',
-        parentOrganization: {
-          '@type': 'Organization',
-          name: 'Parish Health and Wellness',
-          url: 'https://www.phwcare.com',
-        },
-        telephone: '+1-530-513-4294',
-        email: 'info@sunbrightrecovery.org',
+          'A 16-bed nonprofit residential addiction recovery center in Red Bluff, California, serving Northern California and the rest of the state.',
+        telephone: PHONE_SCHEMA,
+        email: EMAIL,
         address: {
           '@type': 'PostalAddress',
-          // TODO: confirm exact street address with Linda
-          streetAddress: '22425 Sunbright Ave',
-          addressLocality: 'Red Bluff',
-          addressRegion: 'CA',
-          postalCode: '96080',
-          addressCountry: 'US',
-        },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: 40.1785,
-          longitude: -122.2358,
+          streetAddress: ADDRESS.street,
+          addressLocality: ADDRESS.city,
+          addressRegion: ADDRESS.region,
+          postalCode: ADDRESS.postalCode,
+          addressCountry: ADDRESS.country,
         },
         areaServed: [
           { '@type': 'State', name: 'California' },
-          { '@type': 'City', name: 'Red Bluff' },
-          { '@type': 'City', name: 'Redding' },
-          { '@type': 'City', name: 'Chico' },
-          { '@type': 'City', name: 'Sacramento' },
+          { '@type': 'AdministrativeArea', name: 'Northern California' },
           { '@type': 'AdministrativeArea', name: 'Tehama County' },
         ],
-        openingHoursSpecification: [
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '08:00',
-            closes: '18:00',
-          },
-        ],
-        medicalSpecialty: ['Addiction Medicine', 'Psychiatry'],
-        availableService: [
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Residential / Inpatient Rehabilitation',
-            url: 'https://sunbrightrecovery.com/programs/residential',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Intensive Outpatient Program (IOP)',
-            url: 'https://sunbrightrecovery.com/programs/outpatient',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Partial Hospitalization Program (PHP)',
-            url: 'https://sunbrightrecovery.com/programs/outpatient',
-          },
-          {
-            '@type': 'MedicalTherapy',
-            name: 'Sober Living / Aftercare',
-            url: 'https://sunbrightrecovery.com/programs/sober-living',
-          },
-        ],
-        acceptedPaymentMethod: ['Medi-Cal', 'Medicare', 'Private Insurance', 'Sliding Scale', 'Cash', 'Credit Card'],
-        priceRange: '$$',
+        nonprofitStatus: 'Nonprofit501c3',
+        taxID: '42-2737546',
+        founder: {
+          '@type': 'Person',
+          name: 'Linda Spyres',
+          honorificSuffix: 'LCSW, LAADC-CA',
+          jobTitle: 'Founder',
+        },
         sameAs: [
-          'https://www.facebook.com/sunbrightrecovery',
+          'https://www.facebook.com/profile.php?id=61590180493030',
           'https://www.instagram.com/sunbrightrecovery',
         ],
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://sunbrightrecovery.com/#website',
-        url: 'https://sunbrightrecovery.com',
-        name: 'Sunbright Recovery Center',
-        publisher: { '@id': 'https://sunbrightrecovery.com/#organization' },
+        '@id': `${SITE}/#website`,
+        url: `${SITE}/`,
+        name: SITE_NAME,
+        publisher: { '@id': `${SITE}/#organization` },
       },
     ],
   };

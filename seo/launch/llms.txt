@@ -1,0 +1,31 @@
+# Sunbright Recovery Center
+
+> Sunbright Recovery Center is a 501(c)(3) nonprofit, 16-bed, co-ed residential addiction recovery center at 22425 Sunbright Ave, Red Bluff, California 96080, serving Northern California and the rest of the state. Licensed by the State Department of Health Care Services.
+
+<!-- STAGED FOR LAUNCH. Before copying over public/llms.txt: confirm every line with Linda,
+     add the DHCS license link, and delete any service she has not confirmed. -->
+
+Key facts:
+- Level of care: residential treatment, 30, 60 and 90-day stays. [CONFIRM with Linda]
+- Medical detox: not provided on site; Sunbright coordinates referral to a detox provider.
+- Payment: private pay. Insurance credentialing in progress; no insurance plan is accepted yet.
+- Nonprofit: IRS 501(c)(3) public charity, EIN 42-2737546.
+- Founder: Linda Spyres, LCSW, LAADC-CA. Program Manager: Faith O'Dell, SUDRC.
+- Phone: (530) 513-4294. Email: info@sunbrightrecovery.org.
+- Faith integration is optional, never required.
+
+## Programs and care
+- [Residential rehab](https://www.sunbrightrecovery.org/programs/residential/)
+- [Admissions](https://www.sunbrightrecovery.org/admissions/)
+- [Insurance and payment](https://www.sunbrightrecovery.org/insurance/)
+- [Our approach](https://www.sunbrightrecovery.org/our-approach/)
+- [What we treat](https://www.sunbrightrecovery.org/what-we-treat/)
+- [Team](https://www.sunbrightrecovery.org/team/)
+- [FAQs](https://www.sunbrightrecovery.org/faqs/)
+- [Family resources](https://www.sunbrightrecovery.org/family-resources/)
+- [Contact](https://www.sunbrightrecovery.org/contact/)
+
+## Policies
+- [Client Bill of Rights & Grievances](https://www.sunbrightrecovery.org/client-rights/)
+- [Your First 14 Days at Sunbright](https://www.sunbrightrecovery.org/first-14-days/)
+- [Privacy Policy](https://www.sunbrightrecovery.org/privacy-policy/)
