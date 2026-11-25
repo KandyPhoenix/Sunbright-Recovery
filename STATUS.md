@@ -25,7 +25,7 @@ At the 2026-06-27 launch the homepage became the root: the old `community.astro`
 **renamed to `src/pages/index.astro`** and serves cleanly at `/` (no more `/community` in the
 URL). **Edit `index.astro` for any homepage work.**
 
-**Live, deployed (10 — `npm run build` must say 10):** `index.astro` (homepage), `about.astro`, `events.astro`,
+**Live, deployed (10 — `npm run build` must say 10, or 11 with `404.astro` once the seo/ai-search-readiness PR merges):** `index.astro` (homepage), `about.astro`, `events.astro`,
 `get-involved.astro`, `contact.astro`, `client-rights.astro`, `workplace-safety.astro`, `privacy-policy.astro` (added 2026-11-05, SBR-38), `first-14-days.astro` (added 2026-11-16), plus `thank-you.astro` (post-form confirmation, noindex).
 
 **Privacy Policy (`/privacy-policy`, SBR-38, 2026-11-05):** website-only policy adapted from phwcare.com/privacy-policy. Footer legal links (Kandy, 2026-11-05, SBR-39): in the brand column under the social icons + 501(c)(3) Letter, two lines — **Client Rights & Grievances**, then **IIPP | Privacy Policy** (`.f-legal`). Removed from the bottom © line. `thank-you` now uses the same full main footer as every other page (Kandy: "just use the main global footer"). PHW's SMS opt-out, "HIPAA-compliant systems" and BAA claims were left out on purpose (not true for Sunbright's site). Health records point to the Notice of Privacy Practices PDF.
@@ -51,6 +51,12 @@ repo for the future *licensed* full-site launch): `_index-full.astro` (old offic
 site live later, drop the `_` prefix** (and review noindex/links first). These hidden files now
 carry the same main line as the live pages, **(530) 513-4294** (swapped 2026-09-18, SBR-33), so
 bringing them live later cannot resurface an old number.
+
+## AI search / SEO readiness (branch `seo/ai-search-readiness`, 2026-11-25, NOT merged)
+
+Draft PR, waiting on Kandy's approval. Adds: `<link rel="canonical">` (trailing-slash URLs, matching the sitemap) and trailing-slash `og:url` on all 9 indexable pages; site-wide JSON-LD via `src/components/SiteSchema.astro` (NGO + WebSite, plus FAQPage on the homepage built from the visible FAQ text); `public/llms.txt`; a real `src/pages/404.astro` (unknown URLs were returning the homepage with 200).
+- The live robots.txt is Cloudflare's **managed robots.txt** prepended to `public/robots.txt`. It blocks training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot…). Search crawlers (Googlebot, Bingbot, OAI-SearchBot, Claude-SearchBot, PerplexityBot) are not named, so they fall under `User-agent: * Allow: /`. Changing the training blocks is a Cloudflare dashboard setting, not a repo change.
+- `src/schema/organization.ts` / `templates/organization.json` are NOT used by any live page. They point at `sunbrightrecovery.com` and list Medi-Cal/Medicare, IOP/PHP and sober living. Don't wire them in before licensing.
 
 ## 🚀 Post-launch open items (tracked in Jira — project **SBR**)
 
