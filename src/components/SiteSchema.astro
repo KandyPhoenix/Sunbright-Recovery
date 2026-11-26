@@ -1,7 +1,7 @@
 ---
 // Site-wide JSON-LD for the live pre-licensing site (SEO / AI search readiness, 2026-11-25).
 // Only facts already shown on the live pages. No clinical service, insurance or
-// "now open" claims while state licensing is in process.
+// "now open" claims until the license is final and the full site launches.
 // Do NOT reuse src/schema/organization.ts here: it points at the .com domain and
 // lists programs and insurance the live site does not claim.
 interface FAQ { q: string; a: string }
@@ -19,7 +19,7 @@ const graph: Record<string, unknown>[] = [
     logo: `${SITE}/logo.png`,
     image: `${SITE}/images/facility-wide.jpg`,
     description:
-      'A 16-bed nonprofit addiction recovery center preparing to open in Red Bluff, California, serving Northern California. State licensing is in process.',
+      'A 16-bed nonprofit addiction recovery center preparing to open in Red Bluff, California, serving Northern California. Its state license has been approved and is being finalized.',
     telephone: '+1-530-513-4294',
     email: 'info@sunbrightrecovery.org',
     address: {
