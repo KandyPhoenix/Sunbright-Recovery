@@ -57,7 +57,7 @@ bringing them live later cannot resurface an old number.
 
 Draft PR, waiting on Kandy's approval. Adds: `<link rel="canonical">` (trailing-slash URLs, matching the sitemap) and trailing-slash `og:url` on all 9 indexable pages; site-wide JSON-LD via `src/components/SiteSchema.astro` (NGO + WebSite, plus FAQPage on the homepage built from the visible FAQ text); `public/llms.txt`; a real `src/pages/404.astro` (unknown URLs were returning the homepage with 200).
 - The live robots.txt is Cloudflare's **managed robots.txt** prepended to `public/robots.txt`. It blocks training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot…). Search crawlers (Googlebot, Bingbot, OAI-SearchBot, Claude-SearchBot, PerplexityBot) are not named, so they fall under `User-agent: * Allow: /`. Changing the training blocks is a Cloudflare dashboard setting, not a repo change.
-- `src/schema/organization.ts` / `templates/organization.json` are NOT used by any live page. They point at `sunbrightrecovery.com` and list Medi-Cal/Medicare, IOP/PHP and sober living. Don't wire them in before licensing.
+- `src/schema/organization.ts` / `templates/organization.json` are NOT used by any live page. They point at `www.sunbrightrecovery.org` and list Medi-Cal/Medicare, IOP/PHP and sober living. Don't wire them in before licensing.
 
 ## 🚀 Post-launch open items (tracked in Jira — project **SBR**)
 

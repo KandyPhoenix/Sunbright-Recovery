@@ -2,7 +2,7 @@
 
 Official website for **Sunbright Recovery Center** — a faith-integrated, evidence-based addiction recovery facility in Northern California. Sunbright operates under the **Parish Health and Wellness (PHW Care)** umbrella.
 
-🌐 **Live site:** [sunbrightrecovery.com](https://sunbrightrecovery.com) *(coming soon)*
+🌐 **Live site:** [www.sunbrightrecovery.org](https://www.sunbrightrecovery.org/) *(coming soon)*
 
 ## About
 

@@ -1,0 +1,10 @@
+# Sunbright Recovery Center — LAUNCH robots.txt (staged 2026-11-25)
+# At launch, copy this file over public/robots.txt. Cloudflare's managed block
+# (AI training bots disallowed) is prepended by Cloudflare and is not in this file.
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+Disallow: /launch-home
+
+Sitemap: https://www.sunbrightrecovery.org/sitemap-index.xml
