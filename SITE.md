@@ -10,7 +10,7 @@
 - **Co-counselor:** Faith Odell, SUDRC
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
 - **Phone:** 530-513-4294 — the main SRC line (set 2026-09-18, SBR-33). Sunbright has its own number now; it no longer shares PHW’s.
-- **Email (planned):** admissions@sunbrightrecovery.com, info@sunbrightrecovery.com
+- **Email (planned):** admissions@sunbrightrecovery.com, info@sunbrightrecovery.org
 - **Funding model:** Self-funded by Linda; donations accepted via existing `phwcare.com/rehab-center-donations`
 
 ## Services (3 tiers)
