@@ -9,7 +9,8 @@
 
 The **live** community / pre-licensing site for **Sunbright Recovery Center** — a 16-bed co-ed residential addiction recovery facility in Red Bluff, CA. The building is **fully built and finished**; they're in the **equipping/preparing-to-open phase**. **Went live 2026-06-27** at **https://www.sunbrightrecovery.org** (community pages only — the full clinical site stays hidden until licensed).
 
-- **Org:** 501(c)(3) nonprofit — **APPROVED** by IRS 2026-07-27 (effective 2026-05-23), EIN 42-2737546, public charity 509(a)(2), donations tax-deductible. Letter on file at `C:\Users\kandy\REHAB CENTER\IRS 501 C3.pdf`. State licensing still in process.
+- **Org:** 501(c)(3) nonprofit — **APPROVED** by IRS 2026-07-27 (effective 2026-05-23), EIN 42-2737546, public charity 509(a)(2), donations tax-deductible. Letter on file at `C:\Users\kandy\REHAB CENTER\IRS 501 C3.pdf`.
+- **License (Kandy, 2026-11-25):** approved and almost finalized — "a few more steps" before opening. **Not final yet: the hidden `_` clinical pages stay hidden until Kandy says so.** Homepage "News, Updates & Upcoming Events" got a "NEW — Our License Has Been Approved" item on 2026-11-25 (SBR-42), in Kandy's wording; no agency or date is named because we have no document for it. Still saying licensing is in process, to update once Kandy says what steps remain: homepage FAQ "When will Sunbright open?", `about.astro`, `get-involved.astro`.
 - **Phone (everywhere):** **(530) 513-4294** — the main SRC line. Set 2026-09-18 per Faith ODell (SBR-33), replacing Faith's personal cell (530) 727-2211 on the live site and the retired PHW number (530) 528-2342 in the hidden clinical files. **Neither old number appears anywhere in the repo now — do not reintroduce either.**
 - **Email:** info@sunbrightrecovery.org (Google Workspace)
 - **Address:** 22425 Sunbright Ave, Red Bluff, CA 96080
