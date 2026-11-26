@@ -9,7 +9,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap({
-      filter: (page) => !['/admin', '/draft', '/admissions-preview', '/design-preview', '/index-v2', '/community', '/thank-you'].some((p) => page.includes(p)),
+      filter: (page) => !['/admin', '/draft', '/admissions-preview', '/design-preview', '/index-v2', '/community', '/thank-you', '/404'].some((p) => page.includes(p)),
       changefreq: 'monthly',
       priority: 0.8,
       lastmod: new Date(),

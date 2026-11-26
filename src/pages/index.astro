@@ -6,6 +6,38 @@
 //        tax-deductibility language is now allowed. State licensing still in process.
 // TODO: Remove `noindex` when real domain is connected and Linda is ready to go live.
 // TODO: Replace [VENMO_LINK], [CASHAPP_LINK], [SQUARE_LINK] with real payment URLs.
+import SiteSchema from '../components/SiteSchema.astro';
+// FAQ text mirrors the visible FAQ below word for word (FAQPage JSON-LD). Update both together.
+const homeFaqs = [
+  {
+    "q": "Is Sunbright a registered nonprofit?",
+    "a": "Yes. The IRS approved Sunbright Recovery Center's 501(c)(3) determination (EIN 42-2737546), effective May 23, 2026. We're recognized as a public charity, and donations are tax-deductible to the extent allowed by law."
+  },
+  {
+    "q": "When will Sunbright open?",
+    "a": "We're working through the final licensing and funding steps. The building is fully constructed — what remains is state licensing, furnishing, and staffing. Every donation moves that timeline forward. We'll announce an opening date as soon as it's confirmed."
+  },
+  {
+    "q": "Can I donate now, before you're open?",
+    "a": "Yes — and your gift is needed now. We're actively fundraising to furnish every room, equip the kitchen, and cover pre-opening operational costs. Giving now means you're part of why this center opens."
+  },
+  {
+    "q": "Where does my donation go?",
+    "a": "Every dollar goes directly toward equipping the center — furnishing bedrooms, outfitting the kitchen, stocking hygiene supplies, and covering the pre-opening costs that get us to day one. Sunbright is community-founded and community-funded. Your gift is what opens these doors."
+  },
+  {
+    "q": "What is the facility like?",
+    "a": "Our 16-bed co-ed building is fully constructed at 22425 Sunbright Ave in Red Bluff, CA. The structure is complete — we're currently furnishing each room and preparing for our operating license. You can see photos of the building above."
+  },
+  {
+    "q": "Who is founding and running Sunbright?",
+    "a": "Sunbright was founded by Linda Spyres, LCSW, LAADC-CA, who has more than 20 years of experience working in addiction treatment in Northern California. Her vision is a community-rooted, nonprofit recovery center that treats every person with dignity."
+  },
+  {
+    "q": "Will Sunbright be faith-based?",
+    "a": "Sunbright is faith-integrated, not faith-required. Spiritual support is available for those who want it — but recovery here doesn't require any particular religious belief. Everyone is welcome, exactly as they are."
+  }
+];
 ---
 <!doctype html>
 <html lang="en">
@@ -14,6 +46,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Sunbright Recovery — Coming to Red Bluff, CA</title>
   <meta name="description" content="Sunbright Recovery is preparing to open a 16-bed addiction recovery center in Red Bluff, CA. Help us open our doors — donate, volunteer, or adopt a space."/>
+  <link rel="canonical" href="https://www.sunbrightrecovery.org/"/>
+  <SiteSchema faqs={homeFaqs} />
   <meta name="robots" content="index,follow"/>
   <link rel="icon" type="image/png" href="/favicon.png"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>

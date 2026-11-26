@@ -1,0 +1,70 @@
+---
+// Site-wide JSON-LD for the live pre-licensing site (SEO / AI search readiness, 2026-11-25).
+// Only facts already shown on the live pages. No clinical service, insurance or
+// "now open" claims until the license is final and the full site launches.
+// Do NOT reuse src/schema/organization.ts here: it points at the .com domain and
+// lists programs and insurance the live site does not claim.
+interface FAQ { q: string; a: string }
+interface Props { faqs?: FAQ[] }
+const { faqs } = Astro.props;
+const SITE = 'https://www.sunbrightrecovery.org';
+
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'NGO',
+    '@id': `${SITE}/#organization`,
+    name: 'Sunbright Recovery Center',
+    alternateName: 'Sunbright Recovery',
+    url: `${SITE}/`,
+    logo: `${SITE}/logo.png`,
+    image: `${SITE}/images/facility-wide.jpg`,
+    description:
+      'A 16-bed nonprofit addiction recovery center preparing to open in Red Bluff, California, serving Northern California. Its state license has been approved and is being finalized.',
+    telephone: '+1-530-513-4294',
+    email: 'info@sunbrightrecovery.org',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '22425 Sunbright Ave',
+      addressLocality: 'Red Bluff',
+      addressRegion: 'CA',
+      postalCode: '96080',
+      addressCountry: 'US',
+    },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Northern California' },
+    nonprofitStatus: 'Nonprofit501c3',
+    taxID: '42-2737546',
+    founder: {
+      '@type': 'Person',
+      name: 'Linda Spyres',
+      honorificSuffix: 'LCSW, LAADC-CA',
+      jobTitle: 'Founder',
+    },
+    sameAs: [
+      'https://www.facebook.com/profile.php?id=61590180493030',
+      'https://www.instagram.com/sunbrightrecovery',
+    ],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE}/#website`,
+    url: `${SITE}/`,
+    name: 'Sunbright Recovery Center',
+    publisher: { '@id': `${SITE}/#organization` },
+  },
+];
+
+if (faqs && faqs.length) {
+  graph.push({
+    '@type': 'FAQPage',
+    '@id': `${SITE}/#faq`,
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+
+const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+---
+<script type="application/ld+json" set:html={json} />

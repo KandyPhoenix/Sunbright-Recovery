@@ -1,0 +1,29 @@
+---
+// Real 404 page. Without a top-level 404.html, Cloudflare Pages served the homepage
+// (HTTP 200) for any unknown URL, e.g. /llms.txt before it existed. That reads as a
+// "soft 404" to search engines and AI crawlers.
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Page Not Found — Sunbright Recovery Center</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <style>
+    body{font-family:Inter,system-ui,sans-serif;color:#1a2438;background:#fff;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
+    h1{font-family:Lora,Georgia,serif;color:#1a2e5a;font-size:32px;margin:0 0 12px}
+    p{color:#3d4a5c;margin:0 0 20px;line-height:1.6}
+    a.btn{display:inline-block;background:#1a2e5a;color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600}
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/logo.png" alt="Sunbright Recovery Center" width="160" style="margin-bottom:20px"/>
+    <h1>We couldn't find that page.</h1>
+    <p>It may have moved. You can head back home, or call us at <a href="tel:+15305134294">(530) 513-4294</a>.</p>
+    <a class="btn" href="/">Back to Sunbright</a>
+  </main>
+</body>
+</html>
