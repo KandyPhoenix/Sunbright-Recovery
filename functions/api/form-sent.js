@@ -34,6 +34,8 @@ export async function onRequestPost({ request, env }) {
   return new Response(null, { status: 204 });
 }
 
+// Anyone who opens this address in a browser just gets "Not found":
+// nothing here ever shows or returns the count.
 export function onRequest() {
-  return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } });
+  return new Response('Not found', { status: 404 });
 }
