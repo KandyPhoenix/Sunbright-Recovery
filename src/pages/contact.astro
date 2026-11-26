@@ -413,6 +413,18 @@ import SiteSchema from '../components/SiteSchema.astro';
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   })();
+
+  // Form-send counter: records only that the form was sent (the time), never
+  // what was typed, so sends can be checked against messages received at info@.
+  (function(){
+    var form = document.getElementById('contact-form');
+    if (!form || !navigator.sendBeacon) return;
+    form.addEventListener('submit', function(){
+      var trap = form.querySelector('input[name="botcheck"]');
+      if (trap && trap.checked) return;
+      try { navigator.sendBeacon('/api/form-sent', ''); } catch (e) {}
+    });
+  })();
 </script>
 </body>
 </html>
